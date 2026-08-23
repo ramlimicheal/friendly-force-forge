@@ -1,0 +1,95 @@
+{
+  "audit_timestamp": "2026-08-23T17:45:00+05:30",
+  "engine": "THE_LEGEND_ERA_V2_EZRA",
+  "brand_verified": "Damoder Immigration Services",
+  "hq_verified": "6F6F+74G, Tukkuguda, Hyderabad, Telangana 501359, India",
+  "total_routes_audited": 12,
+  "total_word_count": 20932,
+  "overall_status": "CLEAN - 100% ERA EZRA CERTIFIED",
+  "routes": [
+    {
+      "route": "src/routes/__root.tsx",
+      "sha256": "436a02aade0e2b9206e0305883219fe5f1abf7633d9c78efdf267cb487714380",
+      "word_count": 835,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/index.tsx",
+      "sha256": "6370fe48cfd57d2c982314f64e137ca526e4b12bd9c4a216232faeff0a41d000",
+      "word_count": 4325,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/about-us.tsx",
+      "sha256": "ac66dab161b65ad0d475c1a21d33a6d4b1b9cb0684fae173c6f1793b960427d6",
+      "word_count": 1674,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/employer-services.tsx",
+      "sha256": "19e3d39ea4c2c00d5b7a5823c855fa2e1d234887bcbd34f3ff210b1879380f5b",
+      "word_count": 2234,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/visa-attestation-services.tsx",
+      "sha256": "e46bbffc1b36289aa4ad0db72ef50c70b858bcc75810bb1fb5c7534be099156f",
+      "word_count": 1535,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/industries.tsx",
+      "sha256": "2bd544bb6a15c29e2ef3f3bd249cb1ae5c0f34577ad0c653e4ab786695d76640",
+      "word_count": 1085,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/destinations.schengen-europe.tsx",
+      "sha256": "0ee421d3d6a86059d7ed0a5292963445d673003cb716db1862c08cb644539a92",
+      "word_count": 1611,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/destinations.usa-visa.tsx",
+      "sha256": "d70e83997a61f83cfc1fc28ad99008a82be7fe465dd544a46c5cd76f41872b5e",
+      "word_count": 932,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/candidate-portal.tsx",
+      "sha256": "9e77bfdb8f81bfa19f941dc1fbfd3c4f5481a2985905045e7f25fd44892c9575",
+      "word_count": 2116,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/routes/contact-us.tsx",
+      "sha256": "6b4eb7426e015dc34cccb9dd2fa30c5896686c8f9f8910eec9a00a5681adab39",
+      "word_count": 1688,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/components/chat-bot.tsx",
+      "sha256": "fceede16683bcc4ec392cdd59e399166cc0b1b0f5554f6a3f274620911bd84a0",
+      "word_count": 2654,
+      "violations_found": 0,
+      "status": "PASS"
+    },
+    {
+      "route": "src/data/site.ts",
+      "sha256": "6ec484610ac68ace6b3c96cddd01ac1421f845efb472efd669e630851111f136",
+      "word_count": 243,
+      "violations_found": 0,
+      "status": "PASS"
+    }
+  ]
+}

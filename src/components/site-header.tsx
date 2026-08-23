@@ -21,7 +21,7 @@ function Brand() {
       </span>
       <span className="leading-tight">
         <span className="block font-display text-base sm:text-lg font-bold tracking-tight text-white">
-          Dhamodaran Immigration
+          Damoder Immigration Services
         </span>
         <span className="hidden text-[11px] uppercase tracking-[0.2em] text-white/75 sm:block font-semibold">
           Overseas Manpower
@@ -213,7 +213,7 @@ export function SiteHeader() {
                 <span className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm">
                   <img src={logoMark} alt="Logo" className="size-full object-contain" />
                 </span>
-                <span className="text-base font-bold text-white">Dhamodaran</span>
+                <span className="text-base font-bold text-white">Damoder</span>
               </SheetTitle>
 
               <nav className="mt-6 flex flex-col gap-2.5 p-2">

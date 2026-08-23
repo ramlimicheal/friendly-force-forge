@@ -46,12 +46,12 @@ export const Route = createFileRoute("/contact-us")({
         content:
           "Reach the right department directly — employer recruitment desk, candidate registration, document attestation, and MEA compliance.",
       },
-      { property: "og:url", content: "https://dhamodaranimmigration.com/contact-us" },
+      { property: "og:url", content: "https://damoderimmigration.com/contact-us" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://dhamodaranimmigration.com/contact-us" },
+      { rel: "canonical", href: "https://damoderimmigration.com/contact-us" },
     ],
     scripts: [
       {
@@ -60,12 +60,12 @@ export const Route = createFileRoute("/contact-us")({
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "Contact Damoder Immigration Services",
-          "url": "https://dhamodaranimmigration.com/contact-us",
+          "url": "https://damoderimmigration.com/contact-us",
           "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Damoder Immigration Services & Overseas Manpower Consultancy",
             "telephone": "+91-94440-12345",
-            "email": "contact@dhamodaranimmigration.com",
+            "email": "contact@damoderimmigration.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "6F6F+74G, Tukkuguda",
@@ -126,14 +126,14 @@ const officeLocations = [
     city: "Hyderabad (Headquarters)",
     state: "Telangana, India",
     address: "Damoder Immigration Services & Overseas Manpower Consultancy, 6F6F+74G, Tukkuguda Business District, Hyderabad – 501359",
-    contact: "+91 94440 12345 / contact@dhamodaranimmigration.com",
+    contact: "+91 94440 12345 / contact@damoderimmigration.com",
     role: "Registered MEA Headquarters & Central Executive Operations",
   },
   {
     city: "Regional Mobilisation Centers",
     state: "South & North India Network",
     address: "Authorized Trade Testing & Skill Auditing Workshop Alliances in Madurai, Trichy, Kochi, Hyderabad, and New Delhi",
-    contact: "partnerships@dhamodaranimmigration.com",
+    contact: "partnerships@damoderimmigration.com",
     role: "Candidate Screening, Welding Rigs, MEP Labs & Trade Testing Yards",
   },
 ];

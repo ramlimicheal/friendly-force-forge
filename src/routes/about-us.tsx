@@ -34,12 +34,12 @@ export const Route = createFileRoute("/about-us")({
         content:
           "Two decades of landmark growth in overseas recruitment, accredited trade testing, and statutory MEA compliance from Hyderabad, India.",
       },
-      { property: "og:url", content: "https://dhamodaranimmigration.com/about-us" },
+      { property: "og:url", content: "https://damoderimmigration.com/about-us" },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://dhamodaranimmigration.com/about-us" },
+      { rel: "canonical", href: "https://damoderimmigration.com/about-us" },
     ],
     scripts: [
       {
@@ -48,13 +48,13 @@ export const Route = createFileRoute("/about-us")({
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "About Damoder Immigration Services",
-          "url": "https://dhamodaranimmigration.com/about-us",
+          "url": "https://damoderimmigration.com/about-us",
           "description": "Comprehensive history, licensing credentials, and operational standards of Damoder Immigration Services.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dhamodaranimmigration.com" },
-              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://dhamodaranimmigration.com/about-us" }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://damoderimmigration.com" },
+              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://damoderimmigration.com/about-us" }
             ]
           }
         })

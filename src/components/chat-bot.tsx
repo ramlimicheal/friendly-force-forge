@@ -34,7 +34,7 @@ const INITIAL_MESSAGES: Message[] = [
   {
     id: "m1",
     sender: "bot",
-    text: "👋 Welcome to **Dhamodaran Immigration & Overseas Manpower** (MEA Lic. `B-0824/TN/PER/1000+/5/9821/2021`).\n\nI am **Damoder AI**, your 24/7 recruitment & mobility advisor. How can I assist you today?",
+    text: "👋 Welcome to **Damoder Immigration Services & Overseas Manpower** (MEA Lic. `B-0824/TN/PER/1000+/5/9821/2021`).\n\nI am **Damoder AI**, your 24/7 recruitment & mobility advisor. How can I assist you today?",
     timestamp: "Just now",
   },
 ];
@@ -184,12 +184,12 @@ function getBotResponse(input: string): { text: string; links?: Array<{ label: s
     q.includes("contact") ||
     q.includes("phone") ||
     q.includes("office") ||
-    q.includes("chennai") ||
+    q.includes("hyderabad") ||
     q.includes("grievance") ||
     q.includes("fraud")
   ) {
     return {
-      text: "🛡️ **Statutory Licensing & Official Verification:**\n\n• **Government Registration**: MEA Registration No. `B-0824/TN/PER/1000+/5/9821/2021` (Ministry of External Affairs, Govt. of India).\n• **Headquarters**: Dhamodaran Immigration & Overseas Manpower, Mount Road / Anna Salai, Chennai, Tamil Nadu, India.\n• **Phone / WhatsApp**: +91 94440 12345\n• **Corporate Email**: contact@dhamodaranimmigration.com\n• **Statutory Grievance Ombudsman**: complaints@dhamodaranimmigration.com\n• **Working Hours**: Monday – Saturday: 9:30 AM – 6:30 PM IST.",
+      text: "🛡️ **Statutory Licensing & Official Verification:**\n\n• **Government Registration**: MEA Registration No. `B-0824/TN/PER/1000+/5/9821/2021` (Ministry of External Affairs, Govt. of India).\n• **Headquarters**: Damoder Immigration Services & Overseas Manpower, Mount Road / Anna Salai, Hyderabad, Telangana, India.\n• **Phone / WhatsApp**: +91 94440 12345\n• **Corporate Email**: contact@damoderimmigration.com\n• **Statutory Grievance Ombudsman**: complaints@damoderimmigration.com\n• **Working Hours**: Monday – Saturday: 9:30 AM – 6:30 PM IST.",
       links: [
         { label: "View Official Contact Desks →", to: "/contact-us" },
         { label: "About Our 20+ Year Heritage →", to: "/about-us" },
@@ -199,12 +199,12 @@ function getBotResponse(input: string): { text: string; links?: Array<{ label: s
 
   // Default response
   return {
-    text: "Thank you for reaching out! Dhamodaran Immigration is a Government of India MEA-licensed overseas recruitment consultancy (Lic. `B-0824/TN/PER/1000+/5/9821/2021`).\n\nI can assist you with:\n1. **Employer Services**: Bulk manpower supply, trade testing & mobilization SLAs.\n2. **Job Seekers**: Live vacancies in Gulf, Europe & USA with zero registration fees.\n3. **Visa & Attestation**: MEA Apostille, State HRD & Embassy legalisation.\n4. **Destination Desks**: Saudi Arabia, UAE, Poland, Germany, Malta, USA.\n\nPlease click a quick option below or ask any specific question!",
+    text: "Thank you for reaching out! Damoder Immigration Services is a Government of India MEA-licensed overseas recruitment consultancy (Lic. `B-0824/TN/PER/1000+/5/9821/2021`).\n\nI can assist you with:\n1. **Employer Services**: Bulk manpower supply, trade testing & mobilization SLAs.\n2. **Job Seekers**: Live vacancies in Gulf, Europe & USA with zero registration fees.\n3. **Visa & Attestation**: MEA Apostille, State HRD & Embassy legalisation.\n4. **Destination Desks**: Saudi Arabia, UAE, Poland, Germany, Malta, USA.\n\nPlease click a quick option below or ask any specific question!",
     links: [
       { label: "For Employers (Bulk Hiring) →", to: "/employer-services" },
       { label: "For Job Seekers (Vacancies) →", to: "/candidate-portal" },
       { label: "Document Attestation →", to: "/visa-attestation-services" },
-      { label: "Contact Chennai Office →", to: "/contact-us" },
+      { label: "Contact Hyderabad Office →", to: "/contact-us" },
     ],
   };
 }
@@ -352,7 +352,7 @@ export function ChatBot() {
                 className="flex items-center gap-1 font-semibold text-brand hover:underline"
               >
                 <Phone className="size-3" />
-                <span>Call Chennai HQ</span>
+                <span>Call Hyderabad HQ</span>
               </a>
             </div>
 
