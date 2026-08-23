@@ -89,7 +89,7 @@ export function SiteHeader() {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <ShieldCheck className="size-3.5 text-ember" />
-            Licensed Immigration &amp; Manpower Services | 100% Process Transparency
+            Licensed Immigration &amp; Manpower Services
           </span>
           <span className="inline-flex items-center gap-4">
             <a href={`tel:${company.employerPhone}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
