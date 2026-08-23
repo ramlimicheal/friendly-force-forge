@@ -1,8 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
 import {
-  MapPin,
   ShieldCheck,
   CheckCircle2,
   FileText,
@@ -22,6 +21,8 @@ import {
   BookOpen,
   UserCheck,
   Compass,
+  HeartHandshake,
+  Award,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -41,17 +42,17 @@ import {
 export const Route = createFileRoute("/candidate-portal")({
   head: () => ({
     meta: [
-      { title: "Candidate Career & Visa Portal | Damoder Immigration Services" },
+      { title: "Visa Assessment & Profile Evaluation Portal | Damoder Immigration Services" },
       {
         name: "description",
         content:
-          "Apply for PR, Study, and Skilled Work Visas in New Zealand, Germany, Canada, Australia, UK & Europe with Damoder Immigration Services (Hyderabad). 100% free eligibility check.",
+          "Submit your profile for free visa eligibility assessment for New Zealand, Germany, Canada, Australia, UK & Europe with Damoder Immigration Services (Hyderabad).",
       },
-      { property: "og:title", content: "Candidate Career & Visa Portal | Damoder Immigration Services" },
+      { property: "og:title", content: "Visa Assessment Portal | Damoder Immigration Services" },
       {
         property: "og:description",
         content:
-          "Dedicated visa consultants, IELTS inputs, transparent points scoring, and verified overseas job opportunities.",
+          "Dedicated visa consultants, transparent points scoring, IELTS language prep, and complete documentation filing from Hyderabad, India.",
       },
       { property: "og:url", content: "https://damoderimmigration.com/candidate-portal" },
       { property: "og:type", content: "website" },
@@ -76,9 +77,9 @@ const candidateMetrics = [
     detail: "PR, Study, Skilled Work & Visitor visas across top nations",
   },
   {
-    value: "Direct",
-    label: "Employer Sourcing",
-    detail: "Written contracts defining salary, overtime & accommodations",
+    value: "6 Flagship",
+    label: "Country Corridors",
+    detail: "New Zealand (#1), Germany, Canada, Australia, UK & Europe",
   },
   {
     value: "7 Pillars",
@@ -87,72 +88,78 @@ const candidateMetrics = [
   },
 ];
 
-const vacancies = [
+const visaCategories = [
   {
-    id: "v1",
-    title: "Senior Software Engineer / Cloud Architect",
-    country: "New Zealand",
-    region: "New Zealand",
-    visaPathway: "Green List Tier 1 Straight to Residence PR",
-    exp: "4+ years AWS / React / Node.js experience",
-    tag: "🇳🇿 Top Flagship PR",
-    benefits: ["Straight to Residence PR Route", "Partner Open Work Visa", "Universal Public Healthcare & Schooling"],
-    sector: "IT & Software Engineering",
+    icon: Award,
+    title: "1. Permanent Residency (PR) Visas",
+    badge: "Direct Settlement",
+    desc: "Comprehensive points evaluation and filing for skilled professionals seeking direct permanent residence abroad.",
+    highlights: [
+      "New Zealand Skilled Migrant Category (SMC 6-Point) & Green List Tier 1",
+      "Germany EU Blue Card & Fast-Track Settlement in 21–27 Months",
+      "Canada Express Entry (FSWP/CEC) & Provincial Nominee Streams (PNP)",
+      "Australia General Skilled Migration (Subclass 189 / 190 / 491)",
+    ],
   },
   {
-    id: "v2",
-    title: "Registered Staff Nurse (ICU / Theatre)",
-    country: "New Zealand",
-    region: "New Zealand",
-    visaPathway: "Green List Tier 1 Fast-Track Residence",
-    exp: "B.Sc Nursing + 2 yrs clinical hospital experience",
-    tag: "🇳🇿 Green List Fast-Track",
-    benefits: ["Direct Residence Pathway", "Hospital Relocation Package", "Overtime Paid at 1.5x"],
-    sector: "Healthcare & Nursing",
+    icon: GraduationCap,
+    title: "2. Study Visas & University Admissions",
+    badge: "Global Education",
+    desc: "End-to-end guidance for undergraduate, master's, and diploma admissions with post-study work rights and education loans.",
+    highlights: [
+      "Top Universities across New Zealand, Germany (Free Tuition), UK & Canada",
+      "Comprehensive IELTS / PTE Exam Slot Booking & Study Materials",
+      "Fast-track Education Loan Sanctioning & Financial Documentation",
+      "Post-Study Work Visa (PSWV) and transition to Permanent Residency",
+    ],
   },
   {
-    id: "v3",
-    title: "Mechanical / Automotive Systems Engineer",
-    country: "Germany",
-    region: "Germany",
-    visaPathway: "EU Blue Card / Chancenkarte Opportunity Card",
-    exp: "Degree in Mechanical / Mechatronics (German B1 track)",
-    tag: "🇩🇪 Top European Priority",
-    benefits: ["Permanent Settlement in 21 Months", "EU Wide Mobility", "Family Sponsorship"],
-    sector: "Engineering & Technical",
+    icon: Briefcase,
+    title: "3. Skilled Work Permits & Job Authorizations",
+    badge: "Employment Sponsorship",
+    desc: "Statutory documentation and visa filing for professionals with employer sponsorship or points-based job seeker permits.",
+    highlights: [
+      "Germany Opportunity Card (Chancenkarte) Points-Based Job Seeker",
+      "New Zealand Accredited Employer Work Visa (AEWV)",
+      "Poland National Type-A Work Permits & Karta Pobytu Residence",
+      "UK Skilled Worker Visa with Certificate of Sponsorship (CoS)",
+    ],
   },
   {
-    id: "v4",
-    title: "Civil Site Engineer & Structural BIM Drafter",
-    country: "Australia",
-    region: "Australia",
-    visaPathway: "Subclass 189 / 190 General Skilled Migration",
-    exp: "B.Tech Civil + EA Positive Skills Assessment",
-    tag: "🇦🇺 GSM Direct PR",
-    benefits: ["Permanent Residency Card", "Medicare Universal Coverage", "Citizenship after 4 Years"],
-    sector: "Engineering & Construction",
+    icon: Globe2,
+    title: "4. Visitor & Tourist Visas",
+    badge: "Short-Stay Travel",
+    desc: "Flawless dossier preparation, travel itinerary planning, and consular appointment management for leisure and family visits.",
+    highlights: [
+      "Schengen 90-Day Multi-Entry Visitor Visas (Europe-wide travel)",
+      "UK Standard Visitor Visa & Fast-Track Priority Appointments",
+      "USA B1/B2 Non-Immigrant Tourist & Business Visas",
+      "Canada & Australia Multiple-Entry Visitor Visas",
+    ],
   },
   {
-    id: "v5",
-    title: "Financial Analyst & Management Accountant",
-    country: "Canada",
-    region: "Canada",
-    visaPathway: "Express Entry FSWP / Provincial Nominee Program (PNP)",
-    exp: "B.Com / MBA Finance / CPA / ACCA + 3 yrs exp",
-    tag: "🇨🇦 Express Entry / PNP",
-    benefits: ["Canadian Permanent Residency", "Universal Healthcare", "Spouse Open Work Permit"],
-    sector: "Accountants & Finance",
+    icon: Landmark,
+    title: "5. Business & Investor Visas",
+    badge: "Capital & Enterprise",
+    desc: "Advisory for high-net-worth individuals, business owners, and corporate leaders establishing international branches.",
+    highlights: [
+      "Business Innovation & Investment Streams (Australia Subclass 188)",
+      "UK Innovator Founder & Self-Sponsorship Pathways",
+      "Canada Start-Up Visa & Intra-Company Transfer (ICT)",
+      "European Golden Visa & Commercial Entity Registration",
+    ],
   },
   {
-    id: "v6",
-    title: "Structural Steel Fabricator / 6G TIG Welder",
-    country: "Poland",
-    region: "Europe",
-    visaPathway: "Type-A Work Permit + Karta Pobytu Residency",
-    exp: "3+ years pipe welding / fabrication experience",
-    tag: "🇪🇺 Type-A Permit",
-    benefits: ["Furnished Company Housing", "Social Security (ZUS)", "Karta Pobytu Residency"],
-    sector: "Manufacturing & Heavy Engineering",
+    icon: HeartHandshake,
+    title: "6. Dependent & Family Visas",
+    badge: "Family Reunification",
+    desc: "Seamless legal unification for spouses, children, and dependent parents with full local work and study rights.",
+    highlights: [
+      "New Zealand & Canada Partner Open Work Visas",
+      "Germany & Schengen Spousal Reunification Permits",
+      "UK Dependent Visa with full unrestricted employment rights",
+      "Australian Partner & Child Subclass Applications",
+    ],
   },
 ];
 
@@ -162,8 +169,8 @@ const protectionCharter = [
     desc: "You deal directly with Damoder Immigration Services headquarters in Hyderabad. No informal cash payments or unverified sub-agents.",
   },
   {
-    title: "Authentic Written Bilingual Contracts",
-    desc: "Every employment or university admission is backed by written documentation specifying role, terms, and statutory rights before departure.",
+    title: "Authentic Written Documentation",
+    desc: "Every application is backed by verified statutory paperwork, institutional offer letters, and transparent fee schedules.",
   },
   {
     title: "IELTS & Language Proficiency Coaching",
@@ -177,18 +184,13 @@ const protectionCharter = [
 
 function CandidatePage() {
   const [submitting, setSubmitting] = useState(false);
-  const [selectedRegion, setSelectedRegion] = useState("All");
-
-  const filteredVacancies = selectedRegion === "All"
-    ? vacancies
-    : vacancies.filter((v) => v.region === selectedRegion);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
-      toast.success("Profile submitted successfully! A dedicated visa counselor from Damoder Immigration Services (Hyderabad) will contact you within 24 hours.");
+      toast.success("Profile submitted successfully! A dedicated visa counselor from Damoder Immigration Services (Hyderabad) will evaluate your credentials and contact you within 24 hours.");
       (e.target as HTMLFormElement).reset();
     }, 1200);
   };
@@ -197,23 +199,23 @@ function CandidatePage() {
     <>
       {/* 1. PageHero */}
       <PageHero
-        eyebrow="Candidate Career & Visa Portal · Damoder Immigration Services (Hyderabad)"
-        title="Start Your Migration Journey to New Zealand, Germany, Canada & Australia"
-        subtitle="Dedicated visa consultants, transparent points scoring, IELTS language inputs, and complete documentation support to study, work, or settle abroad."
+        eyebrow="Visa Assessment & Profile Evaluation Portal · Damoder Immigration Services (Hyderabad)"
+        title="Evaluate Your Eligibility for New Zealand, Germany, Canada & Global Visas"
+        subtitle="Dedicated visa consultants, transparent points scoring, IELTS language guidance, and complete documentation support to study, work, or settle abroad."
       >
         <div className="flex flex-wrap items-center gap-3">
           <a
             href="#eligibility-form"
             className="inline-flex items-center gap-2 rounded-lg bg-ember px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
           >
-            Check Free Eligibility
+            Start Free Profile Assessment
             <ArrowRight className="size-4" />
           </a>
           <a
-            href="#vacancies"
+            href="#visa-categories"
             className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
           >
-            Browse Verified Openings
+            Explore 6 Core Visa Categories
           </a>
         </div>
       </PageHero>
@@ -235,65 +237,41 @@ function CandidatePage() {
         </div>
       </section>
 
-      {/* 3. Verified Overseas Job Vacancies Board */}
+      {/* 3. The 6 Core Visa Categories Section */}
       <Section
-        id="vacancies"
-        eyebrow="Verified Openings"
-        title="Live Overseas Career Openings & PR Corridors"
-        intro="Explore verified positions across New Zealand, Germany, Australia, Canada, and Europe with structured immigration pathways and direct employer sponsorship."
+        id="visa-categories"
+        eyebrow="Visa Pathways"
+        title="Comprehensive Visa Categories Supported"
+        intro="Whether you are aiming for permanent residency, university education, skilled employment, or family reunification, we structure your dossier for maximum approval rates."
       >
-        {/* Regional Filter Pills */}
-        <div className="mb-8 flex flex-wrap items-center gap-2">
-          {["All", "New Zealand", "Germany", "Australia", "Canada", "Europe"].map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setSelectedRegion(r)}
-              className={`rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold transition-all ${
-                selectedRegion === r
-                  ? "bg-ember text-white shadow-xs"
-                  : "bg-paper border border-border text-brand-deep hover:border-brand/40"
-              }`}
-            >
-              {r === "New Zealand" ? "🇳🇿 New Zealand (Priority)" : r === "Germany" ? "🇩🇪 Germany (Priority)" : r}
-            </button>
-          ))}
-        </div>
-
-        <StaggerContainer staggerDelay={0.08} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredVacancies.map((v) => (
-            <StaggerItem key={v.id}>
+        <StaggerContainer staggerDelay={0.06} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {visaCategories.map((v) => (
+            <StaggerItem key={v.title}>
               <MotionCard className="rounded-lg border border-border bg-card p-7 h-full flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-ember">{v.country}</span>
+                    <div className="flex size-11 items-center justify-center rounded-lg bg-brand/10 text-brand">
+                      <v.icon className="size-5" />
+                    </div>
                     <span className="rounded-md border border-brand/20 bg-brand/5 px-2.5 py-0.5 text-[11px] font-semibold text-brand">
-                      {v.tag}
+                      {v.badge}
                     </span>
                   </div>
 
-                  <h3 className="mt-3 font-display text-lg font-bold text-brand-deep leading-snug">
+                  <h3 className="mt-4 font-display text-lg font-bold text-brand-deep leading-snug">
                     {v.title}
                   </h3>
-                  <p className="mt-1 text-xs text-muted-foreground">{v.sector}</p>
-
-                  <div className="mt-4 rounded-md bg-paper p-2.5 border border-border/80 text-xs font-semibold text-brand">
-                    🎯 Pathway: {v.visaPathway}
-                  </div>
-
-                  <div className="mt-4 space-y-1 text-xs text-muted-foreground">
-                    <p><strong>Requirement:</strong> {v.exp}</p>
-                  </div>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
 
                   <div className="mt-5 border-t border-border pt-3">
                     <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                      Included Benefits &amp; Pathway
+                      Key Corridors &amp; Programs
                     </p>
-                    <ul className="mt-2 space-y-1 text-xs text-foreground">
-                      {v.benefits.map((b) => (
-                        <li key={b} className="flex items-center gap-1.5">
-                          <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
-                          <span>{b}</span>
+                    <ul className="mt-2 space-y-1.5 text-xs text-foreground">
+                      {v.highlights.map((h) => (
+                        <li key={h} className="flex items-start gap-1.5">
+                          <CheckCircle2 className="mt-0.5 size-3.5 text-emerald-600 shrink-0" />
+                          <span>{h}</span>
                         </li>
                       ))}
                     </ul>
@@ -305,7 +283,7 @@ function CandidatePage() {
                     href="#eligibility-form"
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-brand hover:text-ember transition-colors"
                   >
-                    <span>Apply for this Mandate</span>
+                    <span>Assess Eligibility for this Category</span>
                     <ArrowRight className="size-3.5" />
                   </a>
                 </div>

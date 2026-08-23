@@ -367,14 +367,14 @@ export function DestinationsWhereWeDeploy() {
                   Work Directly with Verified Overseas Employers
                 </h3>
                 <p className="mt-2 text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  Every deployment is backed by genuine employer demand letters, structured contracts, and full statutory MEA compliance.
+                  Every application is backed by verified legal channels, structured counseling, and complete documentation discipline.
                 </p>
                 <div className="mt-5">
                   <Link
                     to="/candidate-portal"
                     className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-xs sm:text-sm font-semibold text-brand-deep shadow-sm transition-all hover:bg-slate-100 hover:scale-105"
                   >
-                    Explore Verified Vacancies
+                    Check Visa Eligibility & Pathways
                     <ArrowRight className="size-4" />
                   </Link>
                 </div>
