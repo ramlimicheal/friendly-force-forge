@@ -51,7 +51,7 @@ export function SiteHeader() {
     }
     closeTimeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 150);
+    }, 350);
   };
 
   const toggleMobileCategory = (label: string) => {
@@ -127,7 +127,7 @@ export function SiteHeader() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.96 }}
                         transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                        className="absolute left-1/2 top-full -translate-x-1/2 pt-2 z-50 pointer-events-auto"
+                        className="absolute left-1/2 top-full -translate-x-1/2 pt-2 z-50 pointer-events-auto before:absolute before:-top-3 before:left-0 before:right-0 before:h-4 before:content-['']"
                       >
                         <motion.div
                           variants={{
