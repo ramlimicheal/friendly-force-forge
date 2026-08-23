@@ -56,12 +56,12 @@ export const Route = createFileRoute("/destinations/schengen-europe")({
 
 const priorityMetrics = [
   {
-    value: "🇳🇿 #1",
+    value: "🇳🇿 Priority",
     label: "New Zealand Priority",
     detail: "Skilled Migrant (SMC 6-Pt), AEWV & Green List Fast-Track PR",
   },
   {
-    value: "🇩🇪 #1",
+    value: "🇩🇪 Priority",
     label: "Germany Europe Priority",
     detail: "Chancenkarte Opportunity Card & EU Blue Card pathways",
   },
@@ -82,7 +82,7 @@ const priorityDestinations = [
     code: "nz",
     flagUrl: "https://flagcdn.com/w160/nz.webp",
     country: "New Zealand",
-    badge: "🇳🇿 #1 TOP FLAGSHIP PRIORITY",
+    badge: "Top Priority Destination",
     highlight: true,
     capital: "Wellington & Auckland",
     currency: "NZD ($)",
@@ -103,7 +103,7 @@ const priorityDestinations = [
     code: "de",
     flagUrl: "https://flagcdn.com/w160/de.webp",
     country: "Germany",
-    badge: "🇩🇪 #1 TOP EUROPEAN PRIORITY",
+    badge: "Priority European Corridor",
     highlight: true,
     capital: "Berlin, Frankfurt & Munich",
     currency: "EUR (€)",
