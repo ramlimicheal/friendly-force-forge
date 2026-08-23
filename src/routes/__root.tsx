@@ -1,9 +1,10 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
-  useRouter,
+  useRouter, useLocation,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -193,14 +194,33 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const location = useLocation();
+
+  // Smooth scroll to top on page transition
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <ScrollProgressBar />
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
-        <main className="flex-1">
-          <Outlet />
+        <main className="flex-1 overflow-x-hidden">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{
+                duration: 0.45,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
         </main>
         <SiteFooter />
       </div>

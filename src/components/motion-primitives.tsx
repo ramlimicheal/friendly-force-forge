@@ -46,7 +46,7 @@ export function FadeIn({
   children,
   direction = "up",
   delay = 0,
-  duration = 0.5,
+  duration = 0.6,
   distance = 24,
   once = true,
   className,
@@ -77,7 +77,7 @@ export function FadeIn({
       transition={{
         duration,
         delay,
-        ease: [0.21, 0.47, 0.32, 0.98],
+        ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
       {...props}
@@ -165,7 +165,7 @@ export function StaggerItem({
           y: 0,
           transition: {
             duration,
-            ease: [0.21, 0.47, 0.32, 0.98],
+            ease: [0.22, 1, 0.36, 1],
           },
         },
       }}
