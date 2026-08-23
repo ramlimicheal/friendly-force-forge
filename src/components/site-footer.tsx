@@ -134,6 +134,19 @@ export function SiteFooter() {
 
         <div className="border-t border-white/10 px-8 py-6 text-xs text-white/60 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} Damoder Immigration Services. All rights reserved.</p>
+
+          <div className="flex items-center gap-1.5 text-white/70">
+            <span>Powered by</span>
+            <a
+              href="https://theao.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white hover:text-ember transition-colors underline underline-offset-4 decoration-white/30 hover:decoration-ember"
+            >
+              The AO
+            </a>
+          </div>
+
           <div className="flex items-center gap-4">
             <Link to="/about-us" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span>·</span>
