@@ -15,13 +15,12 @@ import {
   Sparkles,
   Stethoscope,
   HardHat,
-  Cpu,
-  GraduationCap,
-  Landmark,
-  Globe2,
-  BookOpen,
-  UserCheck,
-  Compass,
+  UtensilsCrossed,
+  Truck,
+  Flame,
+  Zap,
+  Building2,
+  HelpCircle,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -41,24 +40,24 @@ import {
 export const Route = createFileRoute("/candidate-portal")({
   head: () => ({
     meta: [
-      { title: "Candidate Career & Visa Portal | Damoder Immigration Services" },
+      { title: "Candidate Career Portal | Live Overseas Job Vacancies & Registration" },
       {
         name: "description",
         content:
-          "Apply for PR, Study, and Skilled Work Visas in New Zealand, Germany, Canada, Australia, UK & Europe with Damoder Immigration Services (Hyderabad). 100% free eligibility check.",
+          "Browse live overseas job vacancies for Poland, Germany, Saudi Arabia, UAE, and Qatar. 100% free profile evaluation, zero cash fee guarantee, MEA registered.",
       },
-      { property: "og:title", content: "Candidate Career & Visa Portal | Damoder Immigration" },
+      { property: "og:title", content: "Candidate Career Portal | Damoder Immigration Services" },
       {
         property: "og:description",
         content:
-          "Dedicated visa consultants, IELTS inputs, transparent points scoring, and verified overseas job opportunities.",
+          "Verified overseas job mandates, transparent salaries, direct employer sponsorship, and safe recruitment under MEA regulations.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/candidate-portal" },
+      { property: "og:url", content: "https://dhamodaranimmigration.com/candidate-portal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/candidate-portal" },
+      { rel: "canonical", href: "https://dhamodaranimmigration.com/candidate-portal" },
     ],
     scripts: [
       {
@@ -66,14 +65,14 @@ export const Route = createFileRoute("/candidate-portal")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Damoder Immigration Candidate & Visa Portal",
-          "url": "https://damoderimmigration.com/candidate-portal",
-          "description": "Comprehensive visa intake and eligibility evaluation portal for Indian candidates targeting New Zealand, Germany, Canada, Australia, UK, and Europe.",
+          "name": "Verified Overseas Job Vacancies",
+          "url": "https://dhamodaranimmigration.com/candidate-portal",
+          "description": "Live verified employer job vacancies in Europe, Gulf GCC, and North America for Indian professionals and craftsmen.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://damoderimmigration.com" },
-              { "@type": "ListItem", "position": 2, "name": "Candidate Portal", "item": "https://damoderimmigration.com/candidate-portal" }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dhamodaranimmigration.com" },
+              { "@type": "ListItem", "position": 2, "name": "Candidate Portal", "item": "https://dhamodaranimmigration.com/candidate-portal" }
             ]
           }
         })
@@ -86,127 +85,209 @@ export const Route = createFileRoute("/candidate-portal")({
 const candidateMetrics = [
   {
     value: "100%",
-    label: "Free Eligibility Check",
-    detail: "Accurate points evaluation & pathway recommendations",
+    label: "Free Profile Assessment",
+    detail: "Zero registration fees or hidden evaluation charges",
   },
   {
-    value: "🇳🇿 #1",
-    label: "New Zealand Priority",
-    detail: "Green List, SMC 6-Point PR & Accredited Employer Visas",
+    value: "18,000+",
+    label: "Workers Deployed Legally",
+    detail: "Operating under MEA Lic. B-0824/TN/PER/1000+/5/9821/2021",
   },
   {
-    value: "🇩🇪 #1",
-    label: "Germany Opportunities",
-    detail: "Chancenkarte Opportunity Card & EU Blue Card coaching",
+    value: "Direct",
+    label: "Employer Sponsorship",
+    detail: "Written contracts defining salary, overtime & accommodations",
   },
   {
-    value: "7 Pillars",
-    label: "Client Assurance",
-    detail: "Dedicated consultant, IELTS coaching & document filing",
+    value: "Zero",
+    label: "Cash Transactions",
+    detail: "Strict anti-fraud policy — all official receipts provided",
   },
 ];
 
-const migrationPrograms = [
+const vacancies = [
   {
-    title: "New Zealand Skilled Migrant & Green List",
-    dest: "🇳🇿 New Zealand",
-    badge: "Top Priority",
-    desc: "Direct PR pathways for IT professionals, certified engineers, healthcare workers, and construction managers under the 6-point SMC system and Green List Tier 1/2.",
-    salary: "NZD $75,000 – $135,000 / year (₹38L – ₹68L)",
-    criteria: ["Bachelors / Masters Degree", "Relevant 3+ Years Work Experience", "IELTS General 6.5+ Band", "Job Offer / SMC Point Match"],
-    highlight: true,
+    id: "v1",
+    title: "6G SMAW / TIG Pipe Welder",
+    country: "Saudi Arabia (KSA)",
+    region: "Gulf",
+    salary: "SAR 3,500 – 4,500 / month",
+    inr: "₹78,000 – ₹1,00,000 INR",
+    exp: "4+ years industrial EPC experience",
+    tag: "Aramco Approved Project",
+    benefits: ["Free Accommodation & Food", "Overtime Paid 1.5x", "Free Medical & Air Ticket"],
+    sector: "Oil, Gas & Energy",
   },
   {
-    title: "Germany Opportunity Card (Chancenkarte)",
-    dest: "🇩🇪 Germany",
-    badge: "Europe Priority",
-    desc: "Points-based jobseeker permit enabling qualified Indian graduates and technicians to enter Germany for up to 1 year to secure employment.",
-    salary: "EUR €48,000 – €85,000 / year (₹43L – ₹76L)",
-    criteria: ["Recognized Degree / Diploma", "Points Matrix: Age, Experience, Language", "Basic English or A1/B1 German", "Proof of Living Funds (Blocked Account)"],
-    highlight: true,
+    id: "v2",
+    title: "Registered Staff Nurse (ICU / General)",
+    country: "Germany",
+    region: "Europe",
+    salary: "EUR 2,800 – 3,400 / month",
+    inr: "₹2,50,000 – ₹3,05,000 INR",
+    exp: "B.Sc Nursing + 2 yrs exp (B1/B2 German track)",
+    tag: "EU Blue Card Route",
+    benefits: ["Hospital Sponsorship", "Relocation Allowance", "Path to EU Permanent Residency"],
+    sector: "Healthcare & Hospitals",
   },
   {
-    title: "Canada Express Entry & Provincial PNP",
-    dest: "🇨🇦 Canada",
-    badge: "Permanent Residency",
-    desc: "Federal Skilled Worker program and targeted provincial nominations across Ontario, British Columbia, and Alberta with full family permanent residency.",
-    salary: "CAD $70,000 – $120,000 / year (₹42L – ₹73L)",
-    criteria: ["ECA Credential Evaluation (WES)", "CLB 7+ / IELTS General Band", "NOC TEER 0, 1, 2, 3 Experience", "Comprehensive CRS Score Optimization"],
+    id: "v3",
+    title: "Structural Steel Fabricator / Fitter",
+    country: "Poland",
+    region: "Europe",
+    salary: "PLN 5,500 – 6,800 / month",
+    inr: "₹1,15,000 – ₹1,42,000 INR",
+    exp: "3+ years fabrication experience",
+    tag: "Type-A Work Permit",
+    benefits: ["Furnished Company Housing", "Social Security & Insurance", "Renewable National Permit"],
+    sector: "Manufacturing & Heavy Engineering",
   },
   {
-    title: "Australia General Skilled Migration (GSM)",
-    dest: "🇦🇺 Australia",
-    badge: "Subclass 189/190",
-    desc: "Independent and State-Nominated PR visas offering full Medicare healthcare, high wage scales, and citizenship pathways.",
-    salary: "AUD $80,000 – $140,000 / year (₹44L – ₹77L)",
-    criteria: ["Positive Skills Assessment (ACS / EA / VETASSESS)", "65+ Points on Points Test", "Competent English (IELTS / PTE)", "State Nomination EOI Filing"],
+    id: "v4",
+    title: "Hotel Chef de Partie (Continental / Asian)",
+    country: "Malta",
+    region: "Europe",
+    salary: "EUR 1,500 – 1,850 / month",
+    inr: "₹1,35,000 – ₹1,65,000 INR",
+    exp: "3+ years in 4/5 star hotel or resort",
+    tag: "Single Work Permit",
+    benefits: ["Duty Meals Provided", "Yearly Paid Leave & Return Flight", "Schengen Mobility"],
+    sector: "Hospitality & Resorts",
   },
   {
-    title: "Study in New Zealand, UK & Europe",
-    dest: "🎓 Global Universities",
-    badge: "Study-to-PR",
-    desc: "Premier university admissions with partial scholarships, IELTS coaching, education loan sanctioning, and 2-3 years post-study work visas.",
-    salary: "Post-Study Careers: ₹35L – ₹60L / year",
-    criteria: ["Academic Transcripts (55%+ GPA)", "IELTS / PTE Academic Score", "Statement of Purpose (SOP)", "Financial Proof & Loan Sanction"],
+    id: "v5",
+    title: "Heavy Trailer Driver (Long Haul)",
+    country: "United Arab Emirates (UAE)",
+    region: "Gulf",
+    salary: "AED 2,800 – 3,600 / month",
+    inr: "₹63,000 – ₹81,000 INR",
+    exp: "Valid GCC Heavy Driving License",
+    tag: "MOHRE Approved",
+    benefits: ["Company Housing & Medical", "Trip Allowance Bonus", "2-Year Renewable Contract"],
+    sector: "Logistics & Transport",
   },
   {
-    title: "UK Skilled Worker & Health Care Visa",
-    dest: "🇬🇧 United Kingdom",
-    badge: "Direct Sponsorship",
-    desc: "Fast-track sponsorship for Registered Nurses, IT architects, and corporate professionals with a direct 5-year pathway to Indefinite Leave to Remain (ILR).",
-    salary: "GBP £32,000 – £65,000 / year (₹34L – ₹69L)",
-    criteria: ["Certificate of Sponsorship (CoS)", "IELTS UKVI / OET Score", "NMC Registration for Nurses", "Tuberculosis & PCC Clearance"],
+    id: "v6",
+    title: "Industrial MEP Electrician",
+    country: "Qatar",
+    region: "Gulf",
+    salary: "QAR 2,400 – 3,200 / month",
+    inr: "₹55,000 – ₹73,000 INR",
+    exp: "ITI / Diploma + 3 yrs building projects",
+    tag: "Infrastructure Mandate",
+    benefits: ["Free Bachelor Accommodation", "Free Food / Allowance", "End of Service Gratuity"],
+    sector: "Construction & MEP",
+  },
+  {
+    id: "v7",
+    title: "Forklift & Reach Truck Operator",
+    country: "Croatia",
+    region: "Europe",
+    salary: "EUR 1,200 – 1,500 / month",
+    inr: "₹1,08,000 – ₹1,35,000 INR",
+    exp: "2+ years logistics warehouse experience",
+    tag: "EU Stay & Work Permit",
+    benefits: ["Company Accommodation", "Subsidized Meals", "Overtime Available"],
+    sector: "Warehousing & Supply Chain",
+  },
+  {
+    id: "v8",
+    title: "Shuttering Carpenter & Steel Fixer",
+    country: "Kuwait",
+    region: "Gulf",
+    salary: "KWD 180 – 230 / month",
+    inr: "₹49,000 – ₹62,000 INR",
+    exp: "3+ years construction experience",
+    tag: "Bulk Intake",
+    benefits: ["Camp Accommodation & Mess", "Site Transport Provided", "Overtime Paid"],
+    sector: "Civil Infrastructure",
   },
 ];
 
-const sevenPillars = [
-  { num: "01", title: "Dedicated Consultant", desc: "One-on-one experienced visa advisor guiding your complete immigration roadmap." },
-  { num: "02", title: "Visa-Specific Counseling", desc: "Tailored advice on requirements, scoring thresholds, and realistic timelines." },
-  { num: "03", title: "Relevant Eligibility Check", desc: "Thorough pre-assessment to ensure you qualify before committing time and funds." },
-  { num: "04", title: "Documentation Filing", desc: "Complete dossier compilation, verification, and timely consular submission." },
-  { num: "05", title: "IELTS Inputs & Coaching", desc: "Practice materials and exam strategies to achieve top scores and maximize PR points." },
-  { num: "06", title: "Process Transparency", desc: "Real-time tracking of every move from profile assessment to final visa grant." },
-  { num: "07", title: "Job-Related Tips & Updates", desc: "Current market trends and job search advice to transition smoothly into your dream country." },
+const candidateSteps = [
+  {
+    num: "01",
+    title: "Online Profile & Document Review",
+    desc: "Submit your basic details, passport copy, and resume. Our country desk evaluates your qualifications against open employer demands at zero cost.",
+  },
+  {
+    num: "02",
+    title: "Practical Trade Assessment",
+    desc: "Demonstrate your craftsmanship at our partner technical workshops or complete a video interview with the foreign employer's selection board.",
+  },
+  {
+    num: "03",
+    title: "Offer Letter & Contract Stamping",
+    desc: "Receive your formal written employment contract in dual languages with clearly defined wages, working hours, overtime rates, and housing terms.",
+  },
+  {
+    num: "04",
+    title: "GAMCA Medicals & Visa Stamping",
+    desc: "Complete your medical screening at GAMCA/Wafid accredited diagnostic centers and police clearance. We handle all embassy and MEA eMigrate approvals.",
+  },
+  {
+    num: "05",
+    title: "Flight Deployment & Touchdown Care",
+    desc: "Attend our pre-departure cultural and safety orientation in Hyderabad, receive your flight ticket, and get received by your employer's HR team abroad.",
+  },
+];
+
+const safetyPillars = [
+  {
+    icon: ShieldCheck,
+    title: "Beware of Unlicensed Sub-Agents",
+    desc: "Damoder Immigration Services operates strictly from our registered headquarters in Hyderabad. We have NOT authorized any roaming middlemen, WhatsApp brokers, or village agents to collect cash.",
+  },
+  {
+    icon: FileText,
+    title: "Inspect Your Written Contract",
+    desc: "Never travel on a tourist visa for employment. Every legal job through Damoder comes with a verified work visa and an official MEA eMigrate employment agreement.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Grievance & 24/7 Helpline",
+    desc: "If any individual demands unauthorized cash payments claiming to represent us, report immediately to our Statutory Grievance Desk at complaints@dhamodaranimmigration.com.",
+  },
 ];
 
 function CandidatePage() {
   const [submitting, setSubmitting] = useState(false);
+  const [selectedTrade, setSelectedTrade] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast.success("Profile submitted successfully! A dedicated visa consultant from Damoder Immigration Services (Hyderabad) will contact you within 24 hours.");
-      (e.target as HTMLFormElement).reset();
-    }, 1200);
+  const handleApplyClick = (tradeTitle: string) => {
+    setSelectedTrade(tradeTitle);
+    const element = document.getElementById("register");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <>
+      {/* 1. Standard Top Banner with High-Visibility PixelBlast */}
       <PageHero
-        eyebrow="Candidate Career & Visa Portal · Damoder Immigration Services (Hyderabad)"
-        title="Start Your Migration Journey to New Zealand, Germany, Canada & Australia"
-        subtitle="Dedicated visa consultants, transparent points scoring, IELTS language inputs, and complete documentation support to study, work, or settle abroad."
+        eyebrow="For Indian Job Seekers & Craftsmen · Direct Employer Mandates"
+        title="Authentic Overseas Careers with Verified Employer Sponsorship"
+        subtitle="Zero illegal middleman charges, 100% written contracts, and direct deployment to licensed companies across Schengen Europe, the Gulf GCC, and the United States."
       >
         <div className="flex flex-wrap items-center gap-3">
           <a
-            href="#eligibility-form"
+            href="#vacancies"
             className="inline-flex items-center gap-2 rounded-lg bg-ember px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
           >
-            Check Your Free Eligibility
+            View Live Vacancies
             <ArrowRight className="size-4" />
           </a>
           <a
-            href="#programs"
+            href="#register"
             className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
           >
-            Explore Migration Programs
+            Register Profile
           </a>
         </div>
       </PageHero>
 
-      {/* Metrics Ribbon */}
+      {/* 2. Candidate Trust Metrics Ribbon */}
       <section className="border-b border-border bg-paper py-8 sm:py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
@@ -223,61 +304,62 @@ function CandidatePage() {
         </div>
       </section>
 
-      {/* Flagship Migration Programs */}
+      {/* 3. Live Verified Vacancies Grid */}
       <Section
-        id="programs"
-        eyebrow="Migration & Job Pathways"
-        title="Flagship PR, Study & Work Programs"
-        intro="Explore verified immigration streams across New Zealand, Germany, Canada, Australia, and the UK with transparent salary expectations and eligibility criteria."
+        id="vacancies"
+        eyebrow="Active Mandates"
+        title="Live employer-sponsored job openings"
+        intro="Positions are updated in real-time as foreign employer demand letters are validated on the MEA eMigrate portal. Salaries are tax-free or net take-home."
       >
-        <StaggerContainer staggerDelay={0.08} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {migrationPrograms.map((p) => (
-            <StaggerItem key={p.title}>
-              <MotionCard className={`rounded-lg border bg-card p-7 h-full flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow ${
-                p.highlight ? "border-ember/40 ring-1 ring-ember/20" : "border-border"
-              }`}>
+        <StaggerContainer staggerDelay={0.06} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {vacancies.map((v) => (
+            <StaggerItem key={v.id}>
+              <MotionCard className="rounded-lg border border-border bg-card p-6 h-full flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
                 <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-ember">{p.dest}</span>
-                    <span className={`rounded-md px-2.5 py-0.5 text-[11px] font-semibold ${
-                      p.highlight ? "bg-ember/15 text-ember" : "bg-brand/10 text-brand"
-                    }`}>
-                      {p.badge}
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="rounded-md border border-brand/20 bg-brand/5 px-2.5 py-0.5 text-[11px] font-semibold text-brand">
+                      {v.tag}
                     </span>
+                    <span className="text-xs font-semibold text-muted-foreground">{v.region}</span>
                   </div>
 
-                  <h3 className="mt-3 font-display text-lg font-bold text-brand-deep leading-snug">
-                    {p.title}
+                  <h3 className="mt-4 font-display text-base font-bold text-brand-deep leading-snug">
+                    {v.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{p.desc}</p>
 
-                  <div className="mt-4 rounded-md bg-paper p-2.5 border border-border/80 text-xs font-semibold text-brand">
-                    💰 {p.salary}
+                  <p className="mt-1 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+                    <MapPin className="size-3.5 text-brand" />
+                    <span>{v.country}</span>
+                  </p>
+
+                  <div className="mt-4 rounded-md bg-paper p-3 border border-border/60">
+                    <div className="text-xs font-medium text-muted-foreground">Offered Salary:</div>
+                    <div className="font-display text-sm font-bold text-brand-deep">{v.salary}</div>
+                    <div className="text-[11px] font-semibold text-ember mt-0.5">≈ {v.inr}</div>
                   </div>
 
-                  <div className="mt-5 border-t border-border pt-4">
-                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                      Core Prerequisites
-                    </p>
-                    <ul className="mt-2 space-y-1.5 text-xs text-foreground">
-                      {p.criteria.map((c) => (
-                        <li key={c} className="flex items-center gap-1.5">
-                          <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
-                          <span>{c}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="mt-3 text-xs text-muted-foreground">
+                    <span className="font-semibold text-foreground">Requirement: </span>
+                    {v.exp}
                   </div>
+
+                  <ul className="mt-3 space-y-1 text-[11px] text-muted-foreground border-t border-border/60 pt-2.5">
+                    {v.benefits.map((b) => (
+                      <li key={b} className="flex items-center gap-1.5">
+                        <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-border/70">
-                  <a
-                    href="#eligibility-form"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand hover:text-ember transition-colors"
+                <div className="mt-5 pt-3 border-t border-border">
+                  <Button
+                    onClick={() => handleApplyClick(v.title)}
+                    className="w-full rounded-lg text-xs font-semibold bg-brand hover:bg-brand-deep text-white"
                   >
-                    <span>Apply for this Pathway</span>
-                    <ArrowRight className="size-3.5" />
-                  </a>
+                    Apply for this Trade
+                  </Button>
                 </div>
               </MotionCard>
             </StaggerItem>
@@ -285,124 +367,217 @@ function CandidatePage() {
         </StaggerContainer>
       </Section>
 
-      {/* 7 Pillars of Client Care */}
+      {/* 4. Candidate 5-Stage Deployment Journey */}
       <Section
         tone="muted"
-        eyebrow="Our Commitment"
-        title="The 7 Pillars of Seamless Migration at Damoder Immigration"
-        intro="Why clients trust Damoder Immigration Services Hyderabad as their lifelong migration partner."
+        eyebrow="Transparent Roadmap"
+        title="Your 5-Stage journey from application to international flight"
+        intro="We guide you step-by-step through skill testing, medicals, visa stamping, and pre-departure briefings with zero hidden surprises."
       >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {sevenPillars.map((p) => (
-            <div key={p.num} className="rounded-lg border border-border bg-card p-5 shadow-xs">
-              <span className="font-display text-xl font-bold text-ember">{p.num}</span>
-              <h4 className="mt-2 font-display text-sm font-bold text-brand-deep">{p.title}</h4>
-              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{p.desc}</p>
-            </div>
+        <div className="grid gap-5 md:grid-cols-5">
+          {candidateSteps.map((step, idx) => (
+            <MotionCard key={step.num} className="rounded-lg border border-border bg-card p-6 h-full shadow-xs flex flex-col justify-between">
+              <div>
+                <span className="font-display text-2xl font-bold text-ember">{step.num}</span>
+                <h4 className="mt-3 font-display text-base font-bold text-brand-deep leading-snug">
+                  {step.title}
+                </h4>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  {step.desc}
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-border/60 text-[11px] font-medium text-muted-foreground">
+                Step {idx + 1} of 5
+              </div>
+            </MotionCard>
           ))}
         </div>
       </Section>
 
-      {/* Intake & Eligibility Evaluation Form */}
+      {/* 5. Worker Welfare & Anti-Fraud Safety Charter */}
       <Section
-        id="eligibility-form"
-        eyebrow="Direct Application"
-        title="Submit Your Profile for Free Eligibility Assessment"
-        intro="Fill out the form below. A dedicated visa consultant from our Hyderabad headquarters will evaluate your credentials and contact you within 24 hours."
+        eyebrow="Candidate Protection"
+        title="Our Anti-Fraud & Worker Welfare Charter"
+        intro="Damoder Immigration Services is committed to 100% legal, ethical recruitment under the Emigration Act 1983. Protect yourself from fraudulent travel agents."
       >
-        <div className="mx-auto max-w-3xl rounded-xl border border-border bg-card p-8 shadow-sm">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="cand-name">Full Name *</Label>
-                <Input id="cand-name" required placeholder="e.g. Ramesh Kumar" className="rounded-lg" />
+        <div className="grid gap-6 md:grid-cols-3">
+          {safetyPillars.map((p) => (
+            <MotionCard key={p.title} className="rounded-lg border border-border bg-card p-7 shadow-xs">
+              <div className="flex size-12 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600">
+                <p.icon className="size-6" />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="cand-phone">WhatsApp / Mobile Number *</Label>
-                <Input id="cand-phone" type="tel" required placeholder="+91 98765 43210" className="rounded-lg" />
-              </div>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="cand-email">Email Address *</Label>
-                <Input id="cand-email" type="email" required placeholder="ramesh@example.com" className="rounded-lg" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="cand-city">Current City &amp; State *</Label>
-                <Input id="cand-city" required placeholder="e.g. Hyderabad, Telangana" className="rounded-lg" />
-              </div>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="cand-dest">Target Destination Country *</Label>
-                <select
-                  id="cand-dest"
-                  required
-                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
-                >
-                  <option value="New Zealand">🇳🇿 New Zealand (Top Priority)</option>
-                  <option value="Germany">🇩🇪 Germany (Opportunity Card / Blue Card)</option>
-                  <option value="Canada">🇨🇦 Canada (Express Entry / PNP / Study)</option>
-                  <option value="Australia">🇦🇺 Australia (Subclass 189/190/491)</option>
-                  <option value="United Kingdom">🇬🇧 United Kingdom (Skilled Worker / Student)</option>
-                  <option value="Europe / Poland">🇪🇺 Schengen Europe / Poland / Malta</option>
-                  <option value="United States">🇺🇸 United States (EB-3 / H-1B)</option>
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="cand-visa-type">Visa Category *</Label>
-                <select
-                  id="cand-visa-type"
-                  required
-                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
-                >
-                  <option value="PR Visa">PR Visa (Permanent Residency)</option>
-                  <option value="Study Visa">Study Visa (University Admissions)</option>
-                  <option value="Work Permit">Skilled Work Permit &amp; Job Placement</option>
-                  <option value="Visitor Visa">Visitor &amp; Tourist Visa</option>
-                  <option value="Business / Investor">Business &amp; Investor Visa</option>
-                  <option value="Dependent / Spouse">Dependent &amp; Spouse Visa</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="cand-experience">Highest Education &amp; Total Years of Experience</Label>
-              <Input
-                id="cand-experience"
-                placeholder="e.g. B.Tech in Mechanical Engineering + 5 Years in HVAC / IT"
-                className="rounded-lg"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="cand-message">Specific Queries or Background Notes</Label>
-              <Textarea
-                id="cand-message"
-                rows={4}
-                placeholder="Mention any prior IELTS score, current occupation, or specific questions..."
-                className="rounded-lg"
-              />
-            </div>
-
-            <div className="rounded-lg bg-paper p-4 text-xs text-muted-foreground border border-border">
-              🔒 <strong>Confidentiality Guaranteed:</strong> Your profile data is used strictly for eligibility scoring by Damoder Immigration Services Hyderabad. We never share your data with unauthorized third parties.
-            </div>
-
-            <Button
-              type="submit"
-              disabled={submitting}
-              className="w-full bg-ember hover:bg-ember/90 text-white font-semibold py-3 rounded-lg shadow-sm"
-            >
-              {submitting ? "Evaluating Profile..." : "Submit for Free Visa Assessment"}
-            </Button>
-          </form>
+              <h3 className="mt-5 font-display text-lg font-bold tracking-tight text-brand-deep">
+                {p.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {p.desc}
+              </p>
+            </MotionCard>
+          ))}
         </div>
       </Section>
 
+      {/* 6. Direct Candidate Registration & Skill Submission Terminal */}
+      <Section
+        id="register"
+        tone="muted"
+        eyebrow="Free Registration"
+        title="Submit your profile for overseas placement"
+        intro="Register once in our verified candidate pool. When a matching employer demand opens, our Hyderabad desk contacts you directly with written terms."
+      >
+        <FadeIn direction="up">
+          <div className="mx-auto max-w-4xl rounded-lg border border-border bg-card p-6 sm:p-10 shadow-sm">
+            <form
+              className="grid gap-6 sm:grid-cols-2"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                setTimeout(() => {
+                  setSubmitting(false);
+                  (e.target as HTMLFormElement).reset();
+                  setSelectedTrade("");
+                  toast.success("Profile registered successfully", {
+                    description: "Our recruitment desk will review your details and contact you for upcoming client interview drives.",
+                  });
+                }, 600);
+              }}
+            >
+              <div className="space-y-2">
+                <Label htmlFor="name" className="font-semibold text-brand-deep">
+                  Full Name (Exactly as in Passport) *
+                </Label>
+                <Input id="name" name="name" placeholder="e.g. Ramesh Kumar Soundararajan" required />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="phone" className="font-semibold text-brand-deep">
+                  Mobile &amp; WhatsApp Number *
+                </Label>
+                <Input id="phone" name="phone" placeholder="+91 98765 43210" required />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email" className="font-semibold text-brand-deep">
+                  Email Address *
+                </Label>
+                <Input id="email" name="email" type="email" placeholder="ramesh@gmail.com" required />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="passport" className="font-semibold text-brand-deep">
+                  Passport Status *
+                </Label>
+                <select
+                  id="passport"
+                  name="passport"
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  required
+                >
+                  <option value="">Select passport status...</option>
+                  <option value="ECNR (Emigration Check Not Required)">ECNR (Emigration Check Not Required)</option>
+                  <option value="ECR (Emigration Check Required)">ECR (Emigration Check Required)</option>
+                  <option value="Applied / Renewal In Progress">Applied / Renewal In Progress</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="trade" className="font-semibold text-brand-deep">
+                  Trade / Skill Category *
+                </Label>
+                <Input
+                  id="trade"
+                  name="trade"
+                  defaultValue={selectedTrade}
+                  placeholder="e.g. 6G Welder / ICU Nurse / Electrician / Chef"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="expYears" className="font-semibold text-brand-deep">
+                  Total Work Experience *
+                </Label>
+                <select
+                  id="expYears"
+                  name="expYears"
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  required
+                >
+                  <option value="">Select experience level...</option>
+                  <option value="Fresher (ITI / Certified Course)">Fresher (ITI / Certified Course)</option>
+                  <option value="1 – 3 Years Experience">1 – 3 Years Experience</option>
+                  <option value="3 – 6 Years Experience">3 – 6 Years Experience</option>
+                  <option value="6 – 10 Years Experience">6 – 10 Years Experience</option>
+                  <option value="10+ Years Senior Specialist">10+ Years Senior Specialist</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="targetRegion" className="font-semibold text-brand-deep">
+                  Preferred Destination Region *
+                </Label>
+                <select
+                  id="targetRegion"
+                  name="targetRegion"
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  required
+                >
+                  <option value="">Select region...</option>
+                  <option value="Gulf / GCC Countries (Saudi, UAE, Qatar, Kuwait, Oman, Bahrain)">Gulf / GCC Countries (Saudi, UAE, Qatar, Kuwait, Oman, Bahrain)</option>
+                  <option value="Schengen Europe (Poland, Germany, Malta, Croatia, Romania)">Schengen Europe (Poland, Germany, Malta, Croatia, Romania)</option>
+                  <option value="United States (EB-3, H-1B, J-1)">United States (EB-3, H-1B, J-1)</option>
+                  <option value="Any Verified Country Mandate">Any Verified Country Mandate</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="gccExp" className="font-semibold text-brand-deep">
+                  Prior Overseas Experience
+                </Label>
+                <select
+                  id="gccExp"
+                  name="gccExp"
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="None (First-time overseas applicant)">None (First-time overseas applicant)</option>
+                  <option value="Ex-Gulf (Saudi Arabia, UAE, Qatar, etc.)">Ex-Gulf (Saudi Arabia, UAE, Qatar, etc.)</option>
+                  <option value="Ex-Europe (Poland, Malta, etc.)">Ex-Europe (Poland, Malta, etc.)</option>
+                  <option value="Ex-Southeast Asia (Singapore, Malaysia)">Ex-Southeast Asia (Singapore, Malaysia)</option>
+                </select>
+              </div>
+
+              <div className="space-y-2 sm:col-span-2">
+                <Label htmlFor="qualifications" className="font-semibold text-brand-deep">
+                  Educational Qualifications &amp; Technical Certifications
+                </Label>
+                <Textarea
+                  id="qualifications"
+                  name="qualifications"
+                  rows={3}
+                  placeholder="e.g. 10th / 12th Pass, ITI Welder Certification, AWS 6G Card, B.Sc Nursing, Valid Indian Heavy Driving License, etc."
+                />
+              </div>
+
+              <div className="sm:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <ShieldCheck className="size-4 text-emerald-600 shrink-0" />
+                  <span>100% Confidential. No registration fee is charged at any point.</span>
+                </div>
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={submitting}
+                  className="w-full sm:w-auto rounded-lg font-semibold bg-brand hover:bg-brand-deep text-white px-8"
+                >
+                  {submitting ? "Registering Profile..." : "Submit Profile for Free Assessment"}
+                </Button>
+              </div>
+            </form>
+          </div>
+        </FadeIn>
+      </Section>
+
+      {/* 7. Global CTA Banner */}
       <CtaBanner />
     </>
   );

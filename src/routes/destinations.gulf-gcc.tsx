@@ -33,13 +33,13 @@ export const Route = createFileRoute("/destinations/gulf-gcc")({
         content:
           "High-capacity manpower deployment to Saudi Arabia, UAE, Qatar, Kuwait, Oman, and Bahrain. GAMCA/Wafid medicals, eMigrate clearance, and Enjaz stamping.",
       },
-      { property: "og:title", content: "Gulf & GCC Manpower Recruitment | Damoder Immigration Services" },
+      { property: "og:title", content: "Gulf & GCC Manpower Recruitment | Dhamodaran Immigration" },
       {
         property: "og:description",
         content:
-          "Trade-tested workforce deployed across GCC nations with complete compliance and structured mobilization cycles.",
+          "Trade-tested Indian workforce deployed across 6 GCC nations with 100% MEA compliance and guaranteed 30-45 day mobilization cycles.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/destinations/gulf-gcc" },
+      { property: "og:url", content: "https://dhamodaranimmigration.com/destinations/gulf-gcc" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

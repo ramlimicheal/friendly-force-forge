@@ -21,10 +21,10 @@ function Brand() {
       </span>
       <span className="leading-tight">
         <span className="block font-display text-base sm:text-lg font-bold tracking-tight text-white">
-          Damoder Immigration
+          Dhamodaran Immigration
         </span>
         <span className="hidden text-[11px] uppercase tracking-[0.2em] text-white/75 sm:block font-semibold">
-          Services · Hyderabad
+          Overseas Manpower
         </span>
       </span>
     </Link>
@@ -64,16 +64,16 @@ export function SiteHeader() {
         <div className="hidden items-center justify-between gap-4 px-5 pb-2 text-xs sm:text-[13px] font-medium text-white/80 lg:flex">
           <span className="inline-flex items-center gap-1.5">
             <MapPin className="size-3.5 text-ember" />
-            HQ: Tukkuguda, Hyderabad | New Zealand, Germany, Canada, Australia &amp; UK
+            Head Office: India | Network: Europe, Gulf &amp; USA
           </span>
           <span className="inline-flex items-center gap-1.5">
             <ShieldCheck className="size-3.5 text-ember" />
-            100% Transparent Visa Processing &amp; Dedicated Consultants
+            Government Registered &amp; MEA / eMigrate Compliant
           </span>
           <span className="inline-flex items-center gap-4">
-            <a href={`tel:${company.phone}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
+            <a href={`tel:${company.employerPhone}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
               <Phone className="size-3.5 text-ember" />
-              {company.phone}
+              {company.employerPhone}
             </a>
             <a href={`mailto:${company.email}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
               <Mail className="size-3.5 text-ember" />
@@ -119,6 +119,7 @@ export function SiteHeader() {
                     </motion.span>
                   </button>
 
+                  {/* Smooth Framer Motion Dropdown Container */}
                   <AnimatePresence>
                     {openDropdown === item.label && (
                       <motion.div
@@ -150,11 +151,12 @@ export function SiteHeader() {
                                 hidden: { opacity: 0, x: -6 },
                                 show: { opacity: 1, x: 0 },
                               }}
+                              transition={{ duration: 0.18, ease: "easeOut" }}
                             >
                               <Link
                                 to={child.to}
                                 onClick={() => setOpenDropdown(null)}
-                                className="group/item flex flex-col rounded-md px-3.5 py-2.5 text-left transition-colors hover:bg-brand/5"
+                                className="group/item flex flex-col rounded-md px-3.5 py-2.5 transition-all duration-150 hover:bg-paper hover:translate-x-0.5"
                               >
                                 <span className="text-sm font-semibold text-brand-deep group-hover/item:text-ember transition-colors flex items-center justify-between">
                                   <span>{child.label}</span>
@@ -176,107 +178,111 @@ export function SiteHeader() {
               ) : (
                 <Link
                   key={item.label}
-                  to={item.to ?? "/"}
-                  className="text-sm sm:text-[15px] font-medium text-white/90 transition-colors hover:text-ember"
+                  to={item.to!}
                   activeProps={{ className: "text-ember font-semibold" }}
+                  className="whitespace-nowrap py-2 text-sm sm:text-[15px] font-medium text-white/90 transition-colors hover:text-ember"
                 >
                   {item.label}
                 </Link>
-              )
+              ),
             )}
+
+            {/* Single Action Button integrated inside navigation menu */}
+            <Link
+              to="/candidate-portal"
+              className="inline-flex items-center gap-2 rounded-lg bg-ember px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-ember/90 hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <span>Apply for Jobs</span>
+              <ArrowRight className="size-3.5" />
+            </Link>
           </nav>
 
-          <div className="flex items-center gap-3">
-            <Button
-              asChild
-              className="hidden bg-ember hover:bg-ember/90 text-white font-semibold shadow-xs rounded-lg px-4 py-2 text-sm sm:inline-flex"
-            >
-              <Link to="/contact-us">
-                Free Eligibility Check
-                <ArrowRight className="ml-1.5 size-4" />
-              </Link>
-            </Button>
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-xl text-white hover:bg-white/10 hover:text-white lg:hidden cursor-pointer"
+                aria-label="Open menu"
+              >
+                <Menu className="size-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[88vw] max-w-sm overflow-y-auto bg-brand-deep text-white border-white/10">
+              <SheetTitle className="flex items-center gap-3 px-2 pt-2 font-display text-white">
+                <span className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm">
+                  <img src={logoMark} alt="Logo" className="size-full object-contain" />
+                </span>
+                <span className="text-base font-bold text-white">Dhamodaran</span>
+              </SheetTitle>
 
-            <Sheet open={open} onOpenChange={setOpen}>
-              <SheetTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-lg border-white/20 bg-white/10 text-white hover:bg-white/20 hover:text-white lg:hidden"
-                  aria-label="Open navigation menu"
-                >
-                  <Menu className="size-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[320px] sm:w-[380px] bg-brand-deep text-white border-white/10 p-0 overflow-y-auto">
-                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-                <div className="flex flex-col h-full">
-                  <div className="p-6 border-b border-white/10">
-                    <Brand />
-                  </div>
-                  <nav className="flex-1 p-6 space-y-4">
-                    {navItems.map((item) => (
-                      <div key={item.label}>
-                        {item.children ? (
-                          <div className="space-y-2">
-                            <button
-                              type="button"
-                              onClick={() => toggleMobileCategory(item.label)}
-                              className="flex items-center justify-between w-full text-base font-semibold text-white/90 py-1"
-                            >
-                              <span>{item.label}</span>
-                              <ChevronDown
-                                className={cn(
-                                  "size-4 text-white/60 transition-transform",
-                                  mobileExpanded === item.label && "rotate-180 text-ember"
-                                )}
-                              />
-                            </button>
-                            <AnimatePresence>
-                              {mobileExpanded === item.label && (
-                                <motion.div
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: "auto" }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  className="pl-3 space-y-2 border-l-2 border-white/10 mt-2"
-                                >
-                                  {item.children.map((child) => (
-                                    <Link
-                                      key={child.label}
-                                      to={child.to}
-                                      onClick={() => setOpen(false)}
-                                      className="block py-1.5 text-sm text-white/70 hover:text-ember transition-colors"
-                                    >
-                                      {child.label}
-                                    </Link>
-                                  ))}
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
-                          </div>
-                        ) : (
-                          <Link
-                            to={item.to ?? "/"}
-                            onClick={() => setOpen(false)}
-                            className="block py-1 text-base font-semibold text-white/90 hover:text-ember transition-colors"
+              <nav className="mt-6 flex flex-col gap-2.5 p-2">
+                {navItems.map((item) =>
+                  item.children ? (
+                    <div key={item.label} className="rounded-xl border border-white/10 bg-white/5 overflow-hidden transition-colors">
+                      <button
+                        type="button"
+                        onClick={() => toggleMobileCategory(item.label)}
+                        className="flex w-full items-center justify-between p-3.5 text-left text-xs font-bold uppercase tracking-wider text-ember hover:bg-white/5 transition-colors cursor-pointer"
+                      >
+                        <span>{item.label}</span>
+                        <motion.span
+                          animate={{ rotate: mobileExpanded === item.label ? 180 : 0 }}
+                          transition={{ duration: 0.2, ease: "easeInOut" }}
+                        >
+                          <ChevronDown className="size-4 text-white/70" />
+                        </motion.span>
+                      </button>
+                      <AnimatePresence initial={false}>
+                        {mobileExpanded === item.label && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                            className="overflow-hidden"
                           >
-                            {item.label}
-                          </Link>
+                            <div className="flex flex-col gap-1 px-3 pb-3 pt-1 border-t border-white/5">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  to={child.to}
+                                  onClick={() => setOpen(false)}
+                                  className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-white transition-colors"
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
                         )}
-                      </div>
-                    ))}
-                  </nav>
-                  <div className="p-6 border-t border-white/10 bg-white/[0.02]">
-                    <Button asChild className="w-full bg-ember hover:bg-ember/90 text-white font-semibold">
-                      <Link to="/contact-us" onClick={() => setOpen(false)}>
-                        Book Visa Consultation
-                      </Link>
-                    </Button>
-                  </div>
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      to={item.to!}
+                      onClick={() => setOpen(false)}
+                      className="rounded-xl px-4 py-2.5 text-base font-medium text-white/90 hover:bg-white/10 hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ),
+                )}
+
+                <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-4">
+                  <Link
+                    to="/candidate-portal"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-center gap-2 rounded-xl bg-ember px-5 py-3 text-sm font-bold text-white shadow-md hover:bg-ember/90 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    <span>Apply for Jobs</span>
+                    <ArrowRight className="size-4" />
+                  </Link>
                 </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>

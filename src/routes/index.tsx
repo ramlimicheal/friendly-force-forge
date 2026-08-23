@@ -40,6 +40,15 @@ import {
 import { motion } from "framer-motion";
 
 import heroImage from "@/assets/hero-mobilization.jpg";
+import { AntiFraudVault } from "@/components/anti-fraud-vault";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { LogoMarquee } from "@/components/logo-marquee";
 import { DestinationsWhereWeDeploy } from "@/components/deployment-map";
 import { WhoWeAre } from "@/components/who-we-are";
 import { Section, CtaBanner, ChipLink } from "@/components/page-shell";
@@ -172,27 +181,65 @@ const counters = [
     suffix: " Flagship",
     label: "Core Destination Corridors",
     hint: "New Zealand, Germany, Canada, Australia, United Kingdom & Europe.",
-    tag: "Global Focus",
+    tag: "Global Reach",
     tagColor: "bg-[#1A2C53] text-white ring-white/20",
     icon: Globe2,
   },
   {
-    target: 99,
-    suffix: ".2%",
-    label: "Documentation Accuracy",
-    hint: "Zero-rejection pre-filing legal and regulatory compliance review.",
-    tag: "Precision",
-    tagColor: "bg-emerald-500/15 text-emerald-700 ring-emerald-500/30",
-    icon: FileCheck2,
+    target: 100,
+    suffix: "%",
+    label: "Process Transparency",
+    hint: "Direct milestone tracking with zero hidden charges or unlicensed agents.",
+    tag: "Direct Mandates",
+    tagColor: "bg-amber-400/15 text-amber-400 ring-amber-400/30",
+    icon: Building2,
   },
   {
-    target: 7,
-    suffix: " Pillars",
-    label: "Dedicated Client Promise",
-    hint: "Dedicated consultant, eligibility check, IELTS inputs & transparency.",
-    tag: "Client Care",
-    tagColor: "bg-brand/15 text-brand ring-brand/30",
+    target: 99,
+    suffix: ".2%",
+    label: "Visa & Legal Accuracy",
+    hint: "Thorough pre-vetting with full regulatory and consular compliance.",
+    tag: "Verified Desk",
+    tagColor: "bg-emerald-400/15 text-emerald-400 ring-emerald-400/30",
+    icon: ShieldCheck,
+  },
+];
+
+const sevenPillars = [
+  {
     icon: UserCheck,
+    title: "1. Dedicated Consultant",
+    body: "You’ll be assigned a dedicated visa consultant who is experienced in the complete immigration process of the country you choose to go to, be it for study, work, settlement, or tourism.",
+  },
+  {
+    icon: Compass,
+    title: "2. Visa-Specific Counseling",
+    body: "Immigration processes can be complex; our squad of visa experts counsels the right pathway, the requisites surrounding it, and the sequence of events for seamless migration.",
+  },
+  {
+    icon: Target,
+    title: "3. Relevant Eligibility Check",
+    body: "Qualifying for a particular visa is the first step. By leveraging our deep expertise at Damoder Immigration Services Hyderabad, we evaluate your profile against strict points matrices.",
+  },
+  {
+    icon: FileSignature,
+    title: "4. Documentation Filing",
+    body: "Extensive documentation is involved in any visa process. To lift the stress off your shoulders, we compile, streamline, and submit your documents on time without amiss.",
+  },
+  {
+    icon: BookOpen,
+    title: "5. IELTS Inputs & Language Prep",
+    body: "To help you score best with your language proficiency, we provide the right inputs, study materials, and suggestions to ace IELTS/PTE tests and boost your overall PR points.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "6. 100% Process Transparency",
+    body: "You have every right to know what is happening with your file. We are trusted as the best immigration consultants in Hyderabad for total transparency until the day of the grant.",
+  },
+  {
+    icon: Briefcase,
+    title: "7. Job-Related Tips & Market Updates",
+    body: "We offer all the suggestions, tips, and current job market updates for a smooth transition to your dream country and securing employment in your relevant skill field.",
   },
 ];
 
@@ -247,200 +294,272 @@ const coreVisas = [
   },
 ];
 
-const sevenPillars = [
+const industries = [
+  { icon: Cpu, label: "Information Technology (IT)" },
+  { icon: HardHat, label: "Engineering (Civil, Mech, Elec)" },
+  { icon: Globe2, label: "Marketing & Sales" },
+  { icon: Users, label: "Human Resources (HR)" },
+  { icon: Stethoscope, label: "Healthcare & Medical Specialists" },
+  { icon: Stethoscope, label: "Registered Nursing (B.Sc / GNM)" },
+  { icon: GraduationCap, label: "Teachers & Academic Faculty" },
+  { icon: Landmark, label: "Accountants & Financial Experts" },
+];
+
+const testimonials = [
   {
-    num: "01",
-    title: "Dedicated Consultant",
-    desc: "You’ll be assigned a dedicated visa consultant who is experienced in the complete immigration process of the country you choose to go to, be it for study, work, settlement, or tourism.",
-    icon: UserCheck,
+    quote:
+      "Damoder Immigration Services guided me through the New Zealand Green List straight-to-residence pathway. My resident visa was granted in 4 months with zero hassle!",
+    name: "Vikram Reddy",
+    org: "Software Architect, Auckland (NZ)",
   },
   {
-    num: "02",
-    title: "Visa-Specific Counseling",
-    desc: "Immigration processes can be complex; our squad of visa experts counsels the right pathway, the requisites surrounding it, and the sequence of events for seamless migration.",
-    icon: Compass,
+    quote:
+      "Their Germany desk helped me prepare my Chancenkarte application and B1 German coaching. The transparency from the Hyderabad team was exceptional.",
+    name: "Pooja Sharma",
+    org: "Electrical Engineer, Munich (Germany)",
   },
   {
-    num: "03",
-    title: "Relevant Eligibility Check",
-    desc: "Qualifying for a particular visa is the first step. By leveraging our deep expertise at Damoder Immigration Services Hyderabad, we evaluate your profile against strict points matrices.",
-    icon: Target,
-  },
-  {
-    num: "04",
-    title: "Documentation Filing",
-    desc: "Extensive documentation is involved in any visa process. To lift the stress off your shoulders, we compile, streamline, and submit your documents on time without amiss.",
-    icon: FileSignature,
-  },
-  {
-    num: "05",
-    title: "IELTS Inputs & Coaching",
-    desc: "To help you score best with your language proficiency, we provide the right inputs, study materials, and suggestions to ace IELTS/PTE tests and boost your overall PR points.",
-    icon: BookOpen,
-  },
-  {
-    num: "06",
-    title: "100% Process Transparency",
-    desc: "You have every right to know what is happening with your file. We are trusted as the best immigration consultants in Hyderabad for total transparency until the day of the grant.",
-    icon: ShieldCheck,
-  },
-  {
-    num: "07",
-    title: "Job-Related Tips & Market Updates",
-    desc: "We offer all the suggestions, tips, and current job market updates for a smooth transition to your dream country and securing employment in your relevant skill field.",
-    icon: Briefcase,
+    quote:
+      "From IELTS inputs to educational loan sanctioning and Canadian Express Entry filing, every step was seamless. Damoder is truly the best immigration consultancy in Hyderabad.",
+    name: "Karthik Varma",
+    org: "Financial Analyst, Toronto (Canada)",
   },
 ];
 
-const jobSectors = [
-  { title: "IT & Software Engineering", roles: "Cloud Architects, DevOps, Full-Stack Developers, Data Engineers", icon: Cpu },
-  { title: "Engineering (Civil, Mech, Elec)", roles: "Structural Engineers, MEP Coordinators, Project Managers, Automation", icon: HardHat },
-  { title: "Healthcare & Medical", roles: "General Physicians, Medical Officers, Radiologists, Lab Technicians", icon: Stethoscope },
-  { title: "Registered Nursing", roles: "ICU Nurses, Critical Care, Geriatric Care, Theatre Nurses (B.Sc / GNM)", icon: Stethoscope },
-  { title: "Marketing & Sales", roles: "Digital Marketing Specialists, B2B Account Executives, Growth Leads", icon: Globe2 },
-  { title: "Human Resources (HR)", roles: "Talent Acquisition Managers, HRBP, Global Mobility Specialists", icon: Users },
-  { title: "Teachers & Academic Faculty", roles: "STEM Educators, Primary & Secondary Teachers, University Lecturers", icon: GraduationCap },
-  { title: "Accountants & Finance", roles: "CPA/ACCA Qualified Accountants, Financial Analysts, Tax Auditors", icon: Landmark },
-];
-
-const conciergeServices = [
-  { title: "Notary Service", desc: "Official notary public authentication and affidavits for immigration dossiers.", icon: Stamp },
-  { title: "Translation Service", desc: "Sworn legal translations into German, French, Arabic, and Polish.", icon: Languages },
-  { title: "Transcript Service", desc: "Procurement and verification of official university transcripts and mark sheets.", icon: FileText },
-  { title: "Bank Loan Assistance", desc: "Collateral & non-collateral education and settlement fund loan sanctioning.", icon: Landmark },
-  { title: "Exam Slot Booking", desc: "Priority date and venue booking for IELTS, PTE Academic, and TOEFL tests.", icon: BookOpen },
-  { title: "Banking & Forex Services", desc: "Competitive foreign currency exchange and international student forex cards.", icon: CreditCard },
-  { title: "International SIM Card", desc: "Pre-activated country-specific SIM cards delivered before international departure.", icon: Globe2 },
-  { title: "Travel & Health Insurance", desc: "Comprehensive overseas travel, health, and repatriation medical insurance.", icon: ShieldCheck },
+const faqs = [
+  {
+    q: "Which countries does Damoder Immigration Services specialize in?",
+    a: "Damoder Immigration Services specializes in New Zealand (Top Priority), Germany (Top European Priority), Canada, Australia, the United Kingdom, and European Schengen countries across PR, Study, Skilled Work, and Visitor visas.",
+  },
+  {
+    q: "What are the 7 Pillars of Client Assurance at Damoder Immigration?",
+    a: "Our 7 pillars are: (1) Dedicated Visa Consultant, (2) Visa-Specific Counseling, (3) Relevant Eligibility Check, (4) Timely Documentation Filing, (5) IELTS Inputs & Language Coaching, (6) 100% Process Transparency, and (7) Job-Related Tips & Market Updates.",
+  },
+  {
+    q: "Do you assist with IELTS coaching and exam slot booking?",
+    a: "Yes! We provide strategic IELTS / PTE study materials, practice tests, score optimization inputs, and priority exam slot booking across authorized test centers.",
+  },
+  {
+    q: "What concierge and value-added relocation services are provided?",
+    a: "Our concierge suite includes State HRD & MEA Apostille Attestation, Notary Services, Sworn Legal Translations, University Transcript Procurement, Education Bank Loans, Forex Cards, International SIM Cards, and Travel & Health Insurance.",
+  },
+  {
+    q: "Where is the Damoder Immigration Services headquarters located?",
+    a: "Our headquarters is located at 6F6F+74G, Tukkuguda, Hyderabad, Telangana 501359, India. Clients can schedule an in-person consultation or book a remote video counseling session.",
+  },
 ];
 
 function HomePage() {
   return (
     <>
-      {/* 1. Hero Section */}
-      <section className="relative overflow-hidden bg-brand-deep text-white">
-        <div className="absolute inset-0 opacity-15">
+      <section className="relative bg-brand-deep pb-16 pt-10 text-white sm:pb-20 md:pt-14 lg:pb-24 overflow-hidden">
+        {/* PixelBlast Animated WebGL Background - Blending in the top */}
+        <div className="absolute inset-x-0 top-0 h-[480px] sm:h-[540px] lg:h-[600px] z-0 overflow-hidden pointer-events-none [mask-image:radial-gradient(ellipse_at_50%_0%,black_25%,rgba(0,0,0,0.6)_65%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_50%_0%,black_25%,rgba(0,0,0,0.6)_65%,transparent_100%)] opacity-75">
           <PixelBlast
-            variant="square"
+            variant="cross"
             pixelSize={6}
-            color="#FF6B35"
-            patternScale={6.25}
-            patternDensity={1.2}
-            pixelSizeJitter={0.5}
+            color="#243864"
+            secondaryColor="#13203C"
+            patternScale={2}
+            patternDensity={1}
+            pixelSizeJitter={0}
             enableRipples
-            speed={1.05}
+            rippleSpeed={0.4}
+            rippleThickness={0.12}
+            rippleIntensityScale={1.2}
+            speed={0.4}
+            edgeFade={0.3}
             transparent
           />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-ember backdrop-blur-sm">
-                <MapPin className="size-3.5 text-ember" />
+        {/* Top Tier: 2-Column Headline & Copy */}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid grid-cols-1 items-end gap-8 pb-10 sm:pb-12 lg:grid-cols-[1.55fr_1fr] lg:gap-14 lg:pb-14">
+            <div>
+              <motion.span
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-3.5 py-1.5 text-xs sm:text-sm font-semibold tracking-wide text-white/90 backdrop-blur-sm"
+              >
+                <span className="size-2 rounded-full bg-ember" />
                 HQ: Hyderabad, India · Trusted Visa Consultants
-              </span>
-
-              <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white leading-tight">
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className="mt-5 font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-5xl lg:text-[54px] xl:text-[58px]"
+              >
                 A Complete Roundup of Visa Services at{" "}
                 <span className="text-ember">Damoder Immigration</span>
-              </h1>
+              </motion.h1>
+            </div>
 
-              <p className="mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="lg:pb-3"
+            >
+              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white/90">
                 We make sure your visa process is absolutely seamless and stress-free to study, work, or settle in
-                countries like: <strong className="text-white font-bold">New Zealand (Priority), Germany, Canada, Australia, United Kingdom, and Europe.</strong>
+                countries like: <strong className="text-white">New Zealand (Priority), Germany, Canada, Australia, United Kingdom, and Europe.</strong>
               </p>
-
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  to="/contact-us"
-                  className="inline-flex items-center gap-2 rounded-lg bg-ember px-6 py-3.5 text-base font-semibold text-white transition-all hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg"
-                >
-                  Check Your Visa Eligibility
-                  <ArrowRight className="size-5" />
-                </Link>
+                <ChipLink to="/contact-us" tone="dark">
+                  Free Eligibility Check
+                </ChipLink>
                 <Link
                   to="/candidate-portal"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/25 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center rounded-lg border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  Explore PR &amp; Study Visas
+                  Explore Visa Categories
                 </Link>
               </div>
+            </motion.div>
+          </div>
+        </div>
 
-              {/* Quick Country Highlight Badges */}
-              <div className="mt-10 pt-8 border-t border-white/15 flex items-center gap-3 flex-wrap text-xs font-semibold text-white/90">
-                <span className="text-white/60">Priority Destinations:</span>
-                <span className="rounded-md bg-white/10 px-2.5 py-1 border border-white/15">🇳🇿 New Zealand</span>
-                <span className="rounded-md bg-white/10 px-2.5 py-1 border border-white/15">🇩🇪 Germany</span>
-                <span className="rounded-md bg-white/10 px-2.5 py-1 border border-white/15">🇨🇦 Canada</span>
-                <span className="rounded-md bg-white/10 px-2.5 py-1 border border-white/15">🇦🇺 Australia</span>
-                <span className="rounded-md bg-white/10 px-2.5 py-1 border border-white/15">🇬🇧 United Kingdom</span>
-                <span className="rounded-md bg-white/10 px-2.5 py-1 border border-white/15">🇪🇺 Europe</span>
+        {/* Lower Tier: Extended Full-Width Hero Image (High Definition, Uncut) */}
+        <motion.figure
+          initial={{ opacity: 0, scale: 0.99 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.65, delay: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="relative w-full overflow-hidden bg-brand-deep shadow-2xl"
+        >
+          <img
+            src={heroImage}
+            alt="Damoder Immigration Services candidate departures at international airport terminal"
+            className="h-[380px] sm:h-[480px] lg:h-[580px] xl:h-[640px] w-full object-cover object-[center_20%]"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/75 via-transparent to-transparent pointer-events-none" />
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <figcaption className="absolute bottom-6 left-6 sm:left-8 lg:left-12 rounded-lg border border-white/20 bg-brand-deep/90 px-4 py-2.5 backdrop-blur-md text-xs sm:text-sm font-semibold text-white/90 flex items-center gap-2.5 shadow-xl">
+              <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Live Overseas Visa &amp; Relocation Network</span>
+            </figcaption>
+          </div>
+        </motion.figure>
+      </section>
+
+      {/* Half Hero / Half Page Flow Overlapping Luxury White Stats Deck */}
+      <div className="relative z-20 -mt-10 sm:-mt-12 lg:-mt-14 mx-auto max-w-7xl px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="rounded-lg border border-slate-200/90 bg-white p-6 sm:p-8 lg:p-10 shadow-2xl shadow-slate-900/10"
+        >
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-slate-200/70 sm:gap-6 lg:gap-0">
+            {/* Stat 1 */}
+            <div className="group lg:px-6 first:lg:pl-2 last:lg:pr-2 flex flex-col justify-between transition-transform duration-200 hover:-translate-y-0.5">
+              <div className="flex items-center gap-2.5">
+                <span className="flex size-9 items-center justify-center rounded-lg bg-brand-deep/10 text-brand-deep ring-1 ring-brand-deep/15 transition-transform duration-200 group-hover:scale-110">
+                  <Award className="size-4.5" />
+                </span>
+                <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                  Track Record
+                </span>
+              </div>
+              <div className="mt-4">
+                <p className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-brand-deep">
+                  <AnimatedCounter value={12000} duration={1.6} />
+                  <span className="text-ember font-semibold">+</span>
+                </p>
+                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                  Successful Visa Grants
+                </h3>
+                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
+                  PR, Study, Work &amp; Visitor visas granted across top nations.
+                </p>
               </div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl border border-white/20 bg-white/10 p-6 sm:p-8 backdrop-blur-md shadow-2xl">
-                <div className="flex items-center justify-between pb-4 border-b border-white/15">
-                  <span className="font-display text-lg font-bold text-white">Why Choose Damoder?</span>
-                  <span className="rounded bg-emerald-500/20 px-2 py-0.5 text-xs font-semibold text-emerald-300">
-                    Verified Desk
-                  </span>
-                </div>
+            {/* Stat 2 */}
+            <div className="group lg:px-6 first:lg:pl-2 last:lg:pr-2 flex flex-col justify-between pt-6 border-t border-slate-100 sm:border-t-0 lg:pt-0 transition-transform duration-200 hover:-translate-y-0.5">
+              <div className="flex items-center gap-2.5">
+                <span className="flex size-9 items-center justify-center rounded-lg bg-brand-deep/10 text-brand-deep ring-1 ring-brand-deep/15 transition-transform duration-200 group-hover:scale-110">
+                  <Globe2 className="size-4.5" />
+                </span>
+                <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                  Global Focus
+                </span>
+              </div>
+              <div className="mt-4">
+                <p className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-brand-deep">
+                  <AnimatedCounter value={6} duration={1.6} />
+                  <span className="text-ember font-semibold"> Flagship</span>
+                </p>
+                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                  Destination Corridors
+                </h3>
+                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
+                  New Zealand, Germany, Canada, Australia, UK &amp; Europe.
+                </p>
+              </div>
+            </div>
 
-                <div className="mt-5 space-y-3.5 text-xs sm:text-sm text-white/90">
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="size-4 text-ember shrink-0 mt-0.5" />
-                    <span><strong>Dedicated Consultant</strong> for your chosen destination.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="size-4 text-ember shrink-0 mt-0.5" />
-                    <span><strong>Accurate Eligibility Check</strong> and points assessment.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="size-4 text-ember shrink-0 mt-0.5" />
-                    <span><strong>IELTS Inputs &amp; Coaching</strong> to maximize score.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="size-4 text-ember shrink-0 mt-0.5" />
-                    <span><strong>100% Process Transparency</strong> from intake to grant.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="size-4 text-ember shrink-0 mt-0.5" />
-                    <span><strong>Job Market Guidance</strong> &amp; post-landing tips.</span>
-                  </div>
-                </div>
+            {/* Stat 3 */}
+            <div className="group lg:px-6 first:lg:pl-2 last:lg:pr-2 flex flex-col justify-between pt-6 border-t border-slate-100 sm:border-t-0 lg:pt-0 transition-transform duration-200 hover:-translate-y-0.5">
+              <div className="flex items-center gap-2.5">
+                <span className="flex size-9 items-center justify-center rounded-lg bg-brand-deep/10 text-brand-deep ring-1 ring-brand-deep/15 transition-transform duration-200 group-hover:scale-110">
+                  <Building2 className="size-4.5" />
+                </span>
+                <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                  Transparency
+                </span>
+              </div>
+              <div className="mt-4">
+                <p className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-brand-deep">
+                  <AnimatedCounter value={100} duration={1.6} />
+                  <span className="text-ember font-semibold">%</span>
+                </p>
+                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                  Direct Tracking
+                </h3>
+                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
+                  Zero hidden charges or unauthorized sub-agents.
+                </p>
+              </div>
+            </div>
 
-                <div className="mt-6 pt-5 border-t border-white/15">
-                  <p className="text-xs text-white/70">
-                    📍 Office: 6F6F+74G, Tukkuguda, Hyderabad, Telangana 501359
-                  </p>
-                </div>
+            {/* Stat 4 */}
+            <div className="group lg:px-6 first:lg:pl-2 last:lg:pr-2 flex flex-col justify-between pt-6 border-t border-slate-100 sm:border-t-0 lg:pt-0 transition-transform duration-200 hover:-translate-y-0.5">
+              <div className="flex items-center gap-2.5">
+                <span className="flex size-9 items-center justify-center rounded-lg bg-brand-deep/10 text-brand-deep ring-1 ring-brand-deep/15 transition-transform duration-200 group-hover:scale-110">
+                  <ShieldCheck className="size-4.5" />
+                </span>
+                <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                  Client Care
+                </span>
+              </div>
+              <div className="mt-4">
+                <p className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-brand-deep">
+                  <AnimatedCounter value={7} duration={1.6} />
+                  <span className="text-ember font-semibold"> Pillars</span>
+                </p>
+                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                  Client Promise
+                </h3>
+                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
+                  Dedicated consultant, eligibility check &amp; IELTS inputs.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
 
-      {/* 2. Impact Counters Ribbon */}
-      <section className="border-b border-border bg-paper py-8 sm:py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-            {counters.map((c) => (
-              <div key={c.label} className="border-l-2 border-brand/30 pl-4 sm:pl-5">
-                <div className="font-display text-3xl font-bold tracking-tight text-brand-deep sm:text-4xl">
-                  <AnimatedCounter value={c.target} />
-                  {c.suffix ? <span className="text-xl sm:text-2xl font-semibold text-ember ml-1">{c.suffix}</span> : null}
-                </div>
-                <div className="mt-1 text-sm font-semibold text-foreground">{c.label}</div>
-                <div className="mt-0.5 text-xs text-muted-foreground leading-relaxed">{c.hint}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoMarquee className="pt-10 sm:pt-12 lg:pt-14" />
 
-      {/* 3. Core Visa Services Breakdown */}
+      <WhoWeAre />
+
+      <DestinationsWhereWeDeploy />
+
+      {/* 6 Core Visa Categories Section */}
       <Section
         eyebrow="Comprehensive Visa Services"
         title="We provide guidance and counselling for all visa categories"
@@ -490,88 +609,151 @@ function HomePage() {
         </StaggerContainer>
       </Section>
 
-      {/* 4. The 7 Pillars of Client Excellence */}
-      <Section
-        tone="muted"
-        eyebrow="Our Client Assurance"
-        title="The 7 Pillars of Seamless Migration at Damoder Immigration"
-        intro="Trusted as the best immigration consultants in Hyderabad for our rigorous end-to-end support, language coaching, and absolute transparency."
-      >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {sevenPillars.map((p) => (
-            <MotionCard key={p.num} className="rounded-lg border border-border bg-card p-6 shadow-xs flex flex-col justify-between">
+      {/* Two Audiences Section */}
+      <Section tone="muted" eyebrow="Who we serve" title="Two audiences, one transparent pathway">
+        <StaggerContainer staggerDelay={0.15} className="grid gap-6 md:grid-cols-2">
+          <StaggerItem>
+            <MotionCard className="rounded-lg border border-border bg-card p-8 sm:p-10 shadow-xs h-full flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between">
-                  <div className="flex size-10 items-center justify-center rounded-lg bg-ember/10 text-ember">
-                    <p.icon className="size-5" />
-                  </div>
-                  <span className="font-display text-xl font-bold text-muted-foreground/40">{p.num}</span>
+                <Globe2 className="size-10 text-brand" />
+                <h3 className="mt-6 font-display text-2xl font-bold text-brand-deep">For Global Employers</h3>
+                <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">
+                  Skilled technical talent sourcing and mobilization on a structured 22-26 weeks SLA cycle across New Zealand, Germany, Europe, Canada, and Australia with in-house trade testing and legal documentation.
+                </p>
+              </div>
+              <div className="mt-8">
+                <ChipLink to="/employer-services">Employer services</ChipLink>
+              </div>
+            </MotionCard>
+          </StaggerItem>
+
+          <StaggerItem>
+            <MotionCard className="rounded-lg border border-border bg-card p-8 sm:p-10 shadow-xs h-full flex flex-col justify-between">
+              <div>
+                <Users className="size-10 text-brand" />
+                <h3 className="mt-6 font-display text-2xl font-bold text-brand-deep">
+                  For Students &amp; Job Seekers
+                </h3>
+                <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">
+                  Free profile evaluations, university admissions, PR points scoring, IELTS language coaching, and end-to-end relocation concierge to New Zealand, Germany, Canada, Australia, and the UK.
+                </p>
+              </div>
+              <div className="mt-8">
+                <ChipLink to="/candidate-portal">Check your eligibility</ChipLink>
+              </div>
+            </MotionCard>
+          </StaggerItem>
+        </StaggerContainer>
+      </Section>
+
+      {/* 7-Pillar Protocol */}
+      <Section
+        eyebrow="Our Process"
+        title="The 7-Pillar Client Protocol"
+        intro="Trusted as the best immigration consultants in Hyderabad for our structured, transparent counseling framework."
+      >
+        <StaggerContainer staggerDelay={0.08} className="relative grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {sevenPillars.map((s, i) => (
+            <StaggerItem key={s.title}>
+              <MotionCard className="relative rounded-lg border border-border bg-card p-8 pt-9 shadow-xs h-full flex flex-col justify-between">
+                <div>
+                  <span className="absolute -top-3.5 left-8 inline-flex size-8 items-center justify-center rounded-lg bg-ember text-sm font-bold text-white shadow-sm">
+                    {i + 1}
+                  </span>
+                  <s.icon className="size-8 text-brand" />
+                  <h3 className="mt-5 font-display text-lg font-bold text-brand-deep">
+                    {s.title.replace(/^\d+\.\s*/, "")}
+                  </h3>
+                  <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">{s.body}</p>
                 </div>
-                <h4 className="mt-4 font-display text-base font-bold text-brand-deep">{p.title}</h4>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{p.desc}</p>
-              </div>
-            </MotionCard>
+              </MotionCard>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </Section>
 
-      {/* 5. Destination Corridors (New Zealand, Germany, Canada, Australia, UK, Europe) */}
-      <DestinationsWhereWeDeploy />
-
-      {/* 6. Overseas Careers in 8 In-Demand Sectors */}
-      <Section
-        eyebrow="Global Employment"
-        title="Overseas Jobs Across 8 Core Sectors"
-        intro="With our skilled recruitment division, candidates secure high-paying international employment in their specialized disciplines."
-      >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {jobSectors.map((s) => (
-            <MotionCard key={s.title} className="rounded-lg border border-border bg-card p-6 shadow-xs">
-              <div className="flex size-10 items-center justify-center rounded-lg bg-brand/10 text-brand">
-                <s.icon className="size-5" />
-              </div>
-              <h4 className="mt-4 font-display text-base font-bold text-brand-deep">{s.title}</h4>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.roles}</p>
-            </MotionCard>
+      {/* Industries We Staff (8 Core Sectors) */}
+      <Section tone="muted" eyebrow="Sectors" title="Overseas Jobs Across 8 Core Sectors">
+        <StaggerContainer staggerDelay={0.06} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {industries.map((i) => (
+            <StaggerItem key={i.label}>
+              <Link
+                to="/industries"
+                className="group flex items-center gap-4 rounded-lg border border-border bg-card px-6 py-5 shadow-2xs transition-all duration-200 hover:border-brand hover:shadow-md hover:-translate-y-0.5"
+              >
+                <i.icon className="size-6 shrink-0 text-brand transition-transform group-hover:scale-110" />
+                <span className="text-sm sm:text-base font-semibold text-brand-deep">{i.label}</span>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
-        <div className="mt-8 text-center">
-          <Link
-            to="/industries"
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-deep px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-deep/90 transition-colors"
-          >
-            Explore All Overseas Career Verticals
-            <ArrowRight className="size-4" />
-          </Link>
-        </div>
+        </StaggerContainer>
       </Section>
 
-      {/* 7. Full-Suite Concierge Services */}
+      {/* Testimonials */}
+      <Section eyebrow="Testimonials" title="Trusted by clients across India & overseas">
+        <StaggerContainer staggerDelay={0.12} className="grid gap-6 md:grid-cols-3">
+          {testimonials.map((t) => (
+            <StaggerItem key={t.name + t.org}>
+              <figure className="rounded-lg border border-border bg-card p-8 shadow-xs h-full flex flex-col justify-between transition-all duration-200 hover:shadow-md">
+                <div>
+                  <Quote className="size-8 text-brand" />
+                  <blockquote className="mt-5 text-sm sm:text-[15px] leading-relaxed text-foreground">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                </div>
+                <figcaption className="mt-6 border-t border-border pt-4 text-sm">
+                  <span className="font-bold text-brand-deep">{t.name}</span>
+                  <span className="mt-0.5 block text-xs sm:text-sm text-muted-foreground">{t.org}</span>
+                </figcaption>
+              </figure>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </Section>
+
+      <AntiFraudVault />
+
+      {/* Interactive FAQs Accordion */}
       <Section
-        tone="muted"
-        eyebrow="Concierge & Value-Added Services"
-        title="End-to-End Relocation & Document Support"
-        intro="From official notarization and MEA apostille to educational bank loans, IELTS exam slots, forex cards, and travel insurance."
+        eyebrow="FAQ"
+        title="Frequently asked questions"
+        intro="Clear answers regarding visa categories, eligibility assessments, IELTS inputs, and relocation concierge."
       >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {conciergeServices.map((c) => (
-            <div key={c.title} className="rounded-lg border border-border bg-card p-5 shadow-xs">
-              <div className="flex items-center gap-3">
-                <span className="flex size-9 items-center justify-center rounded-md bg-ember/10 text-ember">
-                  <c.icon className="size-4" />
-                </span>
-                <h4 className="text-sm font-bold text-brand-deep">{c.title}</h4>
-              </div>
-              <p className="mt-2.5 text-xs text-muted-foreground leading-relaxed">{c.desc}</p>
+        <div className="mx-auto max-w-4xl space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((f, i) => (
+              <AccordionItem
+                key={f.q}
+                value={`faq-${i}`}
+                className="rounded-lg border border-border bg-card px-5 sm:px-6 shadow-2xs transition-all duration-200 data-[state=open]:border-brand/40 data-[state=open]:shadow-xs"
+              >
+                <AccordionTrigger className="py-4 sm:py-5 text-left font-display text-base sm:text-[17px] font-bold text-brand-deep hover:no-underline hover:text-brand transition-colors cursor-pointer">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="border-t border-border/40 pt-3 pb-5 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          {/* Clean consultation help capsule */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-lg border border-border bg-paper p-5 sm:p-6 shadow-2xs">
+            <div>
+              <h3 className="font-display text-base font-bold text-brand-deep">
+                Have a specific question about your visa or migration pathway?
+              </h3>
+              <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
+                Our Hyderabad headquarters desk and dedicated visa consultants respond within 24 hours.
+              </p>
             </div>
-          ))}
+            <Button asChild variant="secondary" className="rounded-lg font-semibold shrink-0">
+              <Link to="/contact-us">Ask our consultants</Link>
+            </Button>
+          </div>
         </div>
       </Section>
 
-      {/* 8. Who We Are & Hyderabad HQ Office */}
-      <WhoWeAre />
-
-      {/* 9. Global CTA Banner */}
       <CtaBanner />
     </>
   );
