@@ -36,15 +36,18 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl rounded-lg bg-brand-deep text-white shadow-xl">
         <div className="grid gap-10 px-8 py-16 md:grid-cols-2 md:px-12 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-3.5">
-              <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1.5 shadow-md ring-1 ring-white/20">
+            <div className="flex items-center gap-3">
+              <span className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1 shadow-md ring-1 ring-white/20">
                 <img
                   src={logoMark}
                   alt="Damoder Immigration Services Logo"
                   className="size-full object-contain"
                 />
               </span>
-              <span className="font-display text-lg font-bold">Damoder Immigration</span>
+              <div className="flex flex-col">
+                <span className="font-display text-base font-bold text-white">Damoder Immigration Services</span>
+                <span className="text-[11px] text-ember font-medium tracking-wider uppercase">Hyderabad, India</span>
+              </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/80">
               Leading overseas immigration and manpower consultancy based in Hyderabad, India — mobilizing skilled Indian talent across New Zealand, Germany, Europe, Canada, Australia, and the Americas with complete transparency.

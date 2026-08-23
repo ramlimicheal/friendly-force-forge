@@ -11,22 +11,22 @@ import { cn } from "@/lib/utils";
 
 function Brand() {
   return (
-    <Link to="/" className="group flex shrink-0 items-center gap-3">
-      <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1 shadow-sm ring-1 ring-white/20 transition-transform duration-200 group-hover:scale-105">
+    <Link to="/" className="flex items-center gap-2.5 group">
+      <span className="flex size-9 sm:size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1 shadow-sm ring-1 ring-white/25 transition-transform group-hover:scale-105">
         <img
           src={logoMark}
           alt="Damoder Immigration Services Logo"
           className="size-full object-contain"
         />
       </span>
-      <span className="leading-tight">
-        <span className="block font-display text-base sm:text-lg font-bold tracking-tight text-white">
+      <div className="flex flex-col justify-center">
+        <span className="font-display text-[14px] sm:text-[15px] font-bold tracking-tight text-white group-hover:text-ember transition-colors leading-tight">
           Damoder Immigration Services
         </span>
-        <span className="hidden text-[11px] uppercase tracking-[0.2em] text-white/75 sm:block font-semibold">
-          Overseas Manpower
+        <span className="text-[10px] sm:text-[11px] font-medium tracking-wider uppercase text-ember">
+          Hyderabad, India
         </span>
-      </span>
+      </div>
     </Link>
   );
 }
