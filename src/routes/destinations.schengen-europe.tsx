@@ -58,7 +58,7 @@ const priorityMetrics = [
   {
     value: "🇳🇿 #1",
     label: "New Zealand Priority",
-    detail: "Skilled Migrant (SMC), AEWV & Green List Fast-Track PR",
+    detail: "Skilled Migrant (SMC 6-Pt), AEWV & Green List Fast-Track PR",
   },
   {
     value: "🇩🇪 #1",
@@ -86,10 +86,10 @@ const priorityDestinations = [
     highlight: true,
     capital: "Wellington & Auckland",
     currency: "NZD ($)",
-    salary: "NZD $75,000 – $145,000 / yr (₹38L – ₹74L INR)",
-    permit: "Skilled Migrant Category (SMC 6-Pt) · AEWV · Green List Tier 1/2 · Study-to-PR",
+    visaRoute: "Skilled Migrant Category (SMC 6-Point) · Green List Tier 1/2 · AEWV",
+    permit: "Straight to Residence (Green List Tier 1) · Work-to-Residence · Study-to-PR",
     lead: "3 – 6 Months",
-    desc: "Our premier flagship destination offering world-class quality of life, high wage standards, universal healthcare, and direct permanent residency pathways. We handle 6-point SMC assessments, Accredited Employer job matching, Green List Tier 1 straight-to-residence filings, and top university admissions with post-study work rights.",
+    desc: "New Zealand is our #1 flagship destination, offering exceptional quality of life, universal healthcare, and fast-track permanent residency. We evaluate your 6-point eligibility under the updated SMC system, coordinate with NZ Accredited Employers, and structure Green List Tier 1 Straight to Residence applications for healthcare and IT professionals.",
     roles: [
       "Software Engineers, Cloud Architects & ICT Business Analysts",
       "Civil, Structural, Mechanical & Electrical Engineers",
@@ -107,10 +107,10 @@ const priorityDestinations = [
     highlight: true,
     capital: "Berlin, Frankfurt & Munich",
     currency: "EUR (€)",
-    salary: "EUR €48,000 – €88,000 / yr (₹43L – ₹79L INR)",
-    permit: "Opportunity Card (Chancenkarte) · EU Blue Card · Skilled Worker Visa",
+    visaRoute: "Opportunity Card (Chancenkarte) · EU Blue Card · Skilled Worker Visa",
+    permit: "Points-Based Job Seeker Permit · Fast-Track Settlement Visa",
     lead: "3 – 6 Months",
-    desc: "Europe's leading industrial and tech powerhouse with progressive immigration reforms. The points-based Opportunity Card (Chancenkarte) enables Indian graduates to enter Germany to find qualified work, while the EU Blue Card grants permanent settlement in 21–27 months.",
+    desc: "Germany is Europe's premier industrial and technological powerhouse. Under the Skilled Immigration Act (Fachkräfteeinwanderungsgesetz), the Opportunity Card (Chancenkarte) enables Indian degree holders to enter Germany on a points-based system to secure employment. The EU Blue Card grants permanent settlement in as few as 21–27 months.",
     roles: [
       "IT Specialists, DevOps Engineers & Full-Stack Developers (English track)",
       "Automotive, Mechanical, Mechatronics & Renewable Energy Engineers",
@@ -127,10 +127,10 @@ const priorityDestinations = [
     badge: "EU Member State",
     capital: "Warsaw & Poznań",
     currency: "PLN (zł)",
-    salary: "PLN 60,000 – 95,000 / yr (₹13L – ₹21L INR)",
-    permit: "Type-A Work Permit (Zezwolenie na pracę) + National D-Visa",
+    visaRoute: "National Type-A Work Permit (Zezwolenie na pracę)",
+    permit: "National D-Visa + Karta Pobytu Temporary Residence",
     lead: "4 – 6 Months",
-    desc: "The primary manufacturing, automotive, and logistics engine of Central Europe. Employers provide furnished accommodation, social security (ZUS), and long-term residency (Karta Pobytu) pathways with full Schengen travel rights.",
+    desc: "The central manufacturing, automotive, and logistics hub of Central Europe. Indian skilled workers receive direct statutory employment contracts, furnished housing assistance, full European health coverage (ZUS), and renewable temporary residence cards with free mobility across all 29 Schengen member states.",
     roles: [
       "Structural Welders (MIG/MAG/TIG) & CNC Machinists",
       "Warehouse Forklift Drivers & Logistics Handlers",
@@ -147,10 +147,10 @@ const priorityDestinations = [
     badge: "EU Member State",
     capital: "Valletta & St. Julian's",
     currency: "EUR (€)",
-    salary: "EUR €22,000 – €36,000 / yr (₹20L – ₹32L INR)",
-    permit: "Single Work Permit (Identità Malta Authorization)",
+    visaRoute: "Single Work Permit (Identità Malta Authorization)",
+    permit: "Annual Employer-Sponsored Residence Card",
     lead: "4 – 6 Months",
-    desc: "English-speaking Mediterranean destination with rapid growth in luxury hospitality, resort culinary management, transport, and healthcare. All permits include full Schengen Area travel mobility.",
+    desc: "An English-speaking European island economy with booming demand in luxury hotel hospitality, culinary management, civil construction, and logistics. All single work permits are issued directly through Identità Malta with full Schengen mobility and annual renewal rights.",
     roles: [
       "Hotel Commis Chefs, Sous Chefs & F&B Captains",
       "Hospitality Housekeeping & Barista Professionals",
@@ -167,10 +167,10 @@ const priorityDestinations = [
     badge: "EU Member State",
     capital: "Zagreb & Split",
     currency: "EUR (€)",
-    salary: "EUR €18,000 – €30,000 / yr (₹16L – ₹27L INR)",
-    permit: "Stay and Work Permit (Dozvola za boravak i rad)",
+    visaRoute: "Stay and Work Permit (Dozvola za boravak i rad)",
+    permit: "National Employment & Residence Authorisation",
     lead: "3 – 5 Months",
-    desc: "Dynamic Adriatic EU economy with high demand for tourism infrastructure, shipbuilding, and industrial craftsmen. Fast permit issuance through the Croatian Ministry of Interior (MUP).",
+    desc: "A dynamic Adriatic EU economy experiencing significant growth in coastal resort tourism, commercial shipbuilding, and municipal construction. We handle government labor market tests and fast-track permit approvals directly through the Croatian Ministry of Interior (MUP).",
     roles: [
       "Resort Chefs, Waiters & Housekeeping Crews",
       "Shuttering Carpenters, Steel Fixers & Masons",
@@ -187,10 +187,10 @@ const priorityDestinations = [
     badge: "EU Member State",
     capital: "Bucharest",
     currency: "RON (lei)",
-    salary: "RON 40,000 – 65,000 / yr (₹8L – ₹13L INR)",
-    permit: "Work Authorization (Aviz de Muncă) + Long-Stay D/AM Visa",
+    visaRoute: "Work Authorization (Aviz de Muncă) + D/AM Long-Stay Visa",
+    permit: "National Employment Visa & Residence Card",
     lead: "4 – 6 Months",
-    desc: "Fast-growing industrial market with substantial quotas for international workers in automotive assembly, civil infrastructure, and food logistics.",
+    desc: "A rapid-growth Eastern European market with substantial state-backed quotas for international technical personnel in automotive assembly, civil infrastructure, and food logistics under verified bilateral contracts.",
     roles: [
       "Civil Construction Labor & Equipment Operators",
       "Automotive Assembly Line Technicians",
@@ -209,7 +209,7 @@ function EuropePage() {
       <PageHero
         eyebrow="Specialized Country Corridors · Damoder Immigration Services (Hyderabad)"
         title="New Zealand, Germany & European Work Permits, PR & Study Visas"
-        subtitle="End-to-end guidance for New Zealand (Top Priority), Germany (Opportunity Card & Blue Card), Poland, Malta, Croatia, and Europe with dedicated consultants and complete transparency."
+        subtitle="Comprehensive counseling and documentation filing for New Zealand (Top Priority), Germany (Opportunity Card & Blue Card), Poland, Malta, Croatia, and Europe from our Hyderabad headquarters."
       >
         <div className="flex flex-wrap items-center gap-3">
           <Link
@@ -306,14 +306,13 @@ function EuropePage() {
                     </span>
                   </div>
 
-                  <p className="mt-4 text-xs font-semibold text-brand-deep bg-paper p-2 rounded-md border border-border/80">
-                    {d.permit}
-                  </p>
-
-                  <div className="mt-3 flex items-center justify-between text-xs text-brand">
-                    <span>⏱️ Lead Time: <strong>{d.lead}</strong></span>
-                    <span>💰 <strong>{d.salary}</strong></span>
+                  <div className="mt-4 rounded-md bg-paper p-2.5 border border-border/80 text-xs font-semibold text-brand-deep">
+                    🎯 {d.visaRoute}
                   </div>
+
+                  <p className="mt-2 text-xs font-semibold text-brand">
+                    ⏱️ Processing Lead Time: {d.lead}
+                  </p>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d.desc}</p>
 

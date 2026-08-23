@@ -27,7 +27,7 @@ const securityPillars = [
     title: "Written Legal Contracts",
     subtitle: "Bilingual Terms Before Departure",
     description:
-      "Salary, overtime rates, food, accommodation, and medical insurance are committed in written employment contracts prior to visa stamping.",
+      "Role responsibilities, working hours, accommodation, and medical insurance are committed in written employment contracts prior to visa stamping.",
   },
   {
     icon: FileCheck,

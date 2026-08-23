@@ -57,8 +57,8 @@ const gccCountries = [
     badge: "Vision 2030 Projects",
     capital: "Riyadh & NEOM",
     currency: "SAR (﷼)",
-    salary: "SAR 3,500 – 12,000 / mo (₹78K – ₹2.7L INR)",
-    desc: "Massive infrastructure investments across NEOM, Red Sea Project, Aramco EPC shutdown turnarounds, and civil mega-structures.",
+    focus: "EPC Oil & Gas Turnarounds, NEOM Infrastructure & Plant Engineering",
+    desc: "Massive infrastructure investments across NEOM, Red Sea Project, Aramco EPC shutdown turnarounds, and civil mega-structures under direct employer sponsorship.",
     roles: ["6G Pipe Welders & Fabricators", "Civil Project Engineers", "Heavy Crane Operators", "Electrical MEP Techs"],
   },
   {
@@ -68,8 +68,8 @@ const gccCountries = [
     badge: "Commercial & Hospitality",
     capital: "Dubai & Abu Dhabi",
     currency: "AED (د.إ)",
-    salary: "AED 3,200 – 11,500 / mo (₹72K – ₹2.6L INR)",
-    desc: "High-spec commercial skyscrapers, luxury 5-star hotel operations, aviation logistics, and facility management.",
+    focus: "Luxury 5-Star Hospitality, Commercial Skyscrapers & Aviation Logistics",
+    desc: "High-spec commercial skyscrapers, luxury hotel chains, aviation cargo logistics, and facility management services with transparent employment terms.",
     roles: ["Hotel Chefs & Baristas", "Facility MEP Supervisors", "Logistics & Transport Drivers", "QA/QC Technicians"],
   },
   {
@@ -79,8 +79,8 @@ const gccCountries = [
     badge: "Energy & Infrastructure",
     capital: "Doha & Ras Laffan",
     currency: "QAR (﷼)",
-    salary: "QAR 3,000 – 10,000 / mo (₹69K – ₹2.3L INR)",
-    desc: "LNG terminal expansions, industrial energy plants, urban transport networks, and municipal maintenance operations.",
+    focus: "LNG Terminal Expansion & Urban Transport Networks",
+    desc: "Major LNG gas expansion projects, industrial energy plants, urban transport networks, and municipal facilities maintenance under corporate mandates.",
     roles: ["Instrument Technicians", "Scaffolding Supervisors", "Mechanical Fitters", "Safety Officers"],
   },
   {
@@ -90,8 +90,8 @@ const gccCountries = [
     badge: "Refinery & Marine",
     capital: "Kuwait City",
     currency: "KWD (د.ك)",
-    salary: "KWD 250 – 850 / mo (₹68K – ₹2.3L INR)",
-    desc: "Oil refinery turnarounds, power plant modernization, and marine port cargo logistics with high tax-free earning potential.",
+    focus: "Oil Refinery Modernization & Marine Port Operations",
+    desc: "Refinery plant maintenance, power generation facility modernization, and marine port logistics with complete statutory compliance.",
     roles: ["Refinery Pipe Fitters", "Industrial Electricians", "Diesel Mechanics", "Civil Foremen"],
   },
   {
@@ -101,8 +101,8 @@ const gccCountries = [
     badge: "EPC & Logistics",
     capital: "Muscat & Duqm",
     currency: "OMR (﷼)",
-    salary: "OMR 300 – 900 / mo (₹65K – ₹1.9L INR)",
-    desc: "Duqm Special Economic Zone, port logistics, petrochemical processing, and renewable energy pilot projects.",
+    focus: "Duqm Special Economic Zone & Petrochemical Refining",
+    desc: "Duqm Special Economic Zone, port logistics, petrochemical processing, and renewable energy pilot projects with verified working conditions.",
     roles: ["Structural Welders", "Warehouse Operators", "MEP Supervisors", "Laboratory Analysts"],
   },
   {
@@ -112,8 +112,8 @@ const gccCountries = [
     badge: "Industrial & Manufacturing",
     capital: "Manama",
     currency: "BHD (.د.ب)",
-    salary: "BHD 280 – 800 / mo (₹62K – ₹1.8L INR)",
-    desc: "Aluminum manufacturing, commercial banking infrastructure, logistics hubs, and residential tower construction.",
+    focus: "Aluminum Manufacturing & Financial Hub Infrastructure",
+    desc: "Aluminum smelting facilities, commercial banking infrastructure, logistics centers, and residential developments.",
     roles: ["Foundry Technicians", "Maintenance Electricians", "Civil Masons", "Transport Drivers"],
   },
 ];
@@ -202,11 +202,7 @@ function GulfPage() {
                   </div>
 
                   <p className="mt-4 text-xs font-semibold text-brand-deep bg-paper p-2 rounded-md border border-border/80">
-                    📍 Focus: {d.capital}
-                  </p>
-
-                  <p className="mt-2 text-xs font-semibold text-brand">
-                    💰 Monthly Salary: {d.salary}
+                    📍 {d.focus}
                   </p>
 
                   <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{d.desc}</p>

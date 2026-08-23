@@ -93,11 +93,10 @@ const vacancies = [
     title: "Senior Software Engineer / Cloud Architect",
     country: "New Zealand",
     region: "New Zealand",
-    salary: "NZD $110,000 – $140,000 / year",
-    inr: "₹55,000 – ₹70,000 / month approx",
+    visaPathway: "Green List Tier 1 Straight to Residence PR",
     exp: "4+ years AWS / React / Node.js experience",
-    tag: "🇳🇿 Green List Tier 1 PR",
-    benefits: ["Straight to Residence PR Route", "Partner Open Work Visa", "Free Public Healthcare & Schooling"],
+    tag: "🇳🇿 Top Flagship PR",
+    benefits: ["Straight to Residence PR Route", "Partner Open Work Visa", "Universal Public Healthcare & Schooling"],
     sector: "IT & Software Engineering",
   },
   {
@@ -105,11 +104,10 @@ const vacancies = [
     title: "Registered Staff Nurse (ICU / Theatre)",
     country: "New Zealand",
     region: "New Zealand",
-    salary: "NZD $85,000 – $105,000 / year",
-    inr: "Direct Hospital Sponsorship",
-    exp: "B.Sc Nursing + 2 yrs clinical experience",
+    visaPathway: "Green List Tier 1 Fast-Track Residence",
+    exp: "B.Sc Nursing + 2 yrs clinical hospital experience",
     tag: "🇳🇿 Green List Fast-Track",
-    benefits: ["Direct Residence Pathway", "Relocation Package", "Overtime Paid at 1.5x"],
+    benefits: ["Direct Residence Pathway", "Hospital Relocation Package", "Overtime Paid at 1.5x"],
     sector: "Healthcare & Nursing",
   },
   {
@@ -117,10 +115,9 @@ const vacancies = [
     title: "Mechanical / Automotive Systems Engineer",
     country: "Germany",
     region: "Germany",
-    salary: "EUR €55,000 – €75,000 / year",
-    inr: "₹48,00,000 – ₹66,00,000 INR",
+    visaPathway: "EU Blue Card / Chancenkarte Opportunity Card",
     exp: "Degree in Mechanical / Mechatronics (German B1 track)",
-    tag: "🇩🇪 EU Blue Card / Chancenkarte",
+    tag: "🇩🇪 Top European Priority",
     benefits: ["Permanent Settlement in 21 Months", "EU Wide Mobility", "Family Sponsorship"],
     sector: "Engineering & Technical",
   },
@@ -129,11 +126,10 @@ const vacancies = [
     title: "Civil Site Engineer & Structural BIM Drafter",
     country: "Australia",
     region: "Australia",
-    salary: "AUD $85,000 – $115,000 / year",
-    inr: "Subclass 189 / 190 PR Stream",
+    visaPathway: "Subclass 189 / 190 General Skilled Migration",
     exp: "B.Tech Civil + EA Positive Skills Assessment",
-    tag: "🇦🇺 General Skilled Migration",
-    benefits: ["Permanent Residency Card", "Medicare Full Coverage", "Citizenship after 4 Years"],
+    tag: "🇦🇺 GSM Direct PR",
+    benefits: ["Permanent Residency Card", "Medicare Universal Coverage", "Citizenship after 4 Years"],
     sector: "Engineering & Construction",
   },
   {
@@ -141,10 +137,9 @@ const vacancies = [
     title: "Financial Analyst & Management Accountant",
     country: "Canada",
     region: "Canada",
-    salary: "CAD $75,000 – $95,000 / year",
-    inr: "Express Entry FSWP / PNP",
+    visaPathway: "Express Entry FSWP / Provincial Nominee Program (PNP)",
     exp: "B.Com / MBA Finance / CPA / ACCA + 3 yrs exp",
-    tag: "🇨🇦 Express Entry / Ontario PNP",
+    tag: "🇨🇦 Express Entry / PNP",
     benefits: ["Canadian Permanent Residency", "Universal Healthcare", "Spouse Open Work Permit"],
     sector: "Accountants & Finance",
   },
@@ -153,10 +148,9 @@ const vacancies = [
     title: "Structural Steel Fabricator / 6G TIG Welder",
     country: "Poland",
     region: "Europe",
-    salary: "PLN 5,500 – 7,200 / month",
-    inr: "₹1,15,000 – ₹1,50,000 INR",
+    visaPathway: "Type-A Work Permit + Karta Pobytu Residency",
     exp: "3+ years pipe welding / fabrication experience",
-    tag: "🇪🇺 Type-A Work Permit",
+    tag: "🇪🇺 Type-A Permit",
     benefits: ["Furnished Company Housing", "Social Security (ZUS)", "Karta Pobytu Residency"],
     sector: "Manufacturing & Heavy Engineering",
   },
@@ -169,7 +163,7 @@ const protectionCharter = [
   },
   {
     title: "Authentic Written Bilingual Contracts",
-    desc: "Every employment or university admission is backed by written documentation specifying role, remuneration, and statutory rights before departure.",
+    desc: "Every employment or university admission is backed by written documentation specifying role, terms, and statutory rights before departure.",
   },
   {
     title: "IELTS & Language Proficiency Coaching",
@@ -246,7 +240,7 @@ function CandidatePage() {
         id="vacancies"
         eyebrow="Verified Openings"
         title="Live Overseas Career Openings & PR Corridors"
-        intro="Explore verified positions across New Zealand, Germany, Australia, Canada, and Europe with transparent salary structures and legal sponsorship."
+        intro="Explore verified positions across New Zealand, Germany, Australia, Canada, and Europe with structured immigration pathways and direct employer sponsorship."
       >
         {/* Regional Filter Pills */}
         <div className="mb-8 flex flex-wrap items-center gap-2">
@@ -283,8 +277,8 @@ function CandidatePage() {
                   </h3>
                   <p className="mt-1 text-xs text-muted-foreground">{v.sector}</p>
 
-                  <div className="mt-4 rounded-md bg-paper p-3 border border-border/80 text-xs font-semibold text-brand">
-                    💰 {v.salary}
+                  <div className="mt-4 rounded-md bg-paper p-2.5 border border-border/80 text-xs font-semibold text-brand">
+                    🎯 Pathway: {v.visaPathway}
                   </div>
 
                   <div className="mt-4 space-y-1 text-xs text-muted-foreground">

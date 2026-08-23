@@ -57,7 +57,7 @@ const fourCountries = [
     badge: "🇨🇦 Direct PR & PNP",
     focus: "Express Entry (FSWP / CEC), Provincial Nominee Programs & Study-to-PR",
     currency: "CAD ($)",
-    salary: "CAD $70,000 – $130,000 / yr (₹42L – ₹79L INR)",
+    visaRoute: "Express Entry Comprehensive Ranking System (CRS) · Category-Based Draws",
     lead: "6 – 10 Months",
     desc: "Canada remains one of the world's premier destinations for skilled professionals and students. We assist with ECA credential verification (WES/ICAS), CRS score optimization, French bonus points, and targeted Provincial Nominee streams across Ontario (OINP), British Columbia (BC PNP), Alberta (AAIP), and Saskatchewan (SINP).",
     roles: [
@@ -76,9 +76,9 @@ const fourCountries = [
     badge: "🇦🇺 General Skilled Migration",
     focus: "Subclass 189, Subclass 190 & Subclass 491 Regional Visas",
     currency: "AUD ($)",
-    salary: "AUD $80,000 – $145,000 / yr (₹44L – ₹80L INR)",
+    visaRoute: "SkillSelect Points System · State Nomination Sponsorship",
     lead: "6 – 12 Months",
-    desc: "Australia offers exceptional wages, sunny lifestyle, and universal Medicare healthcare. We manage skills assessments through ACS (IT), Engineers Australia (EA), VETASSESS, and ANMAC (Nursing), followed by Expression of Interest (EOI) and state nomination filings.",
+    desc: "Australia provides high living standards, excellent public healthcare (Medicare), and direct family migration. We manage positive skills assessments with authorized bodies (ACS, Engineers Australia, VETASSESS, ANMAC) followed by Expression of Interest (EOI) drafting and visa lodging.",
     roles: [
       "Civil, Mechanical, Structural & Electrical Engineers",
       "IT Project Managers, Full-Stack & Cyber Security Specialists",
@@ -95,9 +95,9 @@ const fourCountries = [
     badge: "🇬🇧 UK Skilled Worker",
     focus: "UK Skilled Worker Visa, Health & Care Worker & Student Visas",
     currency: "GBP (£)",
-    salary: "GBP £32,000 – £70,000 / yr (₹34L – ₹74L INR)",
+    visaRoute: "Points-Based Immigration System · Certificate of Sponsorship (CoS)",
     lead: "3 – 6 Months",
-    desc: "Direct employment sponsorship in the UK with fast-track processing for healthcare and tech personnel. All permits include NHS healthcare access, spousal work rights, and a 5-year route to Indefinite Leave to Remain (ILR).",
+    desc: "Direct employment sponsorship in the United Kingdom with expedited processing for healthcare and IT personnel. All approved permits include NHS healthcare access, spousal work rights, and a direct 5-year route to Indefinite Leave to Remain (ILR).",
     roles: [
       "NHS & Private Clinic Nurses (B.Sc with CBT & OSCE preparation)",
       "Software Developers, Cloud Engineers & Data Analysts",
@@ -114,9 +114,9 @@ const fourCountries = [
     badge: "🇺🇸 Employment & Exchange",
     focus: "EB-3 Permanent Residency, H-1B Specialty & J-1 Exchange",
     currency: "USD ($)",
-    salary: "USD $75,000 – $160,000 / yr (₹62L – ₹1.3Cr INR)",
+    visaRoute: "Employer-Sponsored Green Card · Non-Immigrant Specialty Occupations",
     lead: "9 – 18 Months",
-    desc: "Employer-sponsored permanent residency and specialized non-immigrant work classifications. We provide comprehensive PERM labor certification guidance, credential evaluations, and consular scheduling in India.",
+    desc: "Employer-sponsored permanent residency (EB-3 Green Card) and specialty non-immigrant visas. We provide comprehensive PERM labor certification coordination, academic evaluations, and consular interview preparation in India.",
     roles: [
       "IT Software Architects & Senior Developers (H-1B / EB-2)",
       "Registered Nurses & Physical Therapists (Schedule A Green Card)",
@@ -209,14 +209,13 @@ function UsaPage() {
                     </span>
                   </div>
 
-                  <p className="mt-4 text-xs font-semibold text-brand-deep bg-paper p-2 rounded-md border border-border/80">
-                    {c.focus}
-                  </p>
-
-                  <div className="mt-3 flex items-center justify-between text-xs text-brand">
-                    <span>⏱️ Lead Time: <strong>{c.lead}</strong></span>
-                    <span>💰 <strong>{c.salary}</strong></span>
+                  <div className="mt-4 rounded-md bg-paper p-2.5 border border-border/80 text-xs font-semibold text-brand-deep">
+                    🎯 {c.visaRoute}
                   </div>
+
+                  <p className="mt-2 text-xs font-semibold text-brand">
+                    ⏱️ Processing Lead Time: {c.lead}
+                  </p>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
 
