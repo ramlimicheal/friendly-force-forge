@@ -30,24 +30,24 @@ export const navItems: NavItem[] = [
     label: "Services",
     children: [
       {
-        label: "PR, Study & Skilled Visas",
+        label: "1. PR, Study & Skilled Migration",
         to: "/candidate-portal",
-        hint: "New Zealand, Germany, Canada, Australia & UK",
+        hint: "New Zealand (#1 Priority), Germany, Canada, Australia & UK",
       },
       {
-        label: "Employer Manpower & Sourcing",
+        label: "2. Employer Manpower & Trade Testing",
         to: "/employer-services",
-        hint: "22-26 weeks structured global mobilization SLA",
+        hint: "22–26 weeks 4-stage structured global mobilization SLA",
       },
       {
-        label: "Visa Stamping & Concierge Services",
+        label: "3. Document Legalisation & MEA Apostille",
         to: "/visa-attestation-services",
-        hint: "Notary, Translations, Transcripts & Loans",
+        hint: "State HRD, Hague Apostille & Embassy consular attestation",
       },
       {
-        label: "MEA Apostille & Legalisation",
+        label: "4. Full-Suite Relocation Concierge",
         to: "/visa-attestation-services",
-        hint: "HRD, MEA & consular embassy attestation",
+        hint: "Notary, Translations, Transcripts, Bank Loans & Forex",
       },
     ],
   },
@@ -57,17 +57,17 @@ export const navItems: NavItem[] = [
       {
         label: "🇳🇿 New Zealand (Top Priority)",
         to: "/destinations/schengen-europe",
-        hint: "Skilled Migrant SMC, AEWV & Green List",
+        hint: "Skilled Migrant SMC 6-Pt, AEWV & Green List Fast-Track",
       },
       {
         label: "🇩🇪 Germany & Europe (Priority)",
         to: "/destinations/schengen-europe",
-        hint: "Opportunity Card, EU Blue Card & Poland",
+        hint: "Opportunity Card, EU Blue Card, Poland & Malta",
       },
       {
         label: "🇨🇦 Canada, 🇦🇺 Australia & 🇬🇧 UK",
         to: "/destinations/usa-visa",
-        hint: "Express Entry, GSM Subclass 189/190 & UK Visas",
+        hint: "Express Entry, GSM Subclass 189/190 & Skilled Worker",
       },
       {
         label: "Gulf / GCC Countries",
@@ -77,6 +77,6 @@ export const navItems: NavItem[] = [
     ],
   },
   { label: "Industries", to: "/industries" },
-  { label: "Candidate Portal", to: "/candidate-portal" },
+  { label: "Visa Assessment", to: "/candidate-portal" },
   { label: "Contact Us", to: "/contact-us" },
 ];

@@ -4,20 +4,21 @@ import { company } from "@/data/site";
 
 const quickLinks = [
   { label: "About Us", to: "/about-us" },
-  { label: "For Employers", to: "/employer-services" },
-  { label: "Trade Testing Labs", to: "/about-us" },
-  { label: "Attestation Services", to: "/visa-attestation-services" },
-  { label: "Job Portal", to: "/candidate-portal" },
-  { label: "Contact Us", to: "/contact-us" },
+  { label: "Employer Services (22-26 Wk SLA)", to: "/employer-services" },
+  { label: "PR & Study Visa Assessment", to: "/candidate-portal" },
+  { label: "MEA Apostille & Legalisation", to: "/visa-attestation-services" },
+  { label: "Relocation Concierge Services", to: "/visa-attestation-services" },
+  { label: "Overseas Careers (8 Sectors)", to: "/industries" },
+  { label: "Contact Us (Hyderabad HQ)", to: "/contact-us" },
 ];
 
 const destinationLinks = [
-  { label: "Poland Work Permit", to: "/destinations/schengen-europe" },
-  { label: "Germany Chancenkarte", to: "/destinations/schengen-europe" },
-  { label: "Malta Single Permit", to: "/destinations/schengen-europe" },
-  { label: "Saudi Arabia Vision 2030", to: "/destinations/gulf-gcc" },
-  { label: "UAE Jobs", to: "/destinations/gulf-gcc" },
-  { label: "USA EB-3", to: "/destinations/usa-visa" },
+  { label: "🇳🇿 New Zealand (Top Priority)", to: "/destinations/schengen-europe" },
+  { label: "🇩🇪 Germany Chancenkarte & Blue Card", to: "/destinations/schengen-europe" },
+  { label: "🇨🇦 Canada Express Entry & PNP", to: "/destinations/usa-visa" },
+  { label: "🇦🇺 Australia GSM 189/190", to: "/destinations/usa-visa" },
+  { label: "🇬🇧 UK Skilled Worker & ILR", to: "/destinations/usa-visa" },
+  { label: "🇵🇱 Poland Type-A Work Permit", to: "/destinations/schengen-europe" },
 ];
 
 function ColumnHeading({ children }: { children: React.ReactNode }) {
@@ -39,34 +40,33 @@ export function SiteFooter() {
               <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1.5 shadow-md ring-1 ring-white/20">
                 <img
                   src={logoMark}
-                  alt="Damoder Immigration Logo"
+                  alt="Damoder Immigration Services Logo"
                   className="size-full object-contain"
                 />
               </span>
               <span className="font-display text-lg font-bold">Damoder Immigration</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/80">
-              Government-licensed overseas manpower consultancy mobilising trade-tested Indian
-              talent to Schengen Europe, the Gulf GCC and the United States.
+              Leading overseas immigration and manpower consultancy based in Hyderabad, India — mobilizing skilled Indian talent across New Zealand, Germany, Europe, Canada, Australia, and the Americas with complete transparency.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-white/70">
               <li className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-ember" />
-                MEA Registration No. B-XXXX/XXX/XXXX
+                Headquarters: Hyderabad, Telangana
               </li>
               <li className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-ember" />
-                ISO 9001:2015 Certified Processes
+                ISO 9001:2015 Quality Standards
               </li>
               <li className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-ember" />
-                eMigrate Verified Recruiting Agent
+                100% Process Transparency
               </li>
             </ul>
           </div>
 
           <div>
-            <ColumnHeading>Quick Links</ColumnHeading>
+            <ColumnHeading>Core Services</ColumnHeading>
             <ul className="mt-4 space-y-2.5 text-sm text-white/80">
               {quickLinks.map((l) => (
                 <li key={l.label}>
@@ -79,7 +79,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <ColumnHeading>Destination Guides</ColumnHeading>
+            <ColumnHeading>Priority Destinations</ColumnHeading>
             <ul className="mt-4 space-y-2.5 text-sm text-white/80">
               {destinationLinks.map((l) => (
                 <li key={l.label}>
@@ -92,44 +92,52 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <ColumnHeading>Legal &amp; Candidate Care</ColumnHeading>
+            <ColumnHeading>Central Desks</ColumnHeading>
             <ul className="mt-4 space-y-2.5 text-sm text-white/80">
               <li>
                 <Link to="/candidate-portal" className="transition-colors hover:text-ember">
-                  Anti-Fraud Advisory
+                  PR &amp; Study Visa Evaluation
+                </Link>
+              </li>
+              <li>
+                <Link to="/employer-services" className="transition-colors hover:text-ember">
+                  Employer Manpower Sourcing Desk
+                </Link>
+              </li>
+              <li>
+                <Link to="/visa-attestation-services" className="transition-colors hover:text-ember">
+                  MEA Apostille &amp; Notary Desk
+                </Link>
+              </li>
+              <li>
+                <Link to="/visa-attestation-services" className="transition-colors hover:text-ember">
+                  Education Loans &amp; Forex Desk
                 </Link>
               </li>
               <li>
                 <Link to="/contact-us" className="transition-colors hover:text-ember">
-                  Grievance Redressal
+                  Grievance &amp; Compliance Officer
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://emigrate.gov.in"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition-colors hover:text-ember"
-                >
-                  MEA eMigrate Official Portal
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${company.compliance}`}
-                  className="transition-colors hover:text-ember"
-                >
-                  {company.compliance}
-                </a>
-              </li>
             </ul>
+
+            <div className="mt-6 rounded-md border border-white/15 bg-white/[0.06] p-3 text-xs text-white/80">
+              <span className="font-bold text-ember">📍 Registered Office:</span>
+              <br />
+              {company.address}
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10">
-          <p className="px-8 py-6 text-center text-sm font-medium text-white/70 md:px-12">
-            © 2026 Damoder Immigration &amp; Overseas Manpower Consultancy. All Rights Reserved. Regulated under Emigration Act 1983.
-          </p>
+        <div className="border-t border-white/10 px-8 py-6 text-xs text-white/60 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p>© {new Date().getFullYear()} Damoder Immigration Services. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link to="/about-us" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span>·</span>
+            <Link to="/about-us" className="hover:text-white transition-colors">Terms of Service</Link>
+            <span>·</span>
+            <Link to="/contact-us" className="hover:text-white transition-colors">Hyderabad Support</Link>
+          </div>
         </div>
       </div>
     </footer>
