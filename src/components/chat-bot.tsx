@@ -171,7 +171,17 @@ export function ChatBot() {
         {isOpen ? (
           <X className="size-6 text-brand-deep" />
         ) : (
-          <img src={logoMark} alt="Damoder AI" className="size-8 object-contain" />
+          <>
+            <img src={logoMark} alt="Damoder AI" className="size-8 object-contain" />
+            {!lead && (
+              <span className="absolute -right-0.5 -top-0.5 flex size-4">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-ember opacity-75" />
+                <span className="relative inline-flex size-4 items-center justify-center rounded-full bg-ember text-[9px] font-bold text-white">
+                  1
+                </span>
+              </span>
+            )}
+          </>
         )}
       </motion.button>
 
