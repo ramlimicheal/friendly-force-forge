@@ -85,11 +85,11 @@ export function SiteHeader() {
         <div className="hidden items-center justify-between gap-4 px-5 pb-2 text-xs sm:text-[13px] font-medium text-white/80 lg:flex">
           <span className="inline-flex items-center gap-1.5">
             <MapPin className="size-3.5 text-ember" />
-            Head Office: Hyderabad, Telangana | New Zealand &amp; Germany Priority Corridors
+            Head Office: Hyderabad, Telangana
           </span>
           <span className="inline-flex items-center gap-1.5">
             <ShieldCheck className="size-3.5 text-ember" />
-            Licensed Immigration &amp; Manpower Services | 100% Process Transparency
+            Licensed Immigration &amp; Manpower Services
           </span>
           <span className="inline-flex items-center gap-4">
             <a href={`tel:${company.employerPhone}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
