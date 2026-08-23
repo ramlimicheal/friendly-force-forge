@@ -18,10 +18,17 @@ export const company = {
   support: "support@damoderimmigration.com",
 };
 
+export type NavChild = {
+  label: string;
+  to: string;
+  hint?: string;
+  flags?: string[];
+};
+
 export type NavItem = {
   label: string;
   to?: string;
-  children?: { label: string; to: string; hint?: string }[];
+  children?: NavChild[];
 };
 
 export const navItems: NavItem[] = [
@@ -55,24 +62,34 @@ export const navItems: NavItem[] = [
     label: "Destinations",
     children: [
       {
-        label: "🇳🇿 New Zealand (Top Priority)",
+        label: "New Zealand (Top Priority)",
         to: "/destinations/schengen-europe",
         hint: "Skilled Migrant SMC 6-Pt, AEWV & Green List Fast-Track",
+        flags: ["nz"],
       },
       {
-        label: "🇩🇪 Germany & Europe (Priority)",
+        label: "Germany & Schengen Europe",
         to: "/destinations/schengen-europe",
         hint: "Opportunity Card, EU Blue Card, Poland & Malta",
+        flags: ["de", "pl", "mt"],
       },
       {
-        label: "🇨🇦 Canada, 🇦🇺 Australia & 🇬🇧 UK",
+        label: "Canada, Australia & UK",
         to: "/destinations/usa-visa",
         hint: "Express Entry, GSM Subclass 189/190 & Skilled Worker",
+        flags: ["ca", "au", "gb"],
       },
       {
-        label: "Gulf / GCC Countries",
+        label: "United States",
+        to: "/destinations/usa-visa",
+        hint: "EB-3 Permanent Residency & H-1B Specialty Occupations",
+        flags: ["us"],
+      },
+      {
+        label: "Gulf / GCC Member States",
         to: "/destinations/gulf-gcc",
-        hint: "Saudi Arabia, UAE, Qatar, Kuwait",
+        hint: "Saudi Arabia, UAE, Qatar, Kuwait & Oman",
+        flags: ["sa", "ae", "qa"],
       },
     ],
   },
