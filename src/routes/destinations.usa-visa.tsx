@@ -11,6 +11,7 @@ import {
   Landmark,
   Scale,
   Award,
+  BookOpen,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -50,35 +51,52 @@ export const Route = createFileRoute("/destinations/usa-visa")({
 
 const fourCountries = [
   {
+    code: "ca",
+    flagUrl: "https://flagcdn.com/w160/ca.webp",
     country: "Canada",
     badge: "🇨🇦 Direct PR & PNP",
     focus: "Express Entry (FSWP / CEC), Provincial Nominee Programs & Study-to-PR",
-    desc: "Canada remains one of the world's most welcoming nations for skilled professionals. We assist with ECA credential verification (WES), CRS score optimization, French bonus points, and Provincial Nominee streams across Ontario, BC, Alberta, and Saskatchewan.",
+    currency: "CAD ($)",
+    salary: "CAD $70,000 – $130,000 / yr (₹42L – ₹79L INR)",
+    lead: "6 – 10 Months",
+    desc: "Canada remains one of the world's premier destinations for skilled professionals and students. We assist with ECA credential verification (WES/ICAS), CRS score optimization, French bonus points, and targeted Provincial Nominee streams across Ontario (OINP), British Columbia (BC PNP), Alberta (AAIP), and Saskatchewan (SINP).",
     roles: [
       "Software Engineers, DevOps & Cloud Developers",
       "Financial Analysts, Chartered Accountants & CPAs",
       "Healthcare Professionals, B.Sc Nurses & Medical Techs",
       "Marketing Specialists, HR Managers & Business Consultants",
     ],
-    pathway: "Direct Permanent Residency (PR) with citizenship eligibility after 3 years.",
+    pathway: "Direct Permanent Residency (PR) with Canadian citizenship eligibility after 3 years.",
+    assessmentBody: "WES · ICAS · Medical Council of Canada",
   },
   {
+    code: "au",
+    flagUrl: "https://flagcdn.com/w160/au.webp",
     country: "Australia",
     badge: "🇦🇺 General Skilled Migration",
     focus: "Subclass 189, Subclass 190 & Subclass 491 Regional Visas",
-    desc: "Australia offers exceptional wages and public healthcare for qualified professionals. We handle skills assessments through ACS, Engineers Australia, VETASSESS, and ANMAC, followed by Expression of Interest (EOI) and state nomination filings.",
+    currency: "AUD ($)",
+    salary: "AUD $80,000 – $145,000 / yr (₹44L – ₹80L INR)",
+    lead: "6 – 12 Months",
+    desc: "Australia offers exceptional wages, sunny lifestyle, and universal Medicare healthcare. We manage skills assessments through ACS (IT), Engineers Australia (EA), VETASSESS, and ANMAC (Nursing), followed by Expression of Interest (EOI) and state nomination filings.",
     roles: [
       "Civil, Mechanical, Structural & Electrical Engineers",
       "IT Project Managers, Full-Stack & Cyber Security Specialists",
       "Registered Nurses, Aged Care & Diagnostic Staff",
       "STEM Teachers, Accountants & Quantity Surveyors",
     ],
-    pathway: "Subclass 189 / 190 Permanent Residency or Subclass 491 to PR transition.",
+    pathway: "Subclass 189 / 190 Permanent Residency or Subclass 491 Regional to PR transition.",
+    assessmentBody: "ACS · Engineers Australia · VETASSESS · ANMAC",
   },
   {
+    code: "gb",
+    flagUrl: "https://flagcdn.com/w160/gb.webp",
     country: "United Kingdom",
     badge: "🇬🇧 UK Skilled Worker",
     focus: "UK Skilled Worker Visa, Health & Care Worker & Student Visas",
+    currency: "GBP (£)",
+    salary: "GBP £32,000 – £70,000 / yr (₹34L – ₹74L INR)",
+    lead: "3 – 6 Months",
     desc: "Direct employment sponsorship in the UK with fast-track processing for healthcare and tech personnel. All permits include NHS healthcare access, spousal work rights, and a 5-year route to Indefinite Leave to Remain (ILR).",
     roles: [
       "NHS & Private Clinic Nurses (B.Sc with CBT & OSCE preparation)",
@@ -86,12 +104,18 @@ const fourCountries = [
       "Chefs, Hospitality Managers & F&B Directors",
       "Financial Auditors, Compliance Officers & Business Analysts",
     ],
-    pathway: "5-Year Skilled Worker Visa leading to Indefinite Leave to Remain (ILR).",
+    pathway: "5-Year Skilled Worker Visa leading to Indefinite Leave to Remain (ILR) and British Citizenship.",
+    assessmentBody: "UK ENIC · NMC (Nursing & Midwifery Council) · GMC",
   },
   {
+    code: "us",
+    flagUrl: "https://flagcdn.com/w160/us.webp",
     country: "United States of America",
     badge: "🇺🇸 Employment & Exchange",
     focus: "EB-3 Permanent Residency, H-1B Specialty & J-1 Exchange",
+    currency: "USD ($)",
+    salary: "USD $75,000 – $160,000 / yr (₹62L – ₹1.3Cr INR)",
+    lead: "9 – 18 Months",
     desc: "Employer-sponsored permanent residency and specialized non-immigrant work classifications. We provide comprehensive PERM labor certification guidance, credential evaluations, and consular scheduling in India.",
     roles: [
       "IT Software Architects & Senior Developers (H-1B / EB-2)",
@@ -99,7 +123,8 @@ const fourCountries = [
       "Culinary & Luxury Hospitality Trainees (J-1 Intern/Trainee)",
       "Executive & Managerial Intra-Company Transfers (L-1)",
     ],
-    pathway: "US Permanent Resident Card (Green Card) through employer sponsorship.",
+    pathway: "US Permanent Resident Card (Green Card) through direct employer sponsorship.",
+    assessmentBody: "USCIS · CGFNS · NACES Credential Evaluation",
   },
 ];
 
@@ -129,10 +154,32 @@ function UsaPage() {
         </div>
       </PageHero>
 
-      {/* 2. 4 Flagship Corridors */}
+      {/* 2. Flag Marquee & Badges */}
+      <section className="border-b border-border/80 bg-card py-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="flex items-center justify-between gap-4 flex-wrap">
+            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              English Corridors:
+            </span>
+            <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
+              {fourCountries.map((d) => (
+                <div key={d.code} className="flex items-center gap-2 rounded-lg border border-border bg-paper px-3 py-1.5 shadow-2xs hover:border-brand/40 transition-colors">
+                  <span className="flex size-6 shrink-0 overflow-hidden rounded-full border border-border shadow-2xs">
+                    <img src={d.flagUrl} alt={d.country} className="size-full object-cover" />
+                  </span>
+                  <span className="text-xs font-bold text-brand-deep">{d.country}</span>
+                  <span className="text-[10px] text-muted-foreground font-mono">({d.code.toUpperCase()})</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. 4 Flagship Corridors */}
       <Section
         eyebrow="Country Pathways"
-        title="Permanent settlement and skilled employment programs"
+        title="Permanent settlement, skilled migration and study programs"
         intro="Our Hyderabad team guides you through skills assessments, points optimization, provincial nominations, and consular filings."
       >
         <StaggerContainer staggerDelay={0.08} className="grid gap-6 md:grid-cols-2">
@@ -141,13 +188,36 @@ function UsaPage() {
               <MotionCard className="rounded-lg border border-border bg-card p-8 h-full flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
                 <div>
                   <div className="flex items-center justify-between">
-                    <h3 className="font-display text-2xl font-bold text-brand-deep">{c.country}</h3>
+                    <div className="flex items-center gap-3">
+                      <span className="relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white shadow-sm ring-1 ring-border/80 bg-paper">
+                        <img
+                          src={c.flagUrl}
+                          alt={`${c.country} flag logo`}
+                          className="size-full object-cover"
+                          loading="lazy"
+                        />
+                      </span>
+                      <div>
+                        <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-ember">
+                          {c.code.toUpperCase()} · {c.currency}
+                        </span>
+                        <h3 className="font-display text-2xl font-bold text-brand-deep">{c.country}</h3>
+                      </div>
+                    </div>
                     <span className="rounded-md border border-brand/20 bg-brand/5 px-2.5 py-1 text-xs font-semibold text-brand">
                       {c.badge}
                     </span>
                   </div>
 
-                  <p className="mt-2 text-xs font-semibold text-ember">{c.focus}</p>
+                  <p className="mt-4 text-xs font-semibold text-brand-deep bg-paper p-2 rounded-md border border-border/80">
+                    {c.focus}
+                  </p>
+
+                  <div className="mt-3 flex items-center justify-between text-xs text-brand">
+                    <span>⏱️ Lead Time: <strong>{c.lead}</strong></span>
+                    <span>💰 <strong>{c.salary}</strong></span>
+                  </div>
+
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
 
                   <div className="mt-6 border-t border-border pt-4">
@@ -165,9 +235,15 @@ function UsaPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-md bg-paper p-3.5 border border-border text-xs text-muted-foreground">
-                  <span className="font-semibold text-brand-deep">Settlement Pathway: </span>
-                  {c.pathway}
+                <div className="mt-6 space-y-2">
+                  <div className="rounded-md bg-paper p-2.5 border border-border text-[11px] text-muted-foreground">
+                    <span className="font-semibold text-brand-deep">Skills Assessor: </span>
+                    {c.assessmentBody}
+                  </div>
+                  <div className="rounded-md bg-brand/5 p-2.5 border border-brand/15 text-[11px] text-brand-deep">
+                    <span className="font-bold text-ember">Settlement Pathway: </span>
+                    {c.pathway}
+                  </div>
                 </div>
               </MotionCard>
             </StaggerItem>
