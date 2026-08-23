@@ -1,0 +1,268 @@
+{
+  "audit_type": "ERA_V2_EZRA_SEMANTIC_CONSISTENCY_AUDIT",
+  "audit_timestamp": "2026-08-23T17:50:00+05:30",
+  "verified_brand": "Damoder Immigration Services",
+  "verified_headquarters": "6F6F+74G, Tukkuguda, Hyderabad, Telangana 501359, India",
+  "flagship_priority_1": "New Zealand",
+  "european_priority_1": "Germany",
+  "total_audited_files": 17,
+  "total_codebase_words": 27526,
+  "overall_consistency_verdict": "100% CONSISTENT & VALUE-ALIGNED",
+  "files": [
+    {
+      "file": "src/data/site.ts",
+      "sha256": "6ec484610ac68ace6b3c96cddd01ac1421f845efb472efd669e630851111f136",
+      "word_count": 243,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 10,
+        "Hyderabad HQ": 1,
+        "New Zealand Priority": 2,
+        "Germany Priority": 2,
+        "Transparency / Trust": 2,
+        "Structured SLA / Timeline": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/__root.tsx",
+      "sha256": "436a02aade0e2b9206e0305883219fe5f1abf7633d9c78efdf267cb487714380",
+      "word_count": 835,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 14,
+        "Hyderabad HQ": 13,
+        "New Zealand Priority": 5,
+        "Germany Priority": 5,
+        "Transparency / Trust": 0,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/index.tsx",
+      "sha256": "6370fe48cfd57d2c982314f64e137ca526e4b12bd9c4a216232faeff0a41d000",
+      "word_count": 4325,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 25,
+        "Hyderabad HQ": 17,
+        "New Zealand Priority": 16,
+        "Germany Priority": 15,
+        "Transparency / Trust": 9,
+        "Structured SLA / Timeline": 4
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/about-us.tsx",
+      "sha256": "ac66dab161b65ad0d475c1a21d33a6d4b1b9cb0684fae173c6f1793b960427d6",
+      "word_count": 1674,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 11,
+        "Hyderabad HQ": 1,
+        "New Zealand Priority": 0,
+        "Germany Priority": 1,
+        "Transparency / Trust": 14,
+        "Structured SLA / Timeline": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/employer-services.tsx",
+      "sha256": "19e3d39ea4c2c00d5b7a5823c855fa2e1d234887bcbd34f3ff210b1879380f5b",
+      "word_count": 2234,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 4,
+        "Hyderabad HQ": 2,
+        "New Zealand Priority": 2,
+        "Germany Priority": 2,
+        "Transparency / Trust": 12,
+        "Structured SLA / Timeline": 46
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/visa-attestation-services.tsx",
+      "sha256": "e46bbffc1b36289aa4ad0db72ef50c70b858bcc75810bb1fb5c7534be099156f",
+      "word_count": 1535,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 5,
+        "Hyderabad HQ": 4,
+        "New Zealand Priority": 1,
+        "Germany Priority": 0,
+        "Transparency / Trust": 4,
+        "Structured SLA / Timeline": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/industries.tsx",
+      "sha256": "2bd544bb6a15c29e2ef3f3bd249cb1ae5c0f34577ad0c653e4ab786695d76640",
+      "word_count": 1085,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 5,
+        "Hyderabad HQ": 1,
+        "New Zealand Priority": 9,
+        "Germany Priority": 7,
+        "Transparency / Trust": 3,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/destinations.schengen-europe.tsx",
+      "sha256": "7ea43a7bb308a0a1286fcee44fae84958ca0634b9ee03ca84c1bc66449d4b02a",
+      "word_count": 1819,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 6,
+        "Hyderabad HQ": 3,
+        "New Zealand Priority": 9,
+        "Germany Priority": 8,
+        "Transparency / Trust": 3,
+        "Structured SLA / Timeline": 8
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/destinations.usa-visa.tsx",
+      "sha256": "9024308d24fec5925409f4410533c17fc53a2120ab34d2e320561a856bed5729",
+      "word_count": 1388,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 6,
+        "Hyderabad HQ": 3,
+        "New Zealand Priority": 0,
+        "Germany Priority": 0,
+        "Transparency / Trust": 1,
+        "Structured SLA / Timeline": 4
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/destinations.gulf-gcc.tsx",
+      "sha256": "836f6968ce5c8f51a24e61ce92eb41a55018fde7856926a34d1bab669915a5a7",
+      "word_count": 1179,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 5,
+        "Hyderabad HQ": 1,
+        "New Zealand Priority": 0,
+        "Germany Priority": 0,
+        "Transparency / Trust": 2,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/candidate-portal.tsx",
+      "sha256": "9e77bfdb8f81bfa19f941dc1fbfd3c4f5481a2985905045e7f25fd44892c9575",
+      "word_count": 2116,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 10,
+        "Hyderabad HQ": 7,
+        "New Zealand Priority": 12,
+        "Germany Priority": 10,
+        "Transparency / Trust": 8,
+        "Structured SLA / Timeline": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/routes/contact-us.tsx",
+      "sha256": "6b4eb7426e015dc34cccb9dd2fa30c5896686c8f9f8910eec9a00a5681adab39",
+      "word_count": 1688,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 11,
+        "Hyderabad HQ": 5,
+        "New Zealand Priority": 0,
+        "Germany Priority": 0,
+        "Transparency / Trust": 7,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/components/chat-bot.tsx",
+      "sha256": "fceede16683bcc4ec392cdd59e399166cc0b1b0f5554f6a3f274620911bd84a0",
+      "word_count": 2654,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 9,
+        "Hyderabad HQ": 4,
+        "New Zealand Priority": 0,
+        "Germany Priority": 6,
+        "Transparency / Trust": 4,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/components/site-header.tsx",
+      "sha256": "a39582d60aaee76b11cd76685c28712d3aa41eb2d1b1a15b0376c77141abb9d1",
+      "word_count": 1360,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 3,
+        "Hyderabad HQ": 0,
+        "New Zealand Priority": 0,
+        "Germany Priority": 0,
+        "Transparency / Trust": 0,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/components/site-footer.tsx",
+      "sha256": "327089511620c297b72005276686de9ebb0098f30840c56b95d34e05f76c3f3f",
+      "word_count": 590,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 3,
+        "Hyderabad HQ": 0,
+        "New Zealand Priority": 0,
+        "Germany Priority": 1,
+        "Transparency / Trust": 3,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/components/who-we-are.tsx",
+      "sha256": "b3c94d9e5ab5a576ada989ceb27a5e4884f95306d5f4feb72b9542c997c38462",
+      "word_count": 522,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 1,
+        "Hyderabad HQ": 0,
+        "New Zealand Priority": 0,
+        "Germany Priority": 0,
+        "Transparency / Trust": 4,
+        "Structured SLA / Timeline": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "src/components/deployment-map.tsx",
+      "sha256": "b699dc12c77d0354643f4faee5848dd530fcc1c8dbab8593190a27665ad28b00",
+      "word_count": 2279,
+      "negative_violations": [],
+      "semantic_signals": {
+        "Brand Presence": 1,
+        "Hyderabad HQ": 0,
+        "New Zealand Priority": 0,
+        "Germany Priority": 4,
+        "Transparency / Trust": 2,
+        "Structured SLA / Timeline": 0
+      },
+      "status": "PASS"
+    }
+  ]
+}
