@@ -176,7 +176,7 @@ export function SiteHeader() {
               ) : (
                 <Link
                   key={item.label}
-                  to={item.to}
+                  to={item.to ?? "/"}
                   className="text-sm sm:text-[15px] font-medium text-white/90 transition-colors hover:text-ember"
                   activeProps={{ className: "text-ember font-semibold" }}
                 >
@@ -256,7 +256,7 @@ export function SiteHeader() {
                           </div>
                         ) : (
                           <Link
-                            to={item.to}
+                            to={item.to ?? "/"}
                             onClick={() => setOpen(false)}
                             className="block py-1 text-base font-semibold text-white/90 hover:text-ember transition-colors"
                           >

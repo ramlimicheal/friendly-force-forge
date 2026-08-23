@@ -28,8 +28,8 @@ type Message = {
   sender: "bot" | "user";
   text: string;
   timestamp: string;
-  quickReplies?: string[];
-  link?: { label: string; to: string };
+  quickReplies?: string[] | undefined;
+  link?: { label: string; to: string } | undefined;
 };
 
 const INITIAL_MESSAGES: Message[] = [
@@ -106,7 +106,7 @@ const KNOWLEDGE_BASE: { keywords: string[]; answer: string; link?: { label: stri
   },
 ];
 
-function getBotReply(userText: string): { text: string; link?: { label: string; to: string }; quickReplies?: string[] } {
+function getBotReply(userText: string): { text: string; link?: { label: string; to: string } | undefined; quickReplies?: string[] | undefined } {
   const lower = userText.toLowerCase();
 
   for (const item of KNOWLEDGE_BASE) {
@@ -173,8 +173,8 @@ export function ChatBot() {
         sender: "bot",
         text: reply.text,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-        quickReplies: reply.quickReplies,
-        link: reply.link,
+        ...(reply.quickReplies ? { quickReplies: reply.quickReplies } : {}),
+        ...(reply.link ? { link: reply.link } : {}),
       };
       setIsTyping(false);
       setMessages((prev) => [...prev, botMessage]);

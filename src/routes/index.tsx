@@ -35,6 +35,7 @@ import {
   FileSignature,
   Headphones,
   Check,
+  Stamp,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -320,7 +321,7 @@ function HomePage() {
       <section className="relative overflow-hidden bg-brand-deep text-white">
         <div className="absolute inset-0 opacity-15">
           <PixelBlast
-            variant="circle"
+            variant="square"
             pixelSize={6}
             color="#FF6B35"
             patternScale={6.25}
@@ -428,7 +429,7 @@ function HomePage() {
             {counters.map((c) => (
               <div key={c.label} className="border-l-2 border-brand/30 pl-4 sm:pl-5">
                 <div className="font-display text-3xl font-bold tracking-tight text-brand-deep sm:text-4xl">
-                  <AnimatedCounter to={c.target} />
+                  <AnimatedCounter value={c.target} />
                   {c.suffix ? <span className="text-xl sm:text-2xl font-semibold text-ember ml-1">{c.suffix}</span> : null}
                 </div>
                 <div className="mt-1 text-sm font-semibold text-foreground">{c.label}</div>
