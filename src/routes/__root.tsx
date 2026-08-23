@@ -1,17 +1,20 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
-  useRouter, useLocation,
+  useRouter,
+  useLocation,
+  redirect,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { motion } from "framer-motion";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { checkSiteAccess } from "../lib/gate.functions";
 import { ScrollProgressBar } from "@/components/motion-primitives";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -79,6 +82,14 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  beforeLoad: async ({ location }) => {
+    // Allow the unlock page itself
+    if (location.pathname === "/unlock") return;
+    const { unlocked } = await checkSiteAccess();
+    if (!unlocked) {
+      throw redirect({ to: "/unlock" });
+    }
+  },
   head: () => ({
     meta: [
       { charSet: "utf-8" },

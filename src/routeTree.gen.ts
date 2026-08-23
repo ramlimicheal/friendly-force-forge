@@ -15,7 +15,9 @@ import { Route as CandidatePortalRouteImport } from './routes/candidate-portal'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as EmployerServicesRouteImport } from './routes/employer-services'
 import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as UnlockRouteImport } from './routes/unlock'
 import { Route as VisaAttestationServicesRouteImport } from './routes/visa-attestation-services'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as DestinationsGulfGccRouteImport } from './routes/destinations.gulf-gcc'
 import { Route as DestinationsSchengenEuropeRouteImport } from './routes/destinations.schengen-europe'
 import { Route as DestinationsUsaVisaRouteImport } from './routes/destinations.usa-visa'
@@ -50,9 +52,19 @@ const IndustriesRoute = IndustriesRouteImport.update({
   path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UnlockRoute = UnlockRouteImport.update({
+  id: '/unlock',
+  path: '/unlock',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VisaAttestationServicesRoute = VisaAttestationServicesRouteImport.update({
   id: '/visa-attestation-services',
   path: '/visa-attestation-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DestinationsGulfGccRoute = DestinationsGulfGccRouteImport.update({
@@ -79,7 +91,9 @@ export interface FileRoutesByFullPath {
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
   '/industries': typeof IndustriesRoute
+  '/unlock': typeof UnlockRoute
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
+  '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
   '/destinations/schengen-europe': typeof DestinationsSchengenEuropeRoute
   '/destinations/usa-visa': typeof DestinationsUsaVisaRoute
@@ -91,7 +105,9 @@ export interface FileRoutesByTo {
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
   '/industries': typeof IndustriesRoute
+  '/unlock': typeof UnlockRoute
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
+  '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
   '/destinations/schengen-europe': typeof DestinationsSchengenEuropeRoute
   '/destinations/usa-visa': typeof DestinationsUsaVisaRoute
@@ -104,7 +120,9 @@ export interface FileRoutesById {
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
   '/industries': typeof IndustriesRoute
+  '/unlock': typeof UnlockRoute
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
+  '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
   '/destinations/schengen-europe': typeof DestinationsSchengenEuropeRoute
   '/destinations/usa-visa': typeof DestinationsUsaVisaRoute
@@ -118,7 +136,9 @@ export interface FileRouteTypes {
     | '/contact-us'
     | '/employer-services'
     | '/industries'
+    | '/unlock'
     | '/visa-attestation-services'
+    | '/api/chat'
     | '/destinations/gulf-gcc'
     | '/destinations/schengen-europe'
     | '/destinations/usa-visa'
@@ -130,7 +150,9 @@ export interface FileRouteTypes {
     | '/contact-us'
     | '/employer-services'
     | '/industries'
+    | '/unlock'
     | '/visa-attestation-services'
+    | '/api/chat'
     | '/destinations/gulf-gcc'
     | '/destinations/schengen-europe'
     | '/destinations/usa-visa'
@@ -142,7 +164,9 @@ export interface FileRouteTypes {
     | '/contact-us'
     | '/employer-services'
     | '/industries'
+    | '/unlock'
     | '/visa-attestation-services'
+    | '/api/chat'
     | '/destinations/gulf-gcc'
     | '/destinations/schengen-europe'
     | '/destinations/usa-visa'
@@ -155,7 +179,9 @@ export interface RootRouteChildren {
   ContactUsRoute: typeof ContactUsRoute
   EmployerServicesRoute: typeof EmployerServicesRoute
   IndustriesRoute: typeof IndustriesRoute
+  UnlockRoute: typeof UnlockRoute
   VisaAttestationServicesRoute: typeof VisaAttestationServicesRoute
+  ApiChatRoute: typeof ApiChatRoute
   DestinationsGulfGccRoute: typeof DestinationsGulfGccRoute
   DestinationsSchengenEuropeRoute: typeof DestinationsSchengenEuropeRoute
   DestinationsUsaVisaRoute: typeof DestinationsUsaVisaRoute
@@ -205,11 +231,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/unlock': {
+      id: '/unlock'
+      path: '/unlock'
+      fullPath: '/unlock'
+      preLoaderRoute: typeof UnlockRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/visa-attestation-services': {
       id: '/visa-attestation-services'
       path: '/visa-attestation-services'
       fullPath: '/visa-attestation-services'
       preLoaderRoute: typeof VisaAttestationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/destinations/gulf-gcc': {
@@ -243,7 +283,9 @@ const rootRouteChildren: RootRouteChildren = {
   ContactUsRoute: ContactUsRoute,
   EmployerServicesRoute: EmployerServicesRoute,
   IndustriesRoute: IndustriesRoute,
+  UnlockRoute: UnlockRoute,
   VisaAttestationServicesRoute: VisaAttestationServicesRoute,
+  ApiChatRoute: ApiChatRoute,
   DestinationsGulfGccRoute: DestinationsGulfGccRoute,
   DestinationsSchengenEuropeRoute: DestinationsSchengenEuropeRoute,
   DestinationsUsaVisaRoute: DestinationsUsaVisaRoute,
