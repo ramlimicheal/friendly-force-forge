@@ -385,11 +385,13 @@ export function PixelBlast({
               for (let i = 0; i < 6; i++) {
                 if (i < ripplesRef.current.length) {
                   const r = ripplesRef.current[i];
-                  gl.uniform2f(uR[i], r.x, r.y);
-                  gl.uniform1f(uT[i], now - r.startTime);
+                  if (r) {
+                    gl.uniform2f(uR[i] ?? null, r.x, r.y);
+                    gl.uniform1f(uT[i] ?? null, now - r.startTime);
+                  }
                 } else {
-                  gl.uniform2f(uR[i], -999, -999);
-                  gl.uniform1f(uT[i], -999);
+                  gl.uniform2f(uR[i] ?? null, -999, -999);
+                  gl.uniform1f(uT[i] ?? null, -999);
                 }
               }
 
@@ -443,7 +445,7 @@ export function PixelBlast({
 
           const wave = Math.sin(nx * 2.2 + now * speed * 1.5) * Math.cos(ny * 1.9 - now * speed * 1.1);
           const bayerIdx = (y % 4) * 4 + (x % 4);
-          const threshold = BAYER_4X4[bayerIdx];
+          const threshold = BAYER_4X4[bayerIdx] ?? 0;
 
           if ((wave * 0.5 + 0.5) > threshold) {
             ctx.globalAlpha = 0.5;
