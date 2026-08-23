@@ -15,6 +15,10 @@ import {
   ArrowRight,
   CheckCircle2,
   Sparkles,
+  GraduationCap,
+  Landmark,
+  UserCheck,
+  Compass,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -34,24 +38,24 @@ import {
 export const Route = createFileRoute("/contact-us")({
   head: () => ({
     meta: [
-      { title: "Contact Us | Employer, Candidate & MEA Compliance Desks" },
+      { title: "Contact Us | Damoder Immigration Services | Hyderabad Headquarters" },
       {
         name: "description",
         content:
-          "Contact Dhamodaran Immigration directly. Department routing for B2B employer mandates, job seekers, MEA apostille attestation, and statutory grievance reporting.",
+          "Contact Damoder Immigration Services at our Hyderabad headquarters: 6F6F+74G, Tukkuguda, Hyderabad, Telangana 501359. Dedicated desks for PR, Study, Work & Visitor Visas.",
       },
-      { property: "og:title", content: "Contact Dhamodaran Immigration | Chennai Headquarters" },
+      { property: "og:title", content: "Contact Damoder Immigration Services | Hyderabad HQ" },
       {
         property: "og:description",
         content:
-          "Reach the right department directly — employer recruitment desk, candidate registration, document attestation, and MEA compliance.",
+          "Schedule an in-person or remote video visa consultation with our dedicated immigration advisors in Hyderabad, India.",
       },
-      { property: "og:url", content: "https://dhamodaranimmigration.com/contact-us" },
+      { property: "og:url", content: "https://damoderimmigration.com/contact-us" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://dhamodaranimmigration.com/contact-us" },
+      { rel: "canonical", href: "https://damoderimmigration.com/contact-us" },
     ],
     scripts: [
       {
@@ -59,19 +63,19 @@ export const Route = createFileRoute("/contact-us")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Contact Dhamodaran Immigration",
-          "url": "https://dhamodaranimmigration.com/contact-us",
+          "name": "Contact Damoder Immigration Services",
+          "url": "https://damoderimmigration.com/contact-us",
           "mainEntity": {
             "@type": "EmploymentAgency",
-            "name": "Dhamodaran Immigration & Overseas Manpower Consultancy",
-            "telephone": "+91-94440-12345",
-            "email": "contact@dhamodaranimmigration.com",
+            "name": "Damoder Immigration Services",
+            "telephone": "+91-98765-43210",
+            "email": "info@damoderimmigration.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Mount Road / Anna Salai",
-              "addressLocality": "Chennai",
-              "addressRegion": "Tamil Nadu",
-              "postalCode": "600002",
+              "streetAddress": "6F6F+74G, Tukkuguda",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana",
+              "postalCode": "501359",
               "addressCountry": "IN"
             }
           }
@@ -84,133 +88,105 @@ export const Route = createFileRoute("/contact-us")({
 
 const desks = [
   {
-    icon: Briefcase,
-    title: "Employer Partnerships & Bulk Mandates",
-    badge: "B2B Clients",
-    phone: company.employerPhone,
-    email: company.partnerships,
-    desc: "Job orders, technical trade test scheduling, client interview delegation hosting, and SLA contracts.",
-    timing: "Mon – Sat: 9:00 AM – 7:00 PM IST",
-  },
-  {
-    icon: Users,
-    title: "Candidate Career Desk & Interviews",
-    badge: "Job Seekers",
-    phone: company.candidatePhone,
-    email: company.jobs,
-    desc: "Open vacancy inquiries, free profile assessment, trade pre-testing schedules, and pre-departure briefings.",
+    icon: Compass,
+    title: "PR & Permanent Settlement Desk",
+    badge: "PR & Skilled Migration",
+    phone: company.phone,
+    email: company.email,
+    desc: "Points assessment, EOI submissions, and document filing for New Zealand (SMC), Canada (Express Entry), Australia & Germany.",
     timing: "Mon – Sat: 9:30 AM – 6:30 PM IST",
   },
   {
-    icon: FileCheck2,
-    title: "MEA Apostille & Visa Stamping Division",
-    badge: "Documentation",
-    phone: company.attestationPhone,
-    email: company.attestation,
-    desc: "State HRD, Hague Apostille stickers, Gulf embassy consular legalisation, and safe passport dispatch.",
-    timing: "Mon – Sat: 9:30 AM – 6:00 PM IST",
+    icon: GraduationCap,
+    title: "Study Visas & University Admissions",
+    badge: "Higher Education",
+    phone: company.consultantPhone,
+    email: company.admissions,
+    desc: "University shortlisting, SOP reviews, IELTS inputs, education loan support, and student visa filing for New Zealand, UK, Germany, Canada & Australia.",
+    timing: "Mon – Sat: 9:30 AM – 6:30 PM IST",
   },
   {
-    icon: ShieldCheck,
-    title: "Statutory Compliance & Grievance Desk",
-    badge: "24/7 Ombudsman",
-    phone: company.employerPhone,
-    email: company.compliance,
-    desc: "Report unauthorized sub-agents, cash demands, or contract discrepancies directly to our compliance director.",
-    timing: "24/7 Urgent Ombudsman Line",
-  },
-];
-
-const officeLocations = [
-  {
-    city: "Chennai (Headquarters)",
-    state: "Tamil Nadu, India",
-    address: "Dhamodaran Immigration & Overseas Manpower Consultancy, Mount Road / Anna Salai Business District, Chennai – 600002",
-    contact: "+91 94440 12345 / contact@dhamodaranimmigration.com",
-    role: "Registered MEA Headquarters & Central Executive Operations",
+    icon: Briefcase,
+    title: "Skilled Work Permits & Employer Placements",
+    badge: "Overseas Careers",
+    phone: company.phone,
+    email: company.careers,
+    desc: "Direct employer sponsorship, Accredited Employer work visas, German Opportunity Cards, and international career transitions.",
+    timing: "Mon – Sat: 9:30 AM – 6:30 PM IST",
   },
   {
-    city: "Regional Mobilisation Centers",
-    state: "South & North India Network",
-    address: "Authorized Trade Testing & Skill Auditing Workshop Alliances in Madurai, Trichy, Kochi, Hyderabad, and New Delhi",
-    contact: "partnerships@dhamodaranimmigration.com",
-    role: "Candidate Screening, Welding Rigs, MEP Labs & Trade Testing Yards",
+    icon: Landmark,
+    title: "Concierge, Attestation & Forex Desk",
+    badge: "Relocation Suite",
+    phone: company.conciergePhone,
+    email: company.support,
+    desc: "Notary public services, State HRD & MEA Apostille, sworn translations, bank loans, IELTS exam slot booking, and forex assistance.",
+    timing: "Mon – Sat: 9:30 AM – 6:30 PM IST",
   },
 ];
 
 function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setTimeout(() => {
+      setSubmitting(false);
+      toast.success("Inquiry received! A dedicated visa counselor from Damoder Immigration Services (Hyderabad) will reach out to you shortly.");
+      (e.target as HTMLFormElement).reset();
+    }, 1200);
+  };
+
   return (
     <>
-      {/* 1. PageHero with PixelBlast */}
       <PageHero
-        eyebrow="Direct Liaison · MEA Licence B-0824/TN/PER/1000+/5/9821/2021"
-        title="Direct Department Routing & Statutory Liaison Desks"
-        subtitle="Department-level direct access so your inquiry connects immediately with a domain specialist—whether submitting corporate job orders, verifying certificates, or accessing grievance support."
-      >
-        <div className="flex flex-wrap items-center gap-3">
-          <a
-            href="#inquiry-form"
-            className="inline-flex items-center gap-2 rounded-lg bg-ember px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
-          >
-            Send Direct Message
-            <ArrowRight className="size-4" />
-          </a>
-          <a
-            href="#desks"
-            className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
-          >
-            Department Contacts
-          </a>
-        </div>
-      </PageHero>
+        eyebrow="Headquarters: Hyderabad, India · Trusted Visa Consultants"
+        title="Get in Touch with Damoder Immigration Services"
+        subtitle="Schedule an in-person consultation at our Hyderabad office or speak with a dedicated visa specialist over phone or video call."
+      />
 
-      {/* 2. Direct Department Routing Cards */}
+      {/* 4 Specialized Department Desks */}
       <Section
-        id="desks"
-        eyebrow="Specialist Desks"
-        title="Connect directly with our operational divisions"
-        intro="Skip the generic switchboard. Contact the exact division handling your project or application."
+        eyebrow="Department Routing"
+        title="Connect directly with our specialized visa desks"
+        intro="Reach the right department directly for faster response times and dedicated counseling."
       >
-        <StaggerContainer staggerDelay={0.08} className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <StaggerContainer staggerDelay={0.08} className="grid gap-6 md:grid-cols-2">
           {desks.map((d) => (
             <StaggerItem key={d.title}>
-              <MotionCard className="rounded-lg border border-border bg-card p-7 h-full flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
+              <MotionCard className="rounded-lg border border-border bg-card p-8 h-full flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex size-11 items-center justify-center rounded-lg bg-brand/10 text-brand">
-                      <d.icon className="size-5" />
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-brand/10 text-brand">
+                      <d.icon className="size-6" />
                     </div>
-                    <span className="rounded-md border border-brand/20 bg-brand/5 px-2.5 py-0.5 text-[11px] font-semibold text-brand">
+                    <span className="rounded-md border border-brand/20 bg-brand/5 px-2.5 py-1 text-xs font-semibold text-brand">
                       {d.badge}
                     </span>
                   </div>
 
-                  <h3 className="mt-4 font-display text-base font-bold text-brand-deep leading-snug">
+                  <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-brand-deep">
                     {d.title}
                   </h3>
-
-                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{d.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d.desc}</p>
                 </div>
 
-                <div className="mt-6 border-t border-border pt-4 space-y-2">
-                  <a
-                    href={`tel:${d.phone.replace(/\s/g, "")}`}
-                    className="flex items-center gap-2 text-xs font-bold text-foreground hover:text-brand transition-colors"
-                  >
-                    <Phone className="size-3.5 text-brand shrink-0" />
-                    <span>{d.phone}</span>
-                  </a>
-                  <a
-                    href={`mailto:${d.email}`}
-                    className="flex items-center gap-2 break-all text-xs font-medium text-muted-foreground hover:text-brand transition-colors"
-                  >
-                    <Mail className="size-3.5 text-ember shrink-0" />
-                    <span>{d.email}</span>
-                  </a>
-                  <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground pt-1">
-                    <Clock className="size-3 text-muted-foreground shrink-0" />
+                <div className="mt-6 border-t border-border pt-4 space-y-2 text-xs">
+                  <div className="flex items-center justify-between">
+                    <span className="text-muted-foreground">Direct Line:</span>
+                    <a href={`tel:${d.phone}`} className="font-semibold text-brand hover:text-ember">
+                      {d.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-muted-foreground">Email:</span>
+                    <a href={`mailto:${d.email}`} className="font-semibold text-brand hover:text-ember">
+                      {d.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center justify-between text-muted-foreground">
+                    <span>Working Hours:</span>
                     <span>{d.timing}</span>
                   </div>
                 </div>
@@ -220,144 +196,134 @@ function ContactPage() {
         </StaggerContainer>
       </Section>
 
-      {/* 3. Direct Interactive Communication Terminal & Office Showcase */}
+      {/* Contact Form & Hyderabad HQ Address */}
       <Section
-        id="inquiry-form"
         tone="muted"
-        eyebrow="Direct Message"
-        title="Submit an inquiry to our central operations"
-        intro="Fill out the form below. Inquiries are automatically routed to the designated desk head and answered within one business day."
+        eyebrow="Direct Inquiry"
+        title="Send a Message or Book an In-Person Consultation"
+        intro="Our Hyderabad headquarters is open Monday through Saturday. Fill out the form below to schedule a visit."
       >
-        <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
-          <FadeIn direction="up">
-            <div className="rounded-lg border border-border bg-card p-6 sm:p-8 shadow-sm">
-              <form
-                className="grid gap-5 sm:grid-cols-2"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitting(true);
-                  setTimeout(() => {
-                    setSubmitting(false);
-                    (e.target as HTMLFormElement).reset();
-                    toast.success("Message received by Department Desk", {
-                      description: "Our designated officer will review your request and contact you within 24 hours.",
-                    });
-                  }, 600);
-                }}
-              >
-                <div className="space-y-2">
-                  <Label htmlFor="cname" className="font-semibold text-brand-deep">
-                    Your Full Name *
-                  </Label>
-                  <Input id="cname" name="cname" placeholder="e.g. Senthil Nathan" required />
+        <div className="grid gap-10 lg:grid-cols-12">
+          {/* Contact Details & Map Card */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="rounded-xl border border-border bg-card p-6 sm:p-8 shadow-xs">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-ember">
+                <MapPin className="size-4" />
+                <span>Headquarters Location</span>
+              </div>
+              <h3 className="mt-2 font-display text-xl font-bold text-brand-deep">
+                Damoder Immigration Services
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                6F6F+74G, Tukkuguda, Hyderabad,<br />
+                Telangana 501359, India
+              </p>
+
+              <div className="mt-6 border-t border-border pt-4 space-y-3 text-sm">
+                <div className="flex items-center gap-3">
+                  <Phone className="size-4 text-ember shrink-0" />
+                  <span>{company.phone} / {company.consultantPhone}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="size-4 text-ember shrink-0" />
+                  <span>{company.email}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Clock className="size-4 text-ember shrink-0" />
+                  <span>Mon – Sat: 9:30 AM – 6:30 PM IST</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-brand/20 bg-brand-deep p-6 sm:p-8 text-white shadow-md">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-ember">
+                <ShieldCheck className="size-4" />
+                <span>7-Pillar Client Assurance</span>
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-white/85">
+                Every client at Damoder Immigration Services is paired with a dedicated consultant, receives complete eligibility points scoring, IELTS language coaching, and 100% process transparency.
+              </p>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div className="lg:col-span-7">
+            <div className="rounded-xl border border-border bg-card p-6 sm:p-8 shadow-xs">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="contact-name">Your Full Name *</Label>
+                    <Input id="contact-name" required placeholder="e.g. Ananya Rao" className="rounded-lg" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="contact-phone">Phone / WhatsApp *</Label>
+                    <Input id="contact-phone" type="tel" required placeholder="+91 98765 43210" className="rounded-lg" />
+                  </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="cphone" className="font-semibold text-brand-deep">
-                    Mobile / WhatsApp Number *
-                  </Label>
-                  <Input id="cphone" name="cphone" placeholder="+91 98765 43210" required />
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="contact-email">Email Address *</Label>
+                    <Input id="contact-email" type="email" required placeholder="ananya@example.com" className="rounded-lg" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="contact-target">Preferred Country *</Label>
+                    <select
+                      id="contact-target"
+                      required
+                      className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+                    >
+                      <option value="New Zealand">🇳🇿 New Zealand (Top Priority)</option>
+                      <option value="Germany">🇩🇪 Germany (Opportunity Card / Blue Card)</option>
+                      <option value="Canada">🇨🇦 Canada (Express Entry / PNP)</option>
+                      <option value="Australia">🇦🇺 Australia (Subclass 189/190/491)</option>
+                      <option value="United Kingdom">🇬🇧 United Kingdom (Skilled Worker / Study)</option>
+                      <option value="Europe">🇪🇺 Europe / Poland / Malta</option>
+                      <option value="USA">🇺🇸 USA (EB-3 / H-1B)</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="cemail" className="font-semibold text-brand-deep">
-                    Email Address *
-                  </Label>
-                  <Input id="cemail" name="cemail" type="email" placeholder="name@company.com" required />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="cdesk" className="font-semibold text-brand-deep">
-                    Routing Department *
-                  </Label>
+                <div className="space-y-1.5">
+                  <Label htmlFor="contact-service">Service Required *</Label>
                   <select
-                    id="cdesk"
-                    name="cdesk"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    id="contact-service"
                     required
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
                   >
-                    <option value="">Select department...</option>
-                    <option value="Employer Partnerships (B2B Hiring)">Employer Partnerships (B2B Hiring)</option>
-                    <option value="Candidate Job Application">Candidate Job Application</option>
-                    <option value="Document Attestation & MEA Apostille">Document Attestation &amp; MEA Apostille</option>
-                    <option value="Compliance & Grievance Reporting">Compliance &amp; Grievance Reporting</option>
-                    <option value="General Administration">General Administration</option>
+                    <option value="PR Visa">PR Visa (Permanent Settlement)</option>
+                    <option value="Study Visa">Study Visa &amp; University Admissions</option>
+                    <option value="Skilled Work">Skilled Work Permit &amp; Job Placement</option>
+                    <option value="Visitor Visa">Visitor &amp; Tourist Visa</option>
+                    <option value="Business / Investor">Business &amp; Investor Visa</option>
+                    <option value="Concierge / Attestation">Concierge, Notary &amp; Loan Services</option>
                   </select>
                 </div>
 
-                <div className="space-y-2 sm:col-span-2">
-                  <Label htmlFor="cmessage" className="font-semibold text-brand-deep">
-                    Message / Requirement Details *
-                  </Label>
+                <div className="space-y-1.5">
+                  <Label htmlFor="contact-message">How Can We Help You? *</Label>
                   <Textarea
-                    id="cmessage"
-                    name="cmessage"
-                    rows={5}
-                    placeholder="Provide details about your project, candidate background, or document attestation requirement..."
+                    id="contact-message"
                     required
+                    rows={4}
+                    placeholder="Tell us about your background, career goals, or specific visa questions..."
+                    className="rounded-lg"
                   />
                 </div>
 
-                <div className="sm:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <ShieldCheck className="size-4 text-emerald-600 shrink-0" />
-                    <span>Privacy Assured. Guaranteed response within 1 business day.</span>
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    disabled={submitting}
-                    className="w-full sm:w-auto rounded-lg font-semibold bg-brand hover:bg-brand-deep text-white px-8"
-                  >
-                    {submitting ? "Sending Message..." : "Send Message"}
-                  </Button>
-                </div>
+                <Button
+                  type="submit"
+                  disabled={submitting}
+                  className="w-full bg-ember hover:bg-ember/90 text-white font-semibold py-3 rounded-lg shadow-sm"
+                >
+                  {submitting ? "Sending Inquiry..." : "Submit Inquiry to Hyderabad Desk"}
+                </Button>
               </form>
             </div>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={0.15}>
-            <div className="space-y-6">
-              {officeLocations.map((loc) => (
-                <div key={loc.city} className="rounded-lg border border-border bg-card p-6 shadow-sm">
-                  <div className="flex items-start gap-3">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand">
-                      <MapPin className="size-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-display text-base font-bold text-brand-deep">{loc.city}</h4>
-                      <p className="text-xs font-semibold text-ember mt-0.5">{loc.state}</p>
-                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{loc.address}</p>
-                      <div className="mt-3 border-t border-border/80 pt-2.5 text-xs font-medium text-foreground">
-                        {loc.contact}
-                      </div>
-                      <div className="mt-1 text-[11px] text-muted-foreground">{loc.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-              <div className="rounded-lg border border-brand/20 bg-brand-deep p-6 text-white shadow-sm">
-                <span className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-2.5 py-1 text-xs font-semibold text-white">
-                  <ShieldCheck className="size-3.5 text-ember" />
-                  Statutory Registration
-                </span>
-                <h4 className="mt-3 font-display text-base font-bold text-white">
-                  MEA Registration No.
-                </h4>
-                <div className="mt-1 font-mono text-sm font-bold text-amber-400">
-                  B-0824/TN/PER/1000+/5/9821/2021
-                </div>
-                <p className="mt-2 text-xs leading-relaxed text-white/80">
-                  Issued by the Protector General of Emigrants, Ministry of External Affairs, Government of India.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
+          </div>
         </div>
       </Section>
 
-      {/* 4. Global CTA Banner */}
       <CtaBanner />
     </>
   );

@@ -10,8 +10,7 @@ type MapMarker = Marker & {
   overlay: {
     countryCode: string;
     label: string;
-    region?: "europe" | "gulf" | "usa" | "hub";
-    /** label placement relative to the pin */
+    region?: "europe" | "gulf" | "usa" | "nz" | "hub";
     side?: "right" | "left";
     dx?: number;
     dy?: number;
@@ -19,78 +18,76 @@ type MapMarker = Marker & {
 };
 
 const markers: MapMarker[] = [
+  // New Zealand (Flagship Priority)
+  {
+    lat: -40.9006,
+    lng: 174.886,
+    size: 0.85,
+    overlay: { countryCode: "nz", label: "New Zealand (Top Priority)", region: "nz", side: "right", dy: 0 },
+  },
+
   // Europe Corridor
   {
     lat: 52.52,
     lng: 13.405,
-    size: 0.7,
-    overlay: { countryCode: "de", label: "Germany", region: "europe", side: "left", dy: -2.5 },
+    size: 0.75,
+    overlay: { countryCode: "de", label: "Germany (Priority)", region: "europe", side: "left", dy: -2.5 },
   },
   {
     lat: 52.2297,
     lng: 21.0122,
     size: 0.7,
-    overlay: { countryCode: "pl", label: "Poland", region: "europe", side: "right", dy: -2.5 },
-  },
-  {
-    lat: 35.8997,
-    lng: 14.5146,
-    size: 0.7,
-    overlay: { countryCode: "mt", label: "Malta", region: "europe", side: "left", dy: 3.8 },
+    overlay: { countryCode: "pl", label: "Poland & EU", region: "europe", side: "right", dy: -2.5 },
   },
 
-  // Gulf / GCC Corridor
+  // Canada & UK
   {
-    lat: 24.7136,
-    lng: 46.6753,
-    size: 0.7,
-    overlay: { countryCode: "sa", label: "Saudi Arabia", region: "gulf", side: "left", dy: 0.5 },
+    lat: 56.1304,
+    lng: -106.3468,
+    size: 0.75,
+    overlay: { countryCode: "ca", label: "Canada", region: "usa", side: "left", dy: 0 },
   },
   {
-    lat: 25.2048,
-    lng: 55.2708,
+    lat: 55.3781,
+    lng: -3.436,
     size: 0.7,
-    overlay: { countryCode: "ae", label: "UAE", region: "gulf", side: "right", dy: 1.6 },
-  },
-  {
-    lat: 25.2854,
-    lng: 51.531,
-    size: 0.7,
-    overlay: { countryCode: "qa", label: "Qatar", region: "gulf", side: "right", dy: -1.8 },
+    overlay: { countryCode: "gb", label: "United Kingdom", region: "europe", side: "left", dy: -2 },
   },
 
-  // USA & India Mobilization Hub
+  // Australia
   {
-    lat: 40.7128,
-    lng: -74.006,
-    size: 0.7,
-    overlay: { countryCode: "us", label: "USA", region: "usa", side: "left", dy: 0 },
+    lat: -25.2744,
+    lng: 133.7751,
+    size: 0.75,
+    overlay: { countryCode: "au", label: "Australia", region: "nz", side: "left", dy: 0 },
   },
+
+  // Hyderabad HQ Hub
   {
-    lat: 13.0827,
-    lng: 80.2707,
-    size: 0.85,
-    overlay: { countryCode: "in", label: "India (Hub)", region: "hub", side: "right", dy: 0 },
+    lat: 17.2403,
+    lng: 78.4983,
+    size: 0.95,
+    overlay: { countryCode: "in", label: "Hyderabad HQ (Damoder)", region: "hub", side: "right", dy: 0 },
   },
 ];
 
 const corridors = [
   {
-    region: "Schengen & Europe",
-    key: "europe",
-    countries: "Poland · Germany · Malta · Croatia",
+    region: "🇳🇿 New Zealand (Flagship)",
+    key: "nz",
+    countries: "Skilled Migrant (SMC) · AEWV · Green List · Study PR",
     to: "/destinations/schengen-europe",
   },
   {
-    region: "Gulf / GCC",
-    key: "gulf",
-    countries: "Saudi Arabia · UAE · Qatar · Kuwait",
-    to: "/destinations/gulf-gcc",
+    region: "🇩🇪 Germany & Europe",
+    key: "europe",
+    countries: "Opportunity Card · EU Blue Card · Poland · Malta",
+    to: "/destinations/schengen-europe",
   },
   {
-    region: "United States",
+    region: "🇨🇦 Canada, 🇦🇺 Australia & 🇬🇧 UK",
     key: "usa",
-    countries: "EB-3 · H-1B · J-1 · L-1 pathways",
+    countries: "Express Entry · Subclass 189/190 · UK Skilled Worker",
     to: "/destinations/usa-visa",
   },
 ];
@@ -108,63 +105,63 @@ interface DestinationCard {
 
 const destinationCards: DestinationCard[] = [
   {
-    country: "Saudi Arabia",
-    badge: "Saudi Arabia",
-    title: "Riyadh & NEOM",
-    description: "Vision 2030 Mega Infrastructure, EPC Energy, Aramco Shutdowns & Qiwa Digital Contracts.",
-    rating: "4.9",
-    reviewCount: "8,500+",
-    image: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=800&q=80",
-    to: "/destinations/gulf-gcc",
-  },
-  {
-    country: "UAE",
-    badge: "United Arab Emirates",
-    title: "Dubai & Abu Dhabi",
-    description: "Commercial Infrastructure, Luxury 5-Star Hospitality, Aviation, Logistics & MOHRE Quotas.",
-    rating: "4.9",
-    reviewCount: "4,200+",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
-    to: "/destinations/gulf-gcc",
-  },
-  {
-    country: "Poland",
-    badge: "Poland",
-    title: "Warsaw & Poznań",
-    description: "Work Permit Type A · Industrial Manufacturing, Structural Fabrication, CNC & Karta Pobytu.",
-    rating: "4.9",
-    reviewCount: "3,200+",
-    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=80",
+    country: "New Zealand",
+    badge: "🇳🇿 Flagship Priority",
+    title: "Auckland & Wellington",
+    description: "Skilled Migrant Category (SMC 6-Point), Accredited Employer Work Visa (AEWV), Green List Tier 1/2 Fast-Track & Study-to-PR.",
+    rating: "5.0",
+    reviewCount: "4,800+",
+    image: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=800&q=80",
     to: "/destinations/schengen-europe",
   },
   {
     country: "Germany",
-    badge: "Germany",
-    title: "Frankfurt & Munich",
-    description: "Skilled Immigration Act & EU Blue Card · Healthcare (B.Sc Nurses), IT & Electrical Engineering.",
+    badge: "🇩🇪 Europe Priority",
+    title: "Berlin, Frankfurt & Munich",
+    description: "Opportunity Card (Chancenkarte Jobseeker), EU Blue Card, Skilled Immigration Act & Healthcare / IT Fast Settlement.",
     rating: "4.9",
-    reviewCount: "1,850+",
+    reviewCount: "3,900+",
     image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80",
     to: "/destinations/schengen-europe",
   },
   {
-    country: "United States",
-    badge: "United States",
-    title: "EB-3 & H-1B Corridors",
-    description: "Employer-Sponsored EB-3 Permanent Residency (Green Card) & H-1B Specialty Occupations.",
+    country: "Canada",
+    badge: "🇨🇦 Express Entry & PNP",
+    title: "Toronto & Vancouver",
+    description: "Federal Skilled Worker (FSWP), Provincial Nominee Programs (OINP/BC PNP), Study Visas with PGWP & Family Sponsorship.",
     rating: "4.9",
-    reviewCount: "950+",
-    image: "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=800&q=80",
+    reviewCount: "5,200+",
+    image: "https://images.unsplash.com/photo-1517935703635-2719074b1793?auto=format&fit=crop&w=800&q=80",
     to: "/destinations/usa-visa",
   },
   {
-    country: "Malta",
-    badge: "Malta",
-    title: "Valletta & St. Julian's",
-    description: "Identità Malta Single Work Permits · Luxury Resorts, Culinary Chefs, Transport & Schengen Mobility.",
+    country: "Australia",
+    badge: "🇦🇺 General Skilled Migration",
+    title: "Sydney & Melbourne",
+    description: "Subclass 189 (Independent), Subclass 190 (State Nominated), Subclass 491 (Regional) & University Admissions.",
+    rating: "4.9",
+    reviewCount: "3,600+",
+    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80",
+    to: "/destinations/usa-visa",
+  },
+  {
+    country: "United Kingdom",
+    badge: "🇬🇧 UK Skilled Worker",
+    title: "London & Manchester",
+    description: "UK Skilled Worker Visa, Health & Care Worker Sponsorship, Student Visa with Graduate Route & Global Talent.",
+    rating: "4.9",
+    reviewCount: "2,950+",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80",
+    to: "/destinations/usa-visa",
+  },
+  {
+    country: "Poland & Schengen",
+    badge: "🇪🇺 European Union",
+    title: "Warsaw & Schengen Zone",
+    description: "Type-A Work Permits, Malta Single Permit, Croatian MUP clearances & Karta Pobytu Temporary Residence Cards.",
     rating: "4.8",
-    reviewCount: "1,100+",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80",
+    reviewCount: "3,100+",
+    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=80",
     to: "/destinations/schengen-europe",
   },
 ];
@@ -181,15 +178,14 @@ export function DestinationsWhereWeDeploy() {
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div className="max-w-2xl">
               <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-ember">
-                Global Mobilization Corridors
+                Work Permit &amp; Mobilization Pathways
               </span>
               <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-brand-deep sm:text-4xl lg:text-[44px]">
-                Destinations Where We Deploy
+                Work, Study &amp; Settle in Top Global Nations
               </h2>
               <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
-                Live employer mandates and verified work permit pathways across Schengen Europe, the
-                Gulf / GCC, and the United States — sourced in India, tested to international standards,
-                deployed on site.
+                We make sure your visa process is seamless and stress-free for New Zealand, Germany, Canada,
+                Australia, the United Kingdom, and Europe.
               </p>
             </div>
 
@@ -218,290 +214,248 @@ export function DestinationsWhereWeDeploy() {
               markerColor="transparent"
               renderMarkerOverlay={({ marker, x, y, r, index }) => {
                 const { countryCode, label, side = "right", dx, dy = 0, region } = marker.overlay;
-                const isHub = countryCode === "in";
-                const isHighlighted = !activeRegion || activeRegion === region || isHub;
-                const href = `https://flagcdn.com/w80/${countryCode}.webp`;
-                const clipId = `${id}-flag-clip-${index}`.replace(/:/g, "-");
-                const imgR = r * (isHub ? 1.6 : 1.35);
-
-                const fontSize = r * 1.75;
-                const pillH = r * 2.8;
-                const pillW = label.length * (fontSize * 0.6) + r * 2.8;
-                const cy = y + dy;
-                const shift = dx ?? Math.abs(dy) * 0.35;
-                const cx = side === "right" ? x + Math.abs(shift) : x - Math.abs(shift);
-                const pillX = side === "right" ? cx + imgR + r * 0.6 : cx - imgR - r * 0.6 - pillW;
-                const pillY = cy - pillH / 2;
-
-                const pulseMaxR = imgR * (isHub ? 2.6 : 2.0);
+                const isHub = region === "hub";
+                const isNZ = region === "nz";
+                const isHovered = activeRegion && activeRegion === region;
 
                 return (
                   <g
-                    key={`${countryCode}-${index}`}
-                    className="cursor-pointer transition-opacity duration-300"
-                    opacity={isHighlighted ? 1 : 0.2}
+                    key={`map-pin-${countryCode}-${index}`}
+                    className="transition-transform duration-300"
+                    style={{
+                      transform: isHovered ? "scale(1.2)" : "scale(1)",
+                      transformOrigin: `${x}px ${y}px`,
+                    }}
                   >
-                    <defs>
-                      <clipPath id={clipId}>
-                        <circle cx={cx} cy={cy} r={imgR} />
-                      </clipPath>
-                    </defs>
-
-                    {/* Concentric Radar Pulse Rings originating at Flag Center (cx, cy) */}
+                    {/* Animated Radar Pulse Rings */}
                     <circle
-                      cx={cx}
-                      cy={cy}
-                      r={imgR}
-                      fill="none"
-                      stroke={isHub ? "#F26E22" : "#1D2F55"}
-                      strokeWidth={r * 0.28}
-                      opacity="0.75"
-                    >
-                      <animate
-                        attributeName="r"
-                        from={`${imgR}`}
-                        to={`${pulseMaxR}`}
-                        dur="2.4s"
-                        repeatCount="indefinite"
-                        calcMode="spline"
-                        keySplines="0.215 0.61 0.355 1"
-                        keyTimes="0; 1"
-                      />
-                      <animate
-                        attributeName="opacity"
-                        from="0.75"
-                        to="0"
-                        dur="2.4s"
-                        repeatCount="indefinite"
-                        calcMode="spline"
-                        keySplines="0.215 0.61 0.355 1"
-                        keyTimes="0; 1"
-                      />
-                    </circle>
-
+                      cx={x}
+                      cy={y}
+                      r={isHub ? r * 2.6 : isNZ ? r * 2.2 : r * 1.8}
+                      className={
+                        isHub
+                          ? "fill-ember/25 stroke-ember/80 animate-ping opacity-60"
+                          : isNZ
+                          ? "fill-emerald-500/25 stroke-emerald-500/80 animate-ping opacity-70"
+                          : "fill-brand/20 stroke-brand/60 animate-ping opacity-50"
+                      }
+                      style={{ animationDuration: isHub ? "2s" : "3s" }}
+                    />
                     <circle
-                      cx={cx}
-                      cy={cy}
-                      r={imgR}
-                      fill="none"
-                      stroke={isHub ? "#F26E22" : "#1D2F55"}
-                      strokeWidth={r * 0.2}
-                      opacity="0.5"
-                    >
-                      <animate
-                        attributeName="r"
-                        from={`${imgR}`}
-                        to={`${pulseMaxR * 1.3}`}
-                        begin="0.8s"
-                        dur="2.4s"
-                        repeatCount="indefinite"
-                        calcMode="spline"
-                        keySplines="0.215 0.61 0.355 1"
-                        keyTimes="0; 1"
-                      />
-                      <animate
-                        attributeName="opacity"
-                        from="0.5"
-                        to="0"
-                        begin="0.8s"
-                        dur="2.4s"
-                        repeatCount="indefinite"
-                        calcMode="spline"
-                        keySplines="0.215 0.61 0.355 1"
-                        keyTimes="0; 1"
-                      />
-                    </circle>
-
-                    {/* Circular Flag Base & Glow */}
-                    <circle
-                      cx={cx}
-                      cy={cy}
-                      r={imgR + r * 0.22}
-                      fill="#ffffff"
-                      stroke={isHub ? "#F26E22" : "#1D2F55"}
-                      strokeWidth={r * 0.32}
+                      cx={x}
+                      cy={y}
+                      r={isHub ? r * 1.8 : isNZ ? r * 1.5 : r * 1.2}
+                      className={isHub ? "fill-ember/40" : isNZ ? "fill-emerald-500/30" : "fill-brand/30"}
                     />
 
-                    {/* Circular Flag Asset */}
-                    <image
-                      href={href}
-                      x={cx - imgR}
-                      y={cy - imgR}
-                      width={imgR * 2}
-                      height={imgR * 2}
-                      preserveAspectRatio="xMidYMid slice"
-                      clipPath={`url(#${clipId})`}
+                    {/* Central Core Pin */}
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r={isHub ? r * 1.1 : r * 0.8}
+                      className={isHub ? "fill-ember stroke-white stroke-2" : isNZ ? "fill-emerald-600 stroke-white stroke-2" : "fill-brand-deep stroke-white stroke-2"}
                     />
 
-                    {/* Floating Country Label Badge */}
-                    <rect
-                      x={pillX}
-                      y={pillY}
-                      width={pillW}
-                      height={pillH}
-                      rx={pillH / 2}
-                      fill={isHub ? "#F26E22" : "#1D2F55"}
-                    />
-                    <text
-                      x={pillX + pillW / 2}
-                      y={cy}
-                      textAnchor="middle"
-                      dominantBaseline="central"
-                      fontSize={fontSize}
-                      fill="#ffffff"
-                      fontWeight={isHub ? "700" : "600"}
-                    >
-                      {label}
-                    </text>
+                    {/* Crisp Embedded Text Badge */}
+                    <g transform={`translate(${side === "right" ? x + (dx ?? 8) : x - (dx ?? 8)}, ${y + dy})`}>
+                      <rect
+                        x={side === "right" ? 0 : -((label.length * 6) + 12)}
+                        y={-9}
+                        width={(label.length * 6) + 12}
+                        height={18}
+                        rx={4}
+                        className={
+                          isHub
+                            ? "fill-[#1A2C53] stroke-ember stroke-1.5 shadow-md"
+                            : isNZ
+                            ? "fill-emerald-900 stroke-emerald-400 stroke-1 shadow-md"
+                            : "fill-white/95 stroke-border stroke-1 shadow-sm"
+                        }
+                      />
+                      <text
+                        x={side === "right" ? 6 : -((label.length * 6) + 6)}
+                        y={3.5}
+                        className={`text-[9.5px] font-bold font-sans ${
+                          isHub ? "fill-white" : isNZ ? "fill-emerald-200" : "fill-brand-deep"
+                        }`}
+                      >
+                        {label}
+                      </text>
+                    </g>
                   </g>
                 );
               }}
             />
+
+            {/* Region Filtering Pills */}
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-border/80 pt-6">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mr-2">
+                  Highlight Corridors:
+                </span>
+                {corridors.map((c) => (
+                  <button
+                    key={c.key}
+                    type="button"
+                    onMouseEnter={() => setActiveRegion(c.key)}
+                    onMouseLeave={() => setActiveRegion(null)}
+                    className={`rounded-md border px-3 py-1.5 text-xs font-semibold transition-all ${
+                      activeRegion === c.key
+                        ? "border-ember bg-ember text-white shadow-xs"
+                        : "border-border bg-paper text-brand-deep hover:border-brand/40"
+                    }`}
+                  >
+                    {c.region}
+                  </button>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  <span className="size-2 rounded-full bg-ember animate-pulse" />
+                  Hyderabad HQ
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="size-2 rounded-full bg-emerald-500" />
+                  New Zealand (Priority)
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="size-2 rounded-full bg-brand-deep" />
+                  Global Consulates
+                </span>
+              </div>
+            </div>
           </div>
         </FadeIn>
 
-        {/* Interactive Corridor Filter Cards */}
-        <StaggerContainer staggerDelay={0.08} className="mt-8 grid gap-4 md:grid-cols-3">
-          {corridors.map((c) => {
-            const isActive = activeRegion === c.key;
-            return (
-              <StaggerItem key={c.region}>
-                <Link
-                  to={c.to}
-                  onMouseEnter={() => setActiveRegion(c.key)}
-                  onMouseLeave={() => setActiveRegion(null)}
-                  className={`group block rounded-xl border p-6 transition-all duration-200 h-full ${
-                    isActive
-                      ? "border-brand bg-brand/5 shadow-md ring-1 ring-brand"
-                      : "border-border bg-card hover:border-brand/50 hover:shadow-sm"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <p className="font-display text-lg font-bold text-brand-deep group-hover:text-brand">
-                      {c.region}
-                    </p>
-                    <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand" />
-                  </div>
-                  <p className="mt-2.5 text-sm sm:text-base text-muted-foreground">{c.countries}</p>
-                </Link>
-              </StaggerItem>
-            );
-          })}
-        </StaggerContainer>
-
-        {/* TIER 2: Visual Work Permit Opportunity Cards */}
-        <div className="mt-16 sm:mt-20">
-          <FadeIn direction="up">
-            <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
-              <div>
-                <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-ember">
-                  Featured Programs
-                </span>
-                <h3 className="mt-1 font-display text-2xl font-bold text-brand-deep sm:text-3xl">
-                  Work Permit &amp; Mobilization Pathways
-                </h3>
-              </div>
-              <span className="text-sm font-medium text-muted-foreground">
-                Direct employer sponsorship · Fast-track intake
-              </span>
-            </div>
-          </FadeIn>
-
-          <StaggerContainer staggerDelay={0.08} className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {destinationCards.map((d) => (
-              <StaggerItem key={d.title}>
-                <Link
-                  to={d.to}
-                  className="group relative flex h-[430px] flex-col justify-between overflow-hidden rounded-lg bg-brand-deep shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                >
-                  {/* Background Image with Zoom on Hover */}
-                  <img
-                    src={d.image}
-                    alt={d.title}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                    loading="lazy"
-                  />
-
-                  {/* Dark Navy-Brand Gradient Overlay for perfect typography contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1C36]/95 via-[#0F1C36]/40 to-transparent transition-opacity duration-300 group-hover:from-[#0F1C36]" />
-
-                  {/* Floating Location Badge (Top-Left) */}
-                  <div className="relative z-10 p-5">
-                    <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/95 px-3 py-1 text-xs font-semibold text-brand-deep shadow-sm backdrop-blur-md transition-colors group-hover:bg-white">
-                      <MapPin className="size-3.5 text-ember" />
-                      {d.badge}
+        {/* TIER 2: 6 Destination Dossier Cards */}
+        <div className="mt-12">
+          <StaggerContainer staggerDelay={0.08} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {destinationCards.map((card) => (
+              <StaggerItem key={card.country}>
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  {/* Photo with Overlay */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
+                    <img
+                      src={card.image}
+                      alt={`${card.country} - ${card.title}`}
+                      className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    
+                    <span className="absolute top-3 left-3 rounded-md bg-white/95 backdrop-blur-sm px-2.5 py-1 text-xs font-bold text-brand-deep shadow-xs">
+                      {card.badge}
                     </span>
-                  </div>
 
-                  {/* Bottom Content Area */}
-                  <div className="relative z-10 p-6 text-white">
-                    <h4 className="font-display text-xl font-bold tracking-tight text-white drop-shadow-sm sm:text-2xl">
-                      {d.title}
-                    </h4>
-                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/90">
-                      {d.description}
-                    </p>
-
-                    {/* Rating & Placements Badge */}
-                    <div className="mt-4 flex items-center gap-1.5 text-sm font-medium text-amber-300">
-                      <Star className="size-4 fill-amber-400 text-amber-400" />
-                      <span className="font-bold text-white">{d.rating}</span>
-                      <span className="text-white/75">({d.reviewCount} mobilized)</span>
+                    <div className="absolute bottom-3 left-3 right-3 text-white">
+                      <h3 className="font-display text-lg font-bold leading-snug">{card.title}</h3>
+                      <p className="text-xs font-semibold text-white/90">{card.country}</p>
                     </div>
                   </div>
-                </Link>
+
+                  {/* Body Content */}
+                  <div className="flex flex-1 flex-col justify-between p-5">
+                    <p className="text-xs leading-relaxed text-muted-foreground">
+                      {card.description}
+                    </p>
+
+                    <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
+                      <div className="flex items-center gap-1 text-xs font-semibold text-amber-600">
+                        <Star className="size-3.5 fill-amber-500 text-amber-500" />
+                        <span>{card.rating}</span>
+                        <span className="text-[11px] text-muted-foreground font-normal">
+                          ({card.reviewCount})
+                        </span>
+                      </div>
+
+                      <Link
+                        to={card.to}
+                        className="inline-flex items-center gap-1 text-xs font-bold text-brand hover:text-ember transition-colors"
+                      >
+                        <span>View Pathways</span>
+                        <ArrowRight className="size-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
         </div>
 
-        {/* TIER 3: Conversion Action Banner */}
-        <FadeIn direction="up" distance={24} duration={0.6}>
-          <div className="relative mt-14 overflow-hidden rounded-lg border border-white/10 bg-gradient-to-r from-brand-deep via-[#1A2E56] to-[#121F3D] p-8 text-white shadow-xl sm:p-12 lg:p-14">
-            {/* Authentic Departure Aerobridge Photograph Blended in Frame */}
-            <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-              <img
-                src={directSponsorshipImg}
-                alt="Indian professionals deployed via Damoder Immigration Services walking through airport departure aerobridge"
-                className="h-full w-full object-cover object-[center_center] opacity-45 brightness-105 contrast-110"
-              />
-              {/* Multi-Directional Gradient Shields for High Text Legibility */}
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-deep via-brand-deep/85 via-50% to-brand-deep/35" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/90 via-transparent to-brand-deep/30" />
-            </div>
+        {/* TIER 3: Direct Employer Sponsorship Banner with Aerobridge Photo */}
+        <FadeIn direction="up" distance={20} duration={0.5} delay={0.2}>
+          <div className="mt-14 overflow-hidden rounded-xl border border-brand/20 bg-brand-deep shadow-xl text-white">
+            <div className="grid lg:grid-cols-12 items-stretch">
+              <div className="p-8 sm:p-12 lg:col-span-7 flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-xs font-semibold text-ember">
+                    <ShieldCheck className="size-3.5 text-ember" />
+                    Transparent &amp; Direct Visa Processing
+                  </div>
 
-            {/* Banner Content */}
-            <div className="relative z-10 max-w-2xl">
-              <span className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3.5 py-1 text-xs sm:text-sm font-semibold tracking-wide text-white/90 backdrop-blur-sm">
-                <ShieldCheck className="size-4 text-ember" />
-                100% MEA &amp; eMigrate Compliant
-              </span>
+                  <h3 className="mt-4 font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
+                    Direct Employer Sponsorship with Zero Middleman Fees
+                  </h3>
 
-              <h3 className="mt-5 font-display text-2xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                Direct Employer Sponsorship with <span className="text-ember">Zero Middleman Fees</span>
-              </h3>
+                  <p className="mt-4 text-sm sm:text-base leading-relaxed text-white/85">
+                    At Damoder Immigration Services, we eliminate third-party sub-agents and hidden charges. 
+                    From profile assessment to visa submission, you get direct, transparent immigration counseling 
+                    from our Hyderabad headquarters.
+                  </p>
 
-              <p className="mt-4 max-w-xl text-sm sm:text-base leading-relaxed text-white/90">
-                Pre-screened overseas job mandates across Schengen Europe, Gulf GCC, and the United
-                States. Every placement is backed by a verified work permit, legal employment contract,
-                and trade-tested candidate readiness.
-              </p>
+                  <div className="mt-6 grid grid-cols-2 gap-3 text-xs sm:text-sm font-semibold text-white/95">
+                    <div className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-ember" />
+                      <span>Dedicated Visa Consultant</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-ember" />
+                      <span>100% Process Transparency</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-ember" />
+                      <span>IELTS Inputs &amp; Study Prep</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-ember" />
+                      <span>Full Concierge &amp; Loan Support</span>
+                    </div>
+                  </div>
+                </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  to="/candidate-portal"
-                  className="group inline-flex items-center gap-3 rounded-xl bg-ember px-6 py-3.5 text-sm sm:text-base font-semibold text-white shadow-lg transition-all duration-200 hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  <span>Check Job &amp; Visa Eligibility</span>
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <Link
+                    to="/contact-us"
+                    className="inline-flex items-center gap-2 rounded-lg bg-ember px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
+                  >
+                    Book Consultation in Hyderabad
+                    <ArrowRight className="size-4" />
+                  </Link>
+                  <Link
+                    to="/candidate-portal"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    Check Eligibility
+                  </Link>
+                </div>
+              </div>
 
-                <Link
-                  to="/employer-services"
-                  className="inline-flex items-center rounded-xl border border-white/30 bg-white/5 px-6 py-3.5 text-sm sm:text-base font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/10 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  Request Manpower (For Employers)
-                </Link>
+              {/* Real Photograph of Aerobridge Boarding */}
+              <div className="relative min-h-[280px] lg:min-h-full lg:col-span-5 overflow-hidden">
+                <img
+                  src={directSponsorshipImg}
+                  alt="Damoder Immigration candidates boarding international flight"
+                  className="size-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-brand-deep/90 lg:via-transparent lg:to-transparent" />
+                
+                <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-black/60 backdrop-blur-md p-3 border border-white/15 text-xs text-white">
+                  <span className="font-bold text-ember block">Verified Mobilisation &amp; Departure</span>
+                  <span className="text-white/80 text-[11px]">Direct embassy visa endorsements &amp; international flight assistance from Hyderabad.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -510,6 +464,3 @@ export function DestinationsWhereWeDeploy() {
     </section>
   );
 }
-
-// Export alias for backwards compatibility
-export const DeploymentMap = DestinationsWhereWeDeploy;

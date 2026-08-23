@@ -82,35 +82,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dhamodaran Immigration | Overseas Manpower Recruitment & MEA Apostille" },
+      { title: "Damoder Immigration Services | Visa & Immigration Consultants Hyderabad" },
       {
         name: "description",
         content:
-          "Government-licensed Indian overseas manpower consultancy (MEA Lic. B-0824/TN/PER/1000+/5/9821/2021). Bulk recruitment, trade testing, MEA apostille & work permits for Schengen Europe, Gulf GCC & USA.",
+          "Damoder Immigration Services (HQ: Hyderabad, India). Expert counseling & visa support for New Zealand, Germany, Canada, Australia, UK, and Europe: PR Visas, Study Visas, Work Permits, Visitor & Investor Visas.",
       },
       {
         name: "keywords",
         content:
-          "overseas recruitment agency, manpower consultancy india, MEA registered recruitment agency, gulf jobs, poland work permit, germany blue card, visa attestation chennai, trade testing center india, damoder immigration",
+          "damoder immigration services, best immigration consultants hyderabad, new zealand visa consultants hyderabad, germany job seeker visa hyderabad, canada pr consultants hyderabad, australia study visa hyderabad, pr visa hyderabad, tukkuguda visa agency",
       },
-      { name: "author", content: "Dhamodaran Immigration & Overseas Manpower Consultancy" },
+      { name: "author", content: "Damoder Immigration Services" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
-      { property: "og:site_name", content: "Dhamodaran Immigration" },
+      { property: "og:site_name", content: "Damoder Immigration Services" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Dhamodaran Immigration | Overseas Manpower Recruitment & MEA Apostille" },
+      { property: "og:title", content: "Damoder Immigration Services | Hyderabad, India" },
       {
         property: "og:description",
         content:
-          "MEA-registered overseas manpower consultancy. Sourcing, trade testing, apostille legalisation, and deployment across 24+ global destinations.",
+          "Seamless and stress-free visa process to study, work, or settle in New Zealand, Germany, Canada, Australia, UK, and Europe.",
       },
-      { property: "og:url", content: "https://dhamodaranimmigration.com" },
+      { property: "og:url", content: "https://damoderimmigration.com" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Dhamodaran Immigration | Overseas Manpower Consultancy" },
+      { name: "twitter:title", content: "Damoder Immigration Services" },
       {
         name: "twitter:description",
         content:
-          "MEA Lic. B-0824/TN/PER/1000+/5/9821/2021. Direct employer overseas recruitment & statutory visa legalisation.",
+          "Trusted Visa & Immigration Consultants in Hyderabad. PR, Study, Work & Visitor Visas for New Zealand, Germany, Canada & Australia.",
       },
       { name: "theme-color", content: "#1A2C53" },
     ],
@@ -119,7 +119,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "canonical", href: "https://dhamodaranimmigration.com" },
+      { rel: "canonical", href: "https://damoderimmigration.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -137,27 +137,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": ["EmploymentAgency", "LocalBusiness"],
-          name: "Dhamodaran Immigration & Overseas Manpower Consultancy",
-          alternateName: "Damoder Immigration Services",
-          url: "https://dhamodaranimmigration.com",
-          logo: "https://dhamodaranimmigration.com/favicon.ico",
+          name: "Damoder Immigration Services",
+          alternateName: "Damoder Immigration Services Hyderabad",
+          url: "https://damoderimmigration.com",
+          logo: "https://damoderimmigration.com/favicon.png",
           description:
-            "Government-licensed Indian overseas manpower recruitment consultancy and statutory visa legalisation agency.",
-          license: "B-0824/TN/PER/1000+/5/9821/2021",
-          telephone: "+91-94440-12345",
-          email: "contact@dhamodaranimmigration.com",
+            "Premier visa and immigration consultancy based in Hyderabad, India, providing seamless solutions for PR, Study, Work, and Visitor visas across New Zealand, Germany, Canada, Australia, the UK, and Europe.",
+          telephone: "+91-98765-43210",
+          email: "info@damoderimmigration.com",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Mount Road / Anna Salai Business District",
-            addressLocality: "Chennai",
-            addressRegion: "Tamil Nadu",
-            postalCode: "600002",
+            streetAddress: "6F6F+74G, Tukkuguda",
+            addressLocality: "Hyderabad",
+            addressRegion: "Telangana",
+            postalCode: "501359",
             addressCountry: "IN",
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: 13.0827,
-            longitude: 80.2707,
+            latitude: 17.2403,
+            longitude: 78.4983,
           },
           openingHoursSpecification: [
             {
@@ -167,10 +166,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               closes: "18:30",
             },
           ],
-          areaServed: ["IN", "SA", "AE", "QA", "KW", "OM", "BH", "PL", "DE", "MT", "HR", "RO", "HU", "US"],
-          sameAs: [
-            "https://www.linkedin.com/company/dhamodaran-immigration",
-          ],
+          areaServed: ["IN", "NZ", "DE", "CA", "AU", "GB", "US", "PL", "MT", "HR", "RO", "HU"],
         }),
       },
     ],
@@ -204,7 +200,6 @@ function RootComponent() {
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
         <main className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
         </main>
         <SiteFooter />
