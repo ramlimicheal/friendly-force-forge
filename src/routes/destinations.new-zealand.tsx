@@ -511,6 +511,14 @@ function NewZealandPage() {
                 href="https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20interested%20in%20New%20Zealand%20Work%20Visa%20and%20Manpower%20Services"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20interested%20in%20New%20Zealand%20Work%20Visa%20and%20Manpower%20Services",
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
+                }}
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-5 py-3 text-sm font-semibold text-emerald-700 transition-all hover:border-emerald-500 hover:bg-emerald-500/20 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <MessageSquare className="size-4" />
