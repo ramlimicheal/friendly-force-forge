@@ -50,7 +50,7 @@ export const Route = createFileRoute("/contact-us")({
           "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Damoder Immigration Services & Overseas Manpower Consultancy",
-            "telephone": ["+91-8639516954", "+91-950205194"],
+            "telephone": ["+91-8639516954", "+91-9502051954"],
             "email": "mail2damoder@gmail.com",
             "address": {
               "@type": "PostalAddress",
@@ -94,7 +94,7 @@ const officeLocations = [
     city: "Hyderabad (Headquarters)",
     state: "Telangana, India",
     address: "Damoder Immigration Services & Overseas Manpower Consultancy, 6F6F+74G, Tukkuguda Business District, Hyderabad – 501359",
-    contact: "+91 8639516954 / +91 950205194 / mail2damoder@gmail.com",
+    contact: "+91 8639516954 / +91 9502051954 / mail2damoder@gmail.com",
     role: "Registered MEA Headquarters & Central Executive Operations",
     mapsUrl: company.mapsUrl,
   },
