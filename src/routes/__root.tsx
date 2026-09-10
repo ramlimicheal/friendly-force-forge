@@ -4,7 +4,6 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  redirect,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -12,7 +11,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { checkSiteAccess } from "../lib/gate.functions";
 import { ScrollProgressBar } from "@/components/motion-primitives";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
