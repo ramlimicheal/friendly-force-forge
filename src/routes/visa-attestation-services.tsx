@@ -43,12 +43,12 @@ export const Route = createFileRoute("/visa-attestation-services")({
         content:
           "End-to-end visa counseling, document legalisation, MEA apostille, education loans, and concierge assistance from Hyderabad, India.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/visa-attestation-services" },
+      { property: "og:url", content: "https://dis.ind.in/visa-attestation-services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/visa-attestation-services" },
+      { rel: "canonical", href: "https://dis.ind.in/visa-attestation-services" },
     ],
   }),
   component: AttestationPage,

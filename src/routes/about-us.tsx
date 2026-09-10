@@ -38,12 +38,12 @@ export const Route = createFileRoute("/about-us")({
         content:
           "Two decades of landmark growth in overseas recruitment, accredited trade testing, and statutory MEA compliance from Hyderabad, India.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/about-us" },
+      { property: "og:url", content: "https://dis.ind.in/about-us" },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/about-us" },
+      { rel: "canonical", href: "https://dis.ind.in/about-us" },
     ],
   }),
   component: AboutPage,

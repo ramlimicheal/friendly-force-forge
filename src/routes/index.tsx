@@ -83,8 +83,8 @@ export const Route = createFileRoute("/")({
         content:
           "Seamless and stress-free visa process to study, work, or settle in New Zealand, Germany, Canada, Australia, the UK, and Europe.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com" },
-      { property: "og:image", content: "https://damoderimmigration.com/favicon.png" },
+      { property: "og:url", content: "https://dis.ind.in" },
+      { property: "og:image", content: "https://dis.ind.in/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Damoder Immigration Services | Hyderabad" },
       {
@@ -94,7 +94,7 @@ export const Route = createFileRoute("/")({
       },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com" },
+      { rel: "canonical", href: "https://dis.ind.in" },
     ],
     scripts: [
       {
@@ -104,17 +104,17 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "WebSite",
-              "@id": "https://damoderimmigration.com/#website",
-              "url": "https://damoderimmigration.com",
+              "@id": "https://dis.ind.in/#website",
+              "url": "https://dis.ind.in",
               "name": "Damoder Immigration Services",
               "description": "Premier visa and immigration consultancy based in Hyderabad, India.",
               "publisher": {
-                "@id": "https://damoderimmigration.com/#organization"
+                "@id": "https://dis.ind.in/#organization"
               }
             },
             {
               "@type": "FAQPage",
-              "@id": "https://damoderimmigration.com/#faq",
+              "@id": "https://dis.ind.in/#faq",
               "mainEntity": [
                 {
                   "@type": "Question",

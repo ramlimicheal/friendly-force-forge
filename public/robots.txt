@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dhamodaranimmigration.com/sitemap.xml
+Sitemap: https://dis.ind.in/sitemap.xml

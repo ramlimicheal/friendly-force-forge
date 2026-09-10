@@ -38,12 +38,12 @@ export const Route = createFileRoute("/destinations/gulf-gcc")({
         content:
           "Trade-tested workforce deployed across GCC nations with complete compliance and structured mobilization cycles.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/destinations/gulf-gcc" },
+      { property: "og:url", content: "https://dis.ind.in/destinations/gulf-gcc" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/destinations/gulf-gcc" },
+      { rel: "canonical", href: "https://dis.ind.in/destinations/gulf-gcc" },
     ],
   }),
   component: GulfPage,

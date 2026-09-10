@@ -38,12 +38,12 @@ export const Route = createFileRoute("/destinations/usa-visa")({
         content:
           "Dedicated points assessment, credential evaluation, and visa filing for Canada, Australia, the United Kingdom, and the United States.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/destinations/usa-visa" },
+      { property: "og:url", content: "https://dis.ind.in/destinations/usa-visa" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/destinations/usa-visa" },
+      { rel: "canonical", href: "https://dis.ind.in/destinations/usa-visa" },
     ],
   }),
   component: UsaPage,

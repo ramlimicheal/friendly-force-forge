@@ -113,7 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Seamless and stress-free visa process to study, work, or settle in New Zealand, Germany, Canada, Australia, UK, and Europe.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com" },
+      { property: "og:url", content: "https://dis.ind.in" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Damoder Immigration Services" },
@@ -129,7 +129,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "canonical", href: "https://damoderimmigration.com" },
+      { rel: "canonical", href: "https://dis.ind.in" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -149,8 +149,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": ["EmploymentAgency", "LocalBusiness"],
           name: "Damoder Immigration Services",
           alternateName: "Damoder Immigration Services Hyderabad",
-          url: "https://damoderimmigration.com",
-          logo: "https://damoderimmigration.com/favicon.png",
+          url: "https://dis.ind.in",
+          logo: "https://dis.ind.in/favicon.png",
           description:
             "Premier visa and immigration consultancy based in Hyderabad, India, providing seamless solutions for PR, Study, Work, and Visitor visas across New Zealand, Germany, Canada, Australia, the UK, and Europe.",
           telephone: ["+91-8639516954", "+91-950205194"],
