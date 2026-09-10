@@ -81,7 +81,7 @@ const desks = [
     icon: ShieldCheck,
     title: "Statutory Compliance & Grievance Desk",
     badge: "24/7 Ombudsman",
-    phone: company.employerPhone,
+    phone: company.candidatePhone,
     email: company.compliance,
     desc: "Report unauthorized sub-agents, cash demands, or contract discrepancies directly to our compliance director.",
     timing: "24/7 Urgent Ombudsman Line",
