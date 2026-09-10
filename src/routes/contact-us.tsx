@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Clock,
   Briefcase,
+  ExternalLink,
 } from "lucide-react";
 
 import { PageHero, Section, CtaBanner } from "@/components/page-shell";
@@ -95,6 +96,7 @@ const officeLocations = [
     address: "Damoder Immigration Services & Overseas Manpower Consultancy, 6F6F+74G, Tukkuguda Business District, Hyderabad – 501359",
     contact: "+91 8639516954 / +91 950205194 / mail2damoder@gmail.com",
     role: "Registered MEA Headquarters & Central Executive Operations",
+    mapsUrl: company.mapsUrl,
   },
   {
     city: "Regional Mobilisation Centers",
@@ -102,6 +104,7 @@ const officeLocations = [
     address: "Authorized Trade Testing & Skill Auditing Workshop Alliances in Madurai, Trichy, Kochi, Hyderabad, and New Delhi",
     contact: "mail2damoder@gmail.com",
     role: "Candidate Screening, Welding Rigs, MEP Labs & Trade Testing Yards",
+    mapsUrl: undefined,
   },
 ];
 
@@ -200,6 +203,17 @@ function ContactPage() {
                         {loc.contact}
                       </div>
                       <div className="mt-1 text-[11px] text-muted-foreground">{loc.role}</div>
+                      {loc.mapsUrl && (
+                        <a
+                          href={loc.mapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-brand/30 bg-brand/5 px-2.5 py-1 text-[11px] font-semibold text-brand transition-colors hover:bg-brand/10 hover:border-brand"
+                        >
+                          <ExternalLink className="size-3" />
+                          Open in Google Maps
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -2,6 +2,8 @@ export const company = {
   name: "Damoder Immigration Services",
   legalName: "Damoder Immigration Services Pvt. Ltd.",
   address: "6F6F+74G, Tukkuguda, Hyderabad, Telangana 501359, India",
+  mapsUrl:
+    "https://www.google.com/maps/place/DAMODER+IMMIGRATION+SERVICES/@17.2106556,78.4727627,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbbbaffe9a0d21:0x519a81456d60a73d!8m2!3d17.2106556!4d78.4727627!16s%2Fg%2F11z4xfl3lw",
   phone: "+91 8639516954",
   consultantPhone: "+91 950205194",
   employerPhone: "+91 8639516954",
