@@ -65,7 +65,7 @@ export const navItems: NavItem[] = [
     children: [
       {
         label: "New Zealand (Top Priority)",
-        to: "/destinations/schengen-europe",
+        to: "/destinations/new-zealand",
         hint: "Skilled Migrant SMC 6-Pt, AEWV & Green List Fast-Track",
         flags: ["nz"],
       },

@@ -18,6 +18,7 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as VisaAttestationServicesRouteImport } from './routes/visa-attestation-services'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as DestinationsGulfGccRouteImport } from './routes/destinations.gulf-gcc'
+import { Route as DestinationsNewZealandRouteImport } from './routes/destinations.new-zealand'
 import { Route as DestinationsSchengenEuropeRouteImport } from './routes/destinations.schengen-europe'
 import { Route as DestinationsUsaVisaRouteImport } from './routes/destinations.usa-visa'
 
@@ -66,6 +67,11 @@ const DestinationsGulfGccRoute = DestinationsGulfGccRouteImport.update({
   path: '/destinations/gulf-gcc',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DestinationsNewZealandRoute = DestinationsNewZealandRouteImport.update({
+  id: '/destinations/new-zealand',
+  path: '/destinations/new-zealand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DestinationsSchengenEuropeRoute =
   DestinationsSchengenEuropeRouteImport.update({
     id: '/destinations/schengen-europe',
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
   '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
+  '/destinations/new-zealand': typeof DestinationsNewZealandRoute
   '/destinations/schengen-europe': typeof DestinationsSchengenEuropeRoute
   '/destinations/usa-visa': typeof DestinationsUsaVisaRoute
 }
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
   '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
+  '/destinations/new-zealand': typeof DestinationsNewZealandRoute
   '/destinations/schengen-europe': typeof DestinationsSchengenEuropeRoute
   '/destinations/usa-visa': typeof DestinationsUsaVisaRoute
 }
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
   '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
+  '/destinations/new-zealand': typeof DestinationsNewZealandRoute
   '/destinations/schengen-europe': typeof DestinationsSchengenEuropeRoute
   '/destinations/usa-visa': typeof DestinationsUsaVisaRoute
 }
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/visa-attestation-services'
     | '/api/chat'
     | '/destinations/gulf-gcc'
+    | '/destinations/new-zealand'
     | '/destinations/schengen-europe'
     | '/destinations/usa-visa'
   fileRoutesByTo: FileRoutesByTo
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/visa-attestation-services'
     | '/api/chat'
     | '/destinations/gulf-gcc'
+    | '/destinations/new-zealand'
     | '/destinations/schengen-europe'
     | '/destinations/usa-visa'
   id:
@@ -156,6 +167,7 @@ export interface FileRouteTypes {
     | '/visa-attestation-services'
     | '/api/chat'
     | '/destinations/gulf-gcc'
+    | '/destinations/new-zealand'
     | '/destinations/schengen-europe'
     | '/destinations/usa-visa'
   fileRoutesById: FileRoutesById
@@ -170,6 +182,7 @@ export interface RootRouteChildren {
   VisaAttestationServicesRoute: typeof VisaAttestationServicesRoute
   ApiChatRoute: typeof ApiChatRoute
   DestinationsGulfGccRoute: typeof DestinationsGulfGccRoute
+  DestinationsNewZealandRoute: typeof DestinationsNewZealandRoute
   DestinationsSchengenEuropeRoute: typeof DestinationsSchengenEuropeRoute
   DestinationsUsaVisaRoute: typeof DestinationsUsaVisaRoute
 }
@@ -239,6 +252,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationsGulfGccRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/destinations/new-zealand': {
+      id: '/destinations/new-zealand'
+      path: '/destinations/new-zealand'
+      fullPath: '/destinations/new-zealand'
+      preLoaderRoute: typeof DestinationsNewZealandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/destinations/schengen-europe': {
       id: '/destinations/schengen-europe'
       path: '/destinations/schengen-europe'
@@ -266,6 +286,7 @@ const rootRouteChildren: RootRouteChildren = {
   VisaAttestationServicesRoute: VisaAttestationServicesRoute,
   ApiChatRoute: ApiChatRoute,
   DestinationsGulfGccRoute: DestinationsGulfGccRoute,
+  DestinationsNewZealandRoute: DestinationsNewZealandRoute,
   DestinationsSchengenEuropeRoute: DestinationsSchengenEuropeRoute,
   DestinationsUsaVisaRoute: DestinationsUsaVisaRoute,
 }
