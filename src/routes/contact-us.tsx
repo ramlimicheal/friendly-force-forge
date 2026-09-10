@@ -49,7 +49,7 @@ export const Route = createFileRoute("/contact-us")({
           "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Damoder Immigration Services & Overseas Manpower Consultancy",
-            "telephone": "+91-8639516954",
+            "telephone": ["+91-8639516954", "+91-950205194"],
             "email": "mail2damoder@gmail.com",
             "address": {
               "@type": "PostalAddress",
