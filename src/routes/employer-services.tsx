@@ -50,12 +50,12 @@ export const Route = createFileRoute("/employer-services")({
         content:
           "4-Stage precision mobilisation SLA timeline (22–26 weeks), certified trade testing workshops, and 100% statutory compliance.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/employer-services" },
+      { property: "og:url", content: "https://dis.ind.in/employer-services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/employer-services" },
+      { rel: "canonical", href: "https://dis.ind.in/employer-services" },
     ],
   }),
   component: EmployerPage,

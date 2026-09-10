@@ -32,12 +32,12 @@ export const Route = createFileRoute("/contact-us")({
         content:
           "Reach the right department directly — employer recruitment desk, candidate registration, document attestation, and MEA compliance.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/contact-us" },
+      { property: "og:url", content: "https://dis.ind.in/contact-us" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/contact-us" },
+      { rel: "canonical", href: "https://dis.ind.in/contact-us" },
     ],
     scripts: [
       {
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/contact-us")({
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "Contact Damoder Immigration Services",
-          "url": "https://damoderimmigration.com/contact-us",
+          "url": "https://dis.ind.in/contact-us",
           "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Damoder Immigration Services & Overseas Manpower Consultancy",

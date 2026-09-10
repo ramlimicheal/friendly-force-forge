@@ -49,12 +49,12 @@ export const Route = createFileRoute("/candidate-portal")({
         content:
           "Dedicated visa consultants, transparent points scoring, IELTS language prep, and complete documentation filing from Hyderabad, India.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/candidate-portal" },
+      { property: "og:url", content: "https://dis.ind.in/candidate-portal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/candidate-portal" },
+      { rel: "canonical", href: "https://dis.ind.in/candidate-portal" },
     ],
   }),
   component: CandidatePage,

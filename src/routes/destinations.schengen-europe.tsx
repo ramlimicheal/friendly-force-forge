@@ -43,12 +43,12 @@ export const Route = createFileRoute("/destinations/schengen-europe")({
         content:
           "New Zealand Skilled Migrant Category, German Opportunity Card, and European work & settlement pathways with dedicated counseling.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/destinations/schengen-europe" },
+      { property: "og:url", content: "https://dis.ind.in/destinations/schengen-europe" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/destinations/schengen-europe" },
+      { rel: "canonical", href: "https://dis.ind.in/destinations/schengen-europe" },
     ],
   }),
   component: EuropePage,

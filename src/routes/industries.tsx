@@ -39,12 +39,12 @@ export const Route = createFileRoute("/industries")({
         content:
           "Direct overseas employment and immigration pathways for qualified Indian talent across 8 specialized disciplines.",
       },
-      { property: "og:url", content: "https://damoderimmigration.com/industries" },
+      { property: "og:url", content: "https://dis.ind.in/industries" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://damoderimmigration.com/industries" },
+      { rel: "canonical", href: "https://dis.ind.in/industries" },
     ],
   }),
   component: IndustriesPage,
