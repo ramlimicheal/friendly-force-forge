@@ -1,6 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { toast } from "sonner";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -28,9 +26,6 @@ import { motion } from "framer-motion";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { PageHero, Section, CtaBanner } from "@/components/page-shell";
 import {
   FadeIn,
@@ -183,18 +178,6 @@ const protectionCharter = [
 ];
 
 function CandidatePage() {
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast.success("Profile submitted successfully! A dedicated visa counselor from Damoder Immigration Services (Hyderabad) will evaluate your credentials and contact you within 24 hours.");
-      (e.target as HTMLFormElement).reset();
-    }, 1200);
-  };
-
   return (
     <>
       {/* 1. PageHero */}
@@ -204,13 +187,6 @@ function CandidatePage() {
         subtitle="Dedicated visa consultants, transparent points scoring, IELTS language guidance, and complete documentation support to study, work, or settle abroad."
       >
         <div className="flex flex-wrap items-center gap-3">
-          <a
-            href="#eligibility-form"
-            className="inline-flex items-center gap-2 rounded-lg bg-ember px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
-          >
-            Start Free Profile Assessment
-            <ArrowRight className="size-4" />
-          </a>
           <a
             href="#visa-categories"
             className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
@@ -277,16 +253,6 @@ function CandidatePage() {
                     </ul>
                   </div>
                 </div>
-
-                <div className="mt-6 pt-4 border-t border-border/70">
-                  <a
-                    href="#eligibility-form"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand hover:text-ember transition-colors"
-                  >
-                    <span>Assess Eligibility for this Category</span>
-                    <ArrowRight className="size-3.5" />
-                  </a>
-                </div>
               </MotionCard>
             </StaggerItem>
           ))}
@@ -312,106 +278,6 @@ function CandidatePage() {
               </div>
             </MotionCard>
           ))}
-        </div>
-      </Section>
-
-      {/* 5. Intake & Eligibility Evaluation Form */}
-      <Section
-        id="eligibility-form"
-        eyebrow="Direct Application"
-        title="Submit Your Profile for Free Eligibility Assessment"
-        intro="Fill out the form below. A dedicated visa counselor from our Hyderabad headquarters will evaluate your credentials and contact you within 24 hours."
-      >
-        <div className="mx-auto max-w-3xl rounded-xl border border-border bg-card p-8 shadow-sm">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="cand-name">Full Name *</Label>
-                <Input id="cand-name" required placeholder="e.g. Ramesh Kumar" className="rounded-lg" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="cand-phone">WhatsApp / Mobile Number *</Label>
-                <Input id="cand-phone" type="tel" required placeholder="+91 98765 43210" className="rounded-lg" />
-              </div>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="cand-email">Email Address *</Label>
-                <Input id="cand-email" type="email" required placeholder="ramesh@example.com" className="rounded-lg" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="cand-city">Current City &amp; State *</Label>
-                <Input id="cand-city" required placeholder="e.g. Hyderabad, Telangana" className="rounded-lg" />
-              </div>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="cand-dest">Target Destination Country *</Label>
-                <select
-                  id="cand-dest"
-                  required
-                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
-                >
-                  <option value="New Zealand">🇳🇿 New Zealand (Top Priority)</option>
-                  <option value="Germany">🇩🇪 Germany (Opportunity Card / Blue Card)</option>
-                  <option value="Canada">🇨🇦 Canada (Express Entry / PNP / Study)</option>
-                  <option value="Australia">🇦🇺 Australia (Subclass 189/190/491)</option>
-                  <option value="United Kingdom">🇬🇧 United Kingdom (Skilled Worker / Student)</option>
-                  <option value="Europe / Poland">🇪🇺 Schengen Europe / Poland / Malta</option>
-                  <option value="United States">🇺🇸 United States (EB-3 / H-1B)</option>
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="cand-visa-type">Visa Category *</Label>
-                <select
-                  id="cand-visa-type"
-                  required
-                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
-                >
-                  <option value="PR Visa">PR Visa (Permanent Residency)</option>
-                  <option value="Study Visa">Study Visa (University Admissions)</option>
-                  <option value="Work Permit">Skilled Work Permit &amp; Job Placement</option>
-                  <option value="Visitor Visa">Visitor &amp; Tourist Visa</option>
-                  <option value="Business / Investor">Business &amp; Investor Visa</option>
-                  <option value="Dependent / Spouse">Dependent &amp; Spouse Visa</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="cand-experience">Highest Education &amp; Total Years of Experience</Label>
-              <Input
-                id="cand-experience"
-                placeholder="e.g. B.Tech in Mechanical Engineering + 5 Years in HVAC / IT"
-                className="rounded-lg"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="cand-message">Specific Queries or Background Notes</Label>
-              <Textarea
-                id="cand-message"
-                rows={4}
-                placeholder="Mention any prior IELTS score, current occupation, or specific questions..."
-                className="rounded-lg"
-              />
-            </div>
-
-            <div className="rounded-lg bg-paper p-4 text-xs text-muted-foreground border border-border">
-              🔒 <strong>Confidentiality Guaranteed:</strong> Your profile data is used strictly for eligibility scoring by Damoder Immigration Services Hyderabad. We never share your data with unauthorized third parties.
-            </div>
-
-            <Button
-              type="submit"
-              disabled={submitting}
-              className="w-full bg-ember hover:bg-ember/90 text-white font-semibold py-3 rounded-lg shadow-sm"
-            >
-              {submitting ? "Evaluating Profile..." : "Submit for Free Visa Assessment"}
-            </Button>
-          </form>
         </div>
       </Section>
 
