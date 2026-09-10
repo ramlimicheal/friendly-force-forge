@@ -198,7 +198,7 @@ export function CtaBanner() {
             />
           </div>
 
-          <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between relative z-10">
+          <div className="relative z-10">
             <div>
               <h2 className="max-w-2xl font-display text-3xl font-semibold leading-[1.08] tracking-tight text-white sm:text-4xl md:text-[42px]">
                 Ready to build your workforce or elevate your career?
@@ -207,17 +207,6 @@ export function CtaBanner() {
                 Partner with India&apos;s most reliable, compliant and transparent overseas
                 recruitment firm.
               </p>
-            </div>
-            <div className="flex flex-wrap items-center gap-4">
-              <ChipLink to="/employer-services" tone="dark">
-                Post a requirement
-              </ChipLink>
-              <Link
-                to="/candidate-portal"
-                className="inline-flex items-center rounded-lg border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
-              >
-                Submit resume
-              </Link>
             </div>
           </div>
         </div>

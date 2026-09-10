@@ -63,13 +63,13 @@ export function WhoWeAre() {
           <div className="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-8">
             <div>
               <p className="font-display text-3xl sm:text-4xl font-bold text-brand">
-                <AnimatedCounter value={18000} duration={1.6} />+
+                <AnimatedCounter value={100} duration={1.6} />+
               </p>
-              <p className="mt-1 text-sm font-medium text-muted-foreground">Candidates deployed</p>
+              <p className="mt-1 text-sm font-medium text-muted-foreground">Candidates</p>
             </div>
             <div>
               <p className="font-display text-3xl sm:text-4xl font-bold text-brand">
-                <AnimatedCounter value={600} duration={1.6} />+
+                <AnimatedCounter value={140} duration={1.6} />+
               </p>
               <p className="mt-1 text-sm font-medium text-muted-foreground">Employer partners</p>
             </div>

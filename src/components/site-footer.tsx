@@ -45,8 +45,8 @@ export function SiteFooter() {
                 />
               </span>
               <div className="flex flex-col">
-                <span className="font-display text-base font-bold text-white">Damoder Immigration Services</span>
-                <span className="text-[11px] text-ember font-medium tracking-wider uppercase">Hyderabad, India</span>
+                <span className="font-display text-base font-bold uppercase leading-none text-white">Damoder</span>
+                <span className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-ember">Immigration Services</span>
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/80">

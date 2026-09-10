@@ -55,9 +55,10 @@ function UnlockPage() {
             <img src={logoMark} alt="Damoder Immigration Services" className="size-9 object-contain" />
           </span>
           <div>
-            <p className="font-display text-lg font-bold leading-tight text-brand-deep">
-              Damoder Immigration Services
+            <p className="font-display text-lg font-bold uppercase leading-none text-brand-deep">
+              Damoder
             </p>
+            <p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-brand">Immigration Services</p>
             <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-ember">
               <HardHat className="size-3.5" /> Site under construction
             </p>

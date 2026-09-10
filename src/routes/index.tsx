@@ -408,9 +408,6 @@ function HomePage() {
                 countries like: <strong className="text-white">New Zealand (Priority), Germany, Canada, Australia, United Kingdom, and Europe.</strong>
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <ChipLink to="/contact-us" tone="dark">
-                  Free Eligibility Check
-                </ChipLink>
                 <Link
                   to="/candidate-portal"
                   className="inline-flex items-center rounded-lg border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
@@ -466,7 +463,7 @@ function HomePage() {
               </div>
               <div className="mt-4">
                 <p className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-brand-deep">
-                  <AnimatedCounter value={12000} duration={1.6} />
+                  <AnimatedCounter value={150} duration={1.6} />
                   <span className="text-ember font-semibold">+</span>
                 </p>
                 <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
@@ -606,43 +603,6 @@ function HomePage() {
               </MotionCard>
             </StaggerItem>
           ))}
-        </StaggerContainer>
-      </Section>
-
-      {/* Two Audiences Section */}
-      <Section tone="muted" eyebrow="Who we serve" title="Two audiences, one transparent pathway">
-        <StaggerContainer staggerDelay={0.15} className="grid gap-6 md:grid-cols-2">
-          <StaggerItem>
-            <MotionCard className="rounded-lg border border-border bg-card p-8 sm:p-10 shadow-xs h-full flex flex-col justify-between">
-              <div>
-                <Globe2 className="size-10 text-brand" />
-                <h3 className="mt-6 font-display text-2xl font-bold text-brand-deep">For Global Employers</h3>
-                <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">
-                  Skilled technical talent sourcing and mobilization on a structured 22-26 weeks SLA cycle across New Zealand, Germany, Europe, Canada, and Australia with in-house trade testing and legal documentation.
-                </p>
-              </div>
-              <div className="mt-8">
-                <ChipLink to="/employer-services">Employer services</ChipLink>
-              </div>
-            </MotionCard>
-          </StaggerItem>
-
-          <StaggerItem>
-            <MotionCard className="rounded-lg border border-border bg-card p-8 sm:p-10 shadow-xs h-full flex flex-col justify-between">
-              <div>
-                <Users className="size-10 text-brand" />
-                <h3 className="mt-6 font-display text-2xl font-bold text-brand-deep">
-                  For Students &amp; Job Seekers
-                </h3>
-                <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">
-                  Free profile evaluations, university admissions, PR points scoring, IELTS language coaching, and end-to-end relocation concierge to New Zealand, Germany, Canada, Australia, and the UK.
-                </p>
-              </div>
-              <div className="mt-8">
-                <ChipLink to="/candidate-portal">Check your eligibility</ChipLink>
-              </div>
-            </MotionCard>
-          </StaggerItem>
         </StaggerContainer>
       </Section>
 
