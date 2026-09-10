@@ -78,14 +78,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  beforeLoad: async ({ location }) => {
-    // Allow the unlock page itself
-    if (location.pathname === "/unlock") return;
-    const { unlocked } = await checkSiteAccess();
-    if (!unlocked) {
-      throw redirect({ to: "/unlock" });
-    }
-  },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
