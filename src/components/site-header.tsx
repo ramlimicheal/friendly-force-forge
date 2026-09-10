@@ -9,7 +9,6 @@ import {
   ArrowRight,
   ShieldCheck,
   MapPin,
-  Sparkles,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
