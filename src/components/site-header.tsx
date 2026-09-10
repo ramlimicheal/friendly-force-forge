@@ -234,16 +234,7 @@ export function SiteHeader() {
             )}
           </nav>
 
-          {/* Right Action CTA */}
-          <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              to="/candidate-portal"
-              className="inline-flex items-center gap-2 rounded-lg bg-ember px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-sm transition-all hover:bg-ember/90 hover:scale-105 active:scale-95"
-            >
-              <Sparkles className="size-3.5 text-white" />
-              <span>Free Visa Assessment</span>
-            </Link>
-          </div>
+          {/* Right Action CTA removed per request */}
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex lg:hidden">
@@ -327,16 +318,6 @@ export function SiteHeader() {
                   )}
                 </nav>
 
-                <div className="mt-4 pt-3 border-t border-white/15">
-                  <Link
-                    to="/candidate-portal"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-ember py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-ember/90"
-                  >
-                    <span>Start Free Visa Assessment</span>
-                    <ArrowRight className="size-4" />
-                  </Link>
-                </div>
               </div>
             </motion.div>
           )}
