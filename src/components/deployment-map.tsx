@@ -1,5 +1,6 @@
 import * as React from "react";
-import { MapPin, Star, ShieldCheck } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight, MapPin, Star, ShieldCheck } from "lucide-react";
 
 import { DottedMap, type Marker } from "@/components/ui/dotted-map";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-primitives";

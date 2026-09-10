@@ -168,7 +168,7 @@ export const Route = createFileRoute("/")({
 
 const counters = [
   {
-    target: 12000,
+    target: 150,
     suffix: "+",
     label: "Successful Visa Grants",
     hint: "PR, Study, Work & Visitor visas granted across top global destinations.",

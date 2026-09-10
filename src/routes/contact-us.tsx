@@ -4,12 +4,9 @@ import {
   MapPin,
   Phone,
   ShieldCheck,
-  Building2,
   Clock,
   Briefcase,
-  ArrowRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
 
 import { PageHero, Section, CtaBanner } from "@/components/page-shell";
 import { company } from "@/data/site";
