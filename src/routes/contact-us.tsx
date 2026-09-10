@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Clock,
   Briefcase,
+  ExternalLink,
 } from "lucide-react";
 
 import { PageHero, Section, CtaBanner } from "@/components/page-shell";
