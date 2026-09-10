@@ -10,7 +10,6 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import { motion } from "framer-motion";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -218,17 +217,9 @@ function RootComponent() {
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
         <main className="flex-1 overflow-x-hidden">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0.35 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.25,
-              ease: "easeOut",
-            }}
-          >
+          <div>
             <Outlet />
-          </motion.div>
+          </div>
         </main>
         <SiteFooter />
       </div>
