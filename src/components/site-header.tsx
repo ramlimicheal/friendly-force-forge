@@ -28,11 +28,11 @@ function Brand() {
         />
       </span>
       <div className="flex flex-col justify-center">
-        <span className="font-display text-[14px] sm:text-[15px] font-bold tracking-tight text-white group-hover:text-ember transition-colors leading-tight">
-          Damoder Immigration Services
+        <span className="font-display text-[15px] font-bold uppercase leading-none text-white transition-colors group-hover:text-ember sm:text-base">
+          Damoder
         </span>
-        <span className="text-[10px] sm:text-[11px] font-medium tracking-wider uppercase text-ember">
-          Hyderabad, India
+        <span className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-ember sm:text-[10px]">
+          Immigration Services
         </span>
       </div>
     </Link>

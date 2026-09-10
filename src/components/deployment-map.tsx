@@ -496,22 +496,6 @@ export function DestinationsWhereWeDeploy() {
                 States. Every application is backed by verified legal channels and structured documentation.
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  to="/candidate-portal"
-                  className="group inline-flex items-center gap-3 rounded-xl bg-ember px-6 py-3.5 text-sm sm:text-base font-semibold text-white shadow-lg transition-all duration-200 hover:bg-ember/90 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  <span>Check Visa Eligibility &amp; Points</span>
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-
-                <Link
-                  to="/employer-services"
-                  className="inline-flex items-center rounded-xl border border-white/30 bg-white/5 px-6 py-3.5 text-sm sm:text-base font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/10 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  Request Manpower (For Employers)
-                </Link>
-              </div>
             </div>
           </div>
         </FadeIn>
