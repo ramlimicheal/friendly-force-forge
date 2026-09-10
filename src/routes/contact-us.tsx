@@ -201,6 +201,17 @@ function ContactPage() {
                         {loc.contact}
                       </div>
                       <div className="mt-1 text-[11px] text-muted-foreground">{loc.role}</div>
+                      {loc.mapsUrl && (
+                        <a
+                          href={loc.mapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-brand/30 bg-brand/5 px-2.5 py-1 text-[11px] font-semibold text-brand transition-colors hover:bg-brand/10 hover:border-brand"
+                        >
+                          <ExternalLink className="size-3" />
+                          Open in Google Maps
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
