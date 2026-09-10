@@ -128,6 +128,20 @@ export function SiteFooter() {
               <span className="font-bold text-ember">📍 Registered Office:</span>
               <br />
               {company.address}
+              <div className="mt-2 flex flex-col gap-1">
+                <a href={`tel:${company.employerPhone}`} className="inline-flex items-center gap-1.5 hover:text-ember transition-colors">
+                  <span className="size-1.5 rounded-full bg-ember" />
+                  {company.employerPhone}
+                </a>
+                <a href={`tel:${company.candidatePhone}`} className="inline-flex items-center gap-1.5 hover:text-ember transition-colors">
+                  <span className="size-1.5 rounded-full bg-ember" />
+                  {company.candidatePhone}
+                </a>
+                <a href={`mailto:${company.email}`} className="inline-flex items-center gap-1.5 hover:text-ember transition-colors">
+                  <span className="size-1.5 rounded-full bg-ember" />
+                  {company.email}
+                </a>
+              </div>
             </div>
           </div>
         </div>

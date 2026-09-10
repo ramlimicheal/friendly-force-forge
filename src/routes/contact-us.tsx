@@ -49,7 +49,7 @@ export const Route = createFileRoute("/contact-us")({
           "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Damoder Immigration Services & Overseas Manpower Consultancy",
-            "telephone": "+91-8639516954",
+            "telephone": ["+91-8639516954", "+91-950205194"],
             "email": "mail2damoder@gmail.com",
             "address": {
               "@type": "PostalAddress",
@@ -81,7 +81,7 @@ const desks = [
     icon: ShieldCheck,
     title: "Statutory Compliance & Grievance Desk",
     badge: "24/7 Ombudsman",
-    phone: company.employerPhone,
+    phone: company.candidatePhone,
     email: company.compliance,
     desc: "Report unauthorized sub-agents, cash demands, or contract discrepancies directly to our compliance director.",
     timing: "24/7 Urgent Ombudsman Line",
