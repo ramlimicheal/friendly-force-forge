@@ -208,6 +208,11 @@ function ContactPage() {
                           href={loc.mapsUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={(e) => {
+                            // Preview iframes can block window.open on plain anchors; force it.
+                            e.preventDefault();
+                            window.open(loc.mapsUrl, "_blank", "noopener,noreferrer");
+                          }}
                           className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-brand/30 bg-brand/5 px-2.5 py-1 text-[11px] font-semibold text-brand transition-colors hover:bg-brand/10 hover:border-brand"
                         >
                           <ExternalLink className="size-3" />
