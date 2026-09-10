@@ -15,7 +15,6 @@ import { Route as CandidatePortalRouteImport } from './routes/candidate-portal'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as EmployerServicesRouteImport } from './routes/employer-services'
 import { Route as IndustriesRouteImport } from './routes/industries'
-import { Route as UnlockRouteImport } from './routes/unlock'
 import { Route as VisaAttestationServicesRouteImport } from './routes/visa-attestation-services'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as DestinationsGulfGccRouteImport } from './routes/destinations.gulf-gcc'
@@ -52,11 +51,6 @@ const IndustriesRoute = IndustriesRouteImport.update({
   path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UnlockRoute = UnlockRouteImport.update({
-  id: '/unlock',
-  path: '/unlock',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const VisaAttestationServicesRoute = VisaAttestationServicesRouteImport.update({
   id: '/visa-attestation-services',
   path: '/visa-attestation-services',
@@ -91,7 +85,6 @@ export interface FileRoutesByFullPath {
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
   '/industries': typeof IndustriesRoute
-  '/unlock': typeof UnlockRoute
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
   '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
@@ -105,7 +98,6 @@ export interface FileRoutesByTo {
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
   '/industries': typeof IndustriesRoute
-  '/unlock': typeof UnlockRoute
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
   '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
@@ -120,7 +112,6 @@ export interface FileRoutesById {
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
   '/industries': typeof IndustriesRoute
-  '/unlock': typeof UnlockRoute
   '/visa-attestation-services': typeof VisaAttestationServicesRoute
   '/api/chat': typeof ApiChatRoute
   '/destinations/gulf-gcc': typeof DestinationsGulfGccRoute
@@ -136,7 +127,6 @@ export interface FileRouteTypes {
     | '/contact-us'
     | '/employer-services'
     | '/industries'
-    | '/unlock'
     | '/visa-attestation-services'
     | '/api/chat'
     | '/destinations/gulf-gcc'
@@ -150,7 +140,6 @@ export interface FileRouteTypes {
     | '/contact-us'
     | '/employer-services'
     | '/industries'
-    | '/unlock'
     | '/visa-attestation-services'
     | '/api/chat'
     | '/destinations/gulf-gcc'
@@ -164,7 +153,6 @@ export interface FileRouteTypes {
     | '/contact-us'
     | '/employer-services'
     | '/industries'
-    | '/unlock'
     | '/visa-attestation-services'
     | '/api/chat'
     | '/destinations/gulf-gcc'
@@ -179,7 +167,6 @@ export interface RootRouteChildren {
   ContactUsRoute: typeof ContactUsRoute
   EmployerServicesRoute: typeof EmployerServicesRoute
   IndustriesRoute: typeof IndustriesRoute
-  UnlockRoute: typeof UnlockRoute
   VisaAttestationServicesRoute: typeof VisaAttestationServicesRoute
   ApiChatRoute: typeof ApiChatRoute
   DestinationsGulfGccRoute: typeof DestinationsGulfGccRoute
@@ -231,13 +218,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/unlock': {
-      id: '/unlock'
-      path: '/unlock'
-      fullPath: '/unlock'
-      preLoaderRoute: typeof UnlockRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/visa-attestation-services': {
       id: '/visa-attestation-services'
       path: '/visa-attestation-services'
@@ -283,7 +263,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactUsRoute: ContactUsRoute,
   EmployerServicesRoute: EmployerServicesRoute,
   IndustriesRoute: IndustriesRoute,
-  UnlockRoute: UnlockRoute,
   VisaAttestationServicesRoute: VisaAttestationServicesRoute,
   ApiChatRoute: ApiChatRoute,
   DestinationsGulfGccRoute: DestinationsGulfGccRoute,
