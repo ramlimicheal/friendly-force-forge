@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
 import logoMark from "@/assets/logo-mark-white.png";
 import { company } from "@/data/site";
 
