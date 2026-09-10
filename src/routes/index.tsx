@@ -623,7 +623,7 @@ function HomePage() {
                   <s.icon className="size-8 text-brand" />
                   <h3 className="mt-5 font-display text-lg font-bold text-brand-deep">
                     {s.title.replace(/^\d+\.\s*/, "")}
-                  </h2>
+                  </h3>
                   <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">{s.body}</p>
                 </div>
               </MotionCard>
@@ -702,7 +702,7 @@ function HomePage() {
             <div>
               <h3 className="font-display text-base font-bold text-brand-deep">
                 Have a specific question about your visa or migration pathway?
-              </h2>
+              </h3>
               <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
                 Our Hyderabad headquarters desk and dedicated visa consultants respond within 24 hours.
               </p>
