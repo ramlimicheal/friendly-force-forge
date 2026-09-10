@@ -55,6 +55,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://dis.ind.in/destinations/new-zealand</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://dis.ind.in/contact-us</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
