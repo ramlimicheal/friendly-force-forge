@@ -466,9 +466,9 @@ function HomePage() {
                   <AnimatedCounter value={150} duration={1.6} />
                   <span className="text-ember font-semibold">+</span>
                 </p>
-                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                <h2 className="mt-1.5 font-display text-base font-bold text-brand-deep">
                   Successful Visa Grants
-                </h3>
+                </h2>
                 <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
                   PR, Study, Work &amp; Visitor visas granted across top nations.
                 </p>
@@ -490,9 +490,9 @@ function HomePage() {
                   <AnimatedCounter value={6} duration={1.6} />
                   <span className="text-ember font-semibold"> Flagship</span>
                 </p>
-                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                <h2 className="mt-1.5 font-display text-base font-bold text-brand-deep">
                   Destination Corridors
-                </h3>
+                </h2>
                 <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
                   New Zealand, Germany, Canada, Australia, UK &amp; Europe.
                 </p>
@@ -514,9 +514,9 @@ function HomePage() {
                   <AnimatedCounter value={100} duration={1.6} />
                   <span className="text-ember font-semibold">%</span>
                 </p>
-                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                <h2 className="mt-1.5 font-display text-base font-bold text-brand-deep">
                   Direct Tracking
-                </h3>
+                </h2>
                 <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
                   Zero hidden charges or unauthorized sub-agents.
                 </p>
@@ -538,9 +538,9 @@ function HomePage() {
                   <AnimatedCounter value={7} duration={1.6} />
                   <span className="text-ember font-semibold"> Pillars</span>
                 </p>
-                <h3 className="mt-1.5 font-display text-base font-bold text-brand-deep">
+                <h2 className="mt-1.5 font-display text-base font-bold text-brand-deep">
                   Client Promise
-                </h3>
+                </h2>
                 <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">
                   Dedicated consultant, eligibility check &amp; IELTS inputs.
                 </p>
@@ -623,7 +623,7 @@ function HomePage() {
                   <s.icon className="size-8 text-brand" />
                   <h3 className="mt-5 font-display text-lg font-bold text-brand-deep">
                     {s.title.replace(/^\d+\.\s*/, "")}
-                  </h3>
+                  </h2>
                   <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-muted-foreground">{s.body}</p>
                 </div>
               </MotionCard>
@@ -702,7 +702,7 @@ function HomePage() {
             <div>
               <h3 className="font-display text-base font-bold text-brand-deep">
                 Have a specific question about your visa or migration pathway?
-              </h3>
+              </h2>
               <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
                 Our Hyderabad headquarters desk and dedicated visa consultants respond within 24 hours.
               </p>
