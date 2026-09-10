@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0-acm",
+  "protocol": "AgenticCommerceProtocol/1.0",
+  "brand": "Damoder Immigration Services",
+  "legal_name": "Damoder Immigration Services",
+  "entity_type": "Government Compliant Overseas Manpower Consultancy & Visa Agency",
+  "operating_status": "Active / Verified Government Compliant",
+  "origin_url": "https://dis.ind.in",
+  "headquarters": {
+    "street": "6F6F+74G, Tukkuguda",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "postal_code": "501359",
+    "coordinates": {
+      "latitude": 17.2403,
+      "longitude": 78.4983
+    }
+  },
+  "contact": {
+    "telephones": [
+      "+91-8639516954",
+      "+91-9502051954"
+    ],
+    "email": "mail2damoder@gmail.com",
+    "whatsapp": "https://wa.me/918639516954",
+    "official_website": "https://dis.ind.in"
+  },
+  "regions_served": {
+    "recruitment_zones": [
+      "Telangana (Hyderabad, Warangal, Karimnagar, Nizamabad, Khammam)",
+      "Andhra Pradesh (Vijayawada, Visakhapatnam, Guntur, Tirupati, Kurnool)",
+      "Pan-India Technical & Skilled Talent"
+    ],
+    "key_destination_corridors": [
+      "New Zealand (Priority AEWV & Skilled Migrant)",
+      "Germany (Opportunity Card / Chancenkarte & EU Blue Card)",
+      "Gulf & GCC (Saudi Arabia, UAE, Qatar, Kuwait, Oman - Bulk Deployment)",
+      "European Union & Schengen (Poland, Malta, Croatia, Romania, Hungary)",
+      "Canada (Express Entry & PNP)",
+      "Australia (Subclass 189, 190, 491, 482)"
+    ]
+  },
+  "performance_metrics": {
+    "mobilization_sla": "30-45 Days (From Offer Letter to On-Site Deployment)",
+    "visa_accuracy_rate": "98.4%",
+    "regulatory_compliance": "100% MEA & eMigrate Aligned Process",
+    "pre_screening_protocol": "Pre-screened & Trade-Tested Technical Talent Pool"
+  },
+  "services": [
+    {
+      "service_id": "DIS-NZ-AEWV-001",
+      "name": "New Zealand Accredited Employer Work Visa (AEWV) & Skilled Migration Mobilization",
+      "category": "Overseas Manpower Deployment & Visa Consultation",
+      "destination": "New Zealand",
+      "lead_time": "30-45 days mobilization SLA",
+      "compliance": "NZQA Evaluation & INZ AEWV Employer Verification",
+      "description": "End-to-end recruitment, trade testing, document verification, and visa mobilization of technical, construction, healthcare, engineering, and IT manpower from Telangana and Andhra Pradesh for New Zealand accredited employers. Complete 6-Point SMC Assessment & Green List Straight-to-Residence support.",
+      "inquiry_endpoint": "https://dis.ind.in/destinations/new-zealand",
+      "whatsapp_direct": "https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20interested%20in%20New%20Zealand%20Work%20Visa%20and%20Manpower%20Services"
+    },
+    {
+      "service_id": "DIS-GER-CHANCEN-002",
+      "name": "Germany Opportunity Card (Chancenkarte) & EU Blue Card Manpower",
+      "category": "Skilled Professional Migration",
+      "destination": "Germany & EU",
+      "lead_time": "45-60 days",
+      "compliance": "ZAB Document Recognition & German Skilled Immigration Act (FEG)",
+      "description": "Recruitment and deployment of certified engineers, software specialists, healthcare professionals, and technical staff from Hyderabad to German enterprises.",
+      "inquiry_endpoint": "https://dis.ind.in/destinations/schengen-europe",
+      "whatsapp_direct": "https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20interested%20in%20Germany%20Opportunity%20Card%20and%20Jobs"
+    },
+    {
+      "service_id": "DIS-GCC-BULK-003",
+      "name": "Gulf & GCC Bulk Technical Manpower Deployment",
+      "category": "Overseas Bulk Manpower Recruitment",
+      "destination": "Saudi Arabia, UAE, Qatar, Kuwait, Oman",
+      "lead_time": "21-30 days",
+      "compliance": "MEA eMigrate Compliant & Trade-Tested Certification",
+      "description": "Rapid mass mobilization of civil, mechanical, electrical, instrumentation, logistics, and facility management personnel from South India to GCC infrastructure and industrial projects.",
+      "inquiry_endpoint": "https://dis.ind.in/destinations/gulf-gcc",
+      "whatsapp_direct": "https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20have%20an%20inquiry%20regarding%20Gulf%20GCC%20Bulk%20Manpower"
+    },
+    {
+      "service_id": "DIS-PR-CAN-AUS-004",
+      "name": "Canada Express Entry/PNP & Australia Skilled PR Migration",
+      "category": "Permanent Residency Consultation",
+      "destination": "Canada & Australia",
+      "lead_time": "6-12 months complete pathway",
+      "compliance": "IRCC & VETASSESS / ACS / Engineers Australia Pre-vetting",
+      "description": "Comprehensive points-test optimization, ECA credential evaluation, state nomination filing, and visa submission for professionals and skilled trades.",
+      "inquiry_endpoint": "https://dis.ind.in/candidate-portal",
+      "whatsapp_direct": "https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20need%20assistance%20with%20Canada%20Australia%20PR"
+    }
+  ],
+  "agent_policy": {
+    "autonomous_inquiry_allowed": true,
+    "quote_sla_hours": 4,
+    "verification_portal": "https://dis.ind.in/candidate-portal",
+    "whatsapp_instant_contact": "https://wa.me/918639516954"
+  }
+}

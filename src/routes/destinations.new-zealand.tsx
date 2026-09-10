@@ -16,6 +16,7 @@ import {
   Target,
   Compass,
   MapPin,
+  MessageSquare,
 } from "lucide-react";
 
 import { PageHero, Section, CtaBanner } from "@/components/page-shell";
@@ -32,22 +33,27 @@ export const Route = createFileRoute("/destinations/new-zealand")({
     meta: [
       {
         title:
-          "New Zealand Visa Consultants in Hyderabad | SMC & Green List | Damoder Immigration",
+          "New Zealand Visa Consultants in Hyderabad | AEWV Manpower & SMC | Damoder Immigration",
       },
       {
         name: "description",
         content:
-          "New Zealand visa consultants in Hyderabad. Skilled Migrant Category (SMC 6-point), Green List Tier 1 Straight-to-Residence, and AEWV employer-sponsored work visas with Damoder Immigration Services.",
+          "Top New Zealand visa consultants & overseas manpower agency in Hyderabad. 30-45 day mobilization for Accredited Employer Work Visas (AEWV), Skilled Migrant Category (SMC 6-point), and Green List Straight-to-Residence.",
+      },
+      {
+        name: "keywords",
+        content:
+          "new zealand visa consultants hyderabad, new zealand aewv manpower, new zealand accredited employer work visa, indian manpower for new zealand, smc 6 point assessment hyderabad, new zealand green list straight to pr, telangana new zealand jobs, andhra pradesh new zealand recruitment",
       },
       {
         property: "og:title",
         content:
-          "New Zealand Visa Consultants in Hyderabad | Damoder Immigration Services",
+          "New Zealand Visa Consultants & Overseas Manpower Agency | Damoder Immigration",
       },
       {
         property: "og:description",
         content:
-          "Flagship New Zealand immigration pathway: SMC 6-point assessment, Green List Tier 1 Straight-to-Residence, and Accredited Employer Work Visas from Hyderabad.",
+          "Flagship New Zealand immigration pathway: 30-45 day AEWV manpower mobilization, SMC 6-point assessment, and Green List Tier 1 Straight-to-Residence from Hyderabad.",
       },
       { property: "og:url", content: "https://dis.ind.in/destinations/new-zealand" },
       { property: "og:type", content: "website" },
@@ -55,6 +61,47 @@ export const Route = createFileRoute("/destinations/new-zealand")({
     ],
     links: [
       { rel: "canonical", href: "https://dis.ind.in/destinations/new-zealand" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "New Zealand Accredited Employer Work Visa (AEWV) & Skilled Migration",
+          provider: {
+            "@type": "EmploymentAgency",
+            name: "Damoder Immigration Services",
+            url: "https://dis.ind.in",
+            telephone: ["+91-8639516954", "+91-9502051954"]
+          },
+          serviceType: "Overseas Manpower Mobilization & Visa Processing",
+          areaServed: ["Telangana", "Andhra Pradesh", "India"],
+          description: "Turnkey recruitment, NZQA credential evaluation, and 30-45 day mobilization of technical and professional talent from South India for New Zealand accredited employers.",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "New Zealand Visa Pathways",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Accredited Employer Work Visa (AEWV)",
+                  description: "30-45 day mobilization for trade-tested technical and professional manpower."
+                }
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Skilled Migrant Category (SMC 6-Point)",
+                  description: "Full NZQA credential evaluation, points matrix mapping, and residence filing."
+                }
+              }
+            ]
+          }
+        })
+      }
     ],
   }),
   component: NewZealandPage,
@@ -67,9 +114,9 @@ const heroMetrics = [
     detail: "Top-priority corridor with end-to-end Hyderabad filing",
   },
   {
-    value: "6-Pt",
-    label: "SMC Eligibility",
-    detail: "Updated Skilled Migrant Category point-based assessment",
+    value: "30–45d",
+    label: "Mobilization SLA",
+    detail: "Rapid deployment for trade-tested talent from South India",
   },
   {
     value: "Tier 1",
@@ -77,9 +124,9 @@ const heroMetrics = [
     detail: "Healthcare & ICT roles qualify for direct residence",
   },
   {
-    value: "3–6 mo",
-    label: "Processing Lead Time",
-    detail: "From NZQA assessment to visa decision",
+    value: "100%",
+    label: "MEA & INZ Compliant",
+    detail: "Verified employer accreditation & eMigrate alignment",
   },
 ];
 
@@ -460,6 +507,15 @@ function NewZealandPage() {
               >
                 Book Assessment <ArrowRight className="size-4" />
               </Link>
+              <a
+                href="https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20interested%20in%20New%20Zealand%20Work%20Visa%20and%20Manpower%20Services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              >
+                <MessageSquare className="size-4" />
+                WhatsApp Consultation (+91 86395 16954)
+              </a>
               <Link
                 to="/candidate-portal"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-paper px-5 py-3 text-sm font-semibold text-brand-deep transition-all hover:border-brand hover:bg-brand/5 hover:scale-[1.02] active:scale-[0.98]"

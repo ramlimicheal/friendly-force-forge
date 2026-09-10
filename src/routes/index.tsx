@@ -36,6 +36,7 @@ import {
   Headphones,
   Check,
   Stamp,
+  MessageSquare,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -65,32 +66,32 @@ import { company } from "@/data/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Damoder Immigration Services | Visa & Immigration Consultants Hyderabad" },
+      { title: "Damoder Immigration Services | Indian Overseas Manpower Agency & Visa Consultants Hyderabad" },
       {
         name: "description",
         content:
-          "A Complete Roundup of Visa Services at Damoder Immigration Services, Hyderabad. Seamless & stress-free visa process for New Zealand, Germany, Canada, Australia, UK & Europe: PR, Study, Work & Visitor Visas.",
+          "Government-compliant Indian Overseas Manpower Agency & Visa Consultants in Hyderabad, Telangana. Turnkey 30-45 day mobilization for New Zealand (AEWV), Germany, GCC & Europe with full MEA/eMigrate compliance.",
       },
       {
         name: "keywords",
         content:
-          "damoder immigration services hyderabad, new zealand visa consultants, germany jobseeker visa, canada pr express entry, australia study visa, hyderabad visa agency, tukkuguda immigration consultants, ielts inputs hyderabad",
+          "damoder immigration services hyderabad, indian manpower agency, overseas recruitment consultancy telangana, andhra pradesh overseas manpower, new zealand visa consultants hyderabad, new zealand aewv mobilization, germany jobseeker visa, gcc bulk manpower hyderabad, canada pr express entry, australia study visa",
       },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Damoder Immigration Services | Hyderabad, India" },
+      { property: "og:title", content: "Damoder Immigration Services | Indian Overseas Manpower Agency" },
       {
         property: "og:description",
         content:
-          "Seamless and stress-free visa process to study, work, or settle in New Zealand, Germany, Canada, Australia, the UK, and Europe.",
+          "Pre-screened technical and skilled talent mobilization from Telangana and Andhra Pradesh. 30-45 day deployment SLA for New Zealand, Germany, GCC, Canada, Australia & Europe.",
       },
       { property: "og:url", content: "https://dis.ind.in" },
       { property: "og:image", content: "https://dis.ind.in/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Damoder Immigration Services | Hyderabad" },
+      { name: "twitter:title", content: "Damoder Immigration Services | Hyderabad Overseas Manpower" },
       {
         name: "twitter:description",
         content:
-          "Expert visa counseling, eligibility checks, documentation filing, and IELTS inputs for New Zealand, Germany, Canada, Australia, UK & Europe.",
+          "Overseas Manpower Mobilization & Visa Consultants in Hyderabad. 30-45 day mobilization SLA for New Zealand, Germany, GCC, Canada & Australia.",
       },
     ],
     links: [
@@ -107,7 +108,7 @@ export const Route = createFileRoute("/")({
               "@id": "https://dis.ind.in/#website",
               "url": "https://dis.ind.in",
               "name": "Damoder Immigration Services",
-              "description": "Premier visa and immigration consultancy based in Hyderabad, India.",
+              "description": "Premier government-compliant overseas manpower consultancy and visa agency based in Hyderabad, Telangana, India.",
               "publisher": {
                 "@id": "https://dis.ind.in/#organization"
               }
@@ -121,7 +122,31 @@ export const Route = createFileRoute("/")({
                   "name": "Which countries does Damoder Immigration Services specialize in?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Damoder Immigration Services specializes in New Zealand (Top Priority), Germany (Top European Priority), Canada, Australia, the United Kingdom, and European Schengen countries across PR, Study, Skilled Work, and Visitor visas."
+                    "text": "Damoder Immigration Services specializes in New Zealand (Top Priority AEWV & SMC), Germany (Opportunity Card / Chancenkarte), GCC & Gulf nations (Saudi Arabia, UAE, Qatar, Kuwait, Oman), Canada, Australia, the United Kingdom, and European Schengen countries across PR, Study, Skilled Work, and Visitor visas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does Damoder Immigration Services mobilize Indian manpower for New Zealand and global employers?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Damoder Immigration Services deploys a structured 30-45 day mobilization SLA connecting trade-tested technical talent from Telangana and Andhra Pradesh with New Zealand accredited employers under the AEWV scheme, complete with NZQA credential mapping and INZ compliance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Why is Hyderabad/Telangana the leading hub for overseas manpower recruitment?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hyderabad and the broader Telangana and Andhra Pradesh corridor have India's dense concentration of certified technical, healthcare, and engineering professionals. Damoder Immigration Services operates pre-screening, trade tests, and background vetting directly at our Hyderabad center."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Damoder Immigration Services compliant with MEA and eMigrate regulations?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. All overseas placements, recruitment mandates, and visa documentation strictly comply with Ministry of External Affairs (MEA) and eMigrate statutory frameworks, guaranteeing 100% transparent and legal employment mobility."
                   }
                 },
                 {
@@ -168,19 +193,19 @@ export const Route = createFileRoute("/")({
 
 const counters = [
   {
-    target: 150,
-    suffix: "+",
-    label: "Successful Visa Grants",
-    hint: "PR, Study, Work & Visitor visas granted across top global destinations.",
-    tag: "Track Record",
+    target: 30,
+    suffix: "–45 Days",
+    label: "Candidate Mobilization SLA",
+    hint: "Turnkey trade-tested talent deployment for New Zealand, GCC & European projects.",
+    tag: "Deployment SLA",
     tagColor: "bg-ember/15 text-ember ring-ember/30",
-    icon: Award,
+    icon: Clock,
   },
   {
     target: 6,
     suffix: " Flagship",
     label: "Core Destination Corridors",
-    hint: "New Zealand, Germany, Canada, Australia, United Kingdom & Europe.",
+    hint: "New Zealand (Priority), Germany, GCC, Canada, Australia & Europe.",
     tag: "Global Reach",
     tagColor: "bg-[#1A2C53] text-white ring-white/20",
     icon: Globe2,
@@ -188,15 +213,15 @@ const counters = [
   {
     target: 100,
     suffix: "%",
-    label: "Process Transparency",
-    hint: "Direct milestone tracking with zero hidden charges or unlicensed agents.",
+    label: "MEA & eMigrate Aligned",
+    hint: "Direct recruitment mandates with zero hidden charges or unlicensed sub-agents.",
     tag: "Direct Mandates",
     tagColor: "bg-amber-400/15 text-amber-400 ring-amber-400/30",
     icon: Building2,
   },
   {
-    target: 99,
-    suffix: ".2%",
+    target: 98,
+    suffix: ".4%",
     label: "Visa & Legal Accuracy",
     hint: "Thorough pre-vetting with full regulatory and consular compliance.",
     tag: "Verified Desk",
@@ -384,7 +409,7 @@ function HomePage() {
                 className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-3.5 py-1.5 text-xs sm:text-sm font-semibold tracking-wide text-white/90 backdrop-blur-sm"
               >
                 <span className="size-2 rounded-full bg-ember" />
-                HQ: Hyderabad, India · Trusted Visa Consultants
+                HQ: Hyderabad, Telangana · Government-Compliant Overseas Manpower Agency
               </motion.span>
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
@@ -392,7 +417,7 @@ function HomePage() {
                 transition={{ duration: 0.55, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className="mt-5 font-display text-3xl font-semibold leading-[1.12] tracking-tight sm:text-5xl lg:text-[54px] xl:text-[58px]"
               >
-                A Complete Roundup of Visa Services at{" "}
+                A Complete Roundup of Overseas Manpower & Visa Services at{" "}
                 <span className="text-ember">Damoder Immigration</span>
               </motion.h1>
             </div>
@@ -404,8 +429,8 @@ function HomePage() {
               className="lg:pb-3"
             >
               <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white/90">
-                We make sure your visa process is absolutely seamless and stress-free to study, work, or settle in
-                countries like: <strong className="text-white">New Zealand (Priority), Germany, Canada, Australia, United Kingdom, and Europe.</strong>
+                Connecting pre-screened, trade-tested talent from <strong className="text-white">Telangana and Andhra Pradesh</strong> with accredited global employers. Turnkey 30–45 day mobilization for:{" "}
+                <strong className="text-white">New Zealand (Priority AEWV), Germany, GCC, Canada, Australia, UK, and Europe.</strong>
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
@@ -414,6 +439,15 @@ function HomePage() {
                 >
                   Explore Visa Categories
                 </Link>
+                <a
+                  href="https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20looking%20for%20overseas%20manpower%20/%20visa%20services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 hover:bg-emerald-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                >
+                  <MessageSquare className="size-4" />
+                  <span>WhatsApp Assessment (+91 86395 16954)</span>
+                </a>
               </div>
             </motion.div>
           </div>

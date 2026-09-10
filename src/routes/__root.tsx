@@ -91,26 +91,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "keywords",
         content:
-          "damoder immigration services, best immigration consultants hyderabad, new zealand visa consultants hyderabad, germany job seeker visa hyderabad, canada pr consultants hyderabad, australia study visa hyderabad, pr visa hyderabad, tukkuguda visa agency",
+          "damoder immigration services, indian manpower agency, overseas recruitment hyderabad, telangana manpower consultancy, andhra pradesh overseas jobs, new zealand visa consultants hyderabad, new zealand aewv mobilization, germany job seeker visa hyderabad, canada pr consultants hyderabad, australia study visa hyderabad, pr visa hyderabad, tukkuguda visa agency, gulf recruitment agency hyderabad",
       },
       { name: "author", content: "Damoder Immigration Services" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "agent-manifest", content: "https://dis.ind.in/agent-manifest.json" },
       { property: "og:site_name", content: "Damoder Immigration Services" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Damoder Immigration Services | Hyderabad, India" },
       {
         property: "og:description",
         content:
-          "Seamless and stress-free visa process to study, work, or settle in New Zealand, Germany, Canada, Australia, UK, and Europe.",
+          "Government-compliant overseas manpower mobilization and visa processing from Hyderabad, Telangana. Specializing in New Zealand (AEWV), Germany, Gulf/GCC, Canada, Australia, and Europe.",
       },
       { property: "og:url", content: "https://dis.ind.in" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Damoder Immigration Services" },
+      { name: "twitter:title", content: "Damoder Immigration Services | Indian Overseas Manpower Agency" },
       {
         name: "twitter:description",
         content:
-          "Trusted Visa & Immigration Consultants in Hyderabad. PR, Study, Work & Visitor Visas for New Zealand, Germany, Canada & Australia.",
+          "Premier Overseas Manpower Agency & Visa Consultants in Hyderabad. 30-45 day mobilization SLA for New Zealand, Germany, GCC, Canada & Australia.",
       },
       { name: "theme-color", content: "#1A2C53" },
     ],
@@ -136,15 +137,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": ["EmploymentAgency", "LocalBusiness"],
+          "@type": ["EmploymentAgency", "LocalBusiness", "Organization"],
+          "@id": "https://dis.ind.in/#organization",
           name: "Damoder Immigration Services",
-          alternateName: "Damoder Immigration Services Hyderabad",
+          alternateName: [
+            "Damoder Immigration Services Hyderabad",
+            "Damoder Overseas Manpower Consultancy",
+            "Dhamodaran Immigration"
+          ],
           url: "https://dis.ind.in",
           logo: "https://dis.ind.in/favicon.png",
+          image: "https://dis.ind.in/favicon.png",
           description:
-            "Premier visa and immigration consultancy based in Hyderabad, India, providing seamless solutions for PR, Study, Work, and Visitor visas across New Zealand, Germany, Canada, Australia, the UK, and Europe.",
+            "Premier government-compliant overseas manpower consultancy and visa agency based in Hyderabad, Telangana, India. Specializing in rapid mobilization for New Zealand (AEWV & SMC), Germany (Opportunity Card), GCC bulk recruitment, and Schengen Europe.",
           telephone: ["+91-8639516954", "+91-9502051954"],
           email: "mail2damoder@gmail.com",
+          sameAs: [
+            "https://wa.me/918639516954"
+          ],
           address: {
             "@type": "PostalAddress",
             streetAddress: "6F6F+74G, Tukkuguda",
@@ -166,7 +176,88 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               closes: "18:30",
             },
           ],
-          areaServed: ["IN", "NZ", "DE", "CA", "AU", "GB", "US", "PL", "MT", "HR", "RO", "HU"],
+          areaServed: [
+            {
+              "@type": "AdministrativeArea",
+              name: "Telangana",
+            },
+            {
+              "@type": "AdministrativeArea",
+              name: "Andhra Pradesh",
+            },
+            {
+              "@type": "Country",
+              name: "India",
+            },
+            {
+              "@type": "Country",
+              name: "New Zealand",
+            },
+            {
+              "@type": "Country",
+              name: "Germany",
+            },
+            {
+              "@type": "Country",
+              name: "Saudi Arabia",
+            },
+            {
+              "@type": "Country",
+              name: "United Arab Emirates",
+            },
+            {
+              "@type": "Country",
+              name: "Canada",
+            },
+            {
+              "@type": "Country",
+              name: "Australia",
+            },
+            {
+              "@type": "Country",
+              name: "United Kingdom",
+            }
+          ],
+          knowsAbout: [
+            "New Zealand Accredited Employer Work Visa (AEWV)",
+            "New Zealand Skilled Migrant Category (SMC 6-Point System)",
+            "New Zealand Green List Straight-to-Residence Pathways",
+            "Germany Opportunity Card (Chancenkarte)",
+            "MEA and eMigrate Overseas Deployment Compliance",
+            "Telangana and Andhra Pradesh Technical Workforce Mobilization",
+            "Bulk Manpower Recruitment for Gulf and GCC Mega-Projects",
+            "Trade Testing and Skills Pre-Vetting"
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Overseas Manpower & Immigration Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "New Zealand AEWV & Skilled Worker Mobilization",
+                  description: "Turnkey 30-45 day mobilization of trade-tested and professional talent from Telangana and Andhra Pradesh for New Zealand accredited employers."
+                }
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Gulf & GCC Bulk Manpower Deployment",
+                  description: "Rapid mobilization of technical, engineering, and trade workforce for GCC industrial and infrastructure projects under full MEA/eMigrate compliance."
+                }
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "German Opportunity Card & EU Blue Card Processing",
+                  description: "End-to-end ZAB document pre-check, points assessment, and consular filing for German skilled migration."
+                }
+              }
+            ]
+          }
         }),
       },
     ],

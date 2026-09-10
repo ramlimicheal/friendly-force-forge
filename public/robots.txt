@@ -1,4 +1,24 @@
 User-agent: *
 Allow: /
 
+# Autonomous Agent Commerce Protocol (ACM v1.0) Manifest
+Agent-Manifest: https://dis.ind.in/agent-manifest.json
+
+# Sitemaps
 Sitemap: https://dis.ind.in/sitemap.xml
+
+# Explicit AI Search Engine & Generative Engine Crawler Access
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
