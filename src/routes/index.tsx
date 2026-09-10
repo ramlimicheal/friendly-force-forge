@@ -443,10 +443,10 @@ function HomePage() {
                   href="https://wa.me/918639516954?text=Hi%20Damoder%20Immigration,%20I%20am%20looking%20for%20overseas%20manpower%20/%20visa%20services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 hover:bg-emerald-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                  className="inline-flex items-center gap-2 rounded-lg border border-emerald-400/50 bg-emerald-500/10 px-5 py-3 text-sm font-semibold text-emerald-300 backdrop-blur-sm transition-all duration-200 hover:border-emerald-300 hover:bg-emerald-500/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <MessageSquare className="size-4" />
-                  <span>WhatsApp Assessment (+91 86395 16954)</span>
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </motion.div>
