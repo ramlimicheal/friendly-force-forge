@@ -19,19 +19,20 @@ import { cn } from "@/lib/utils";
 
 function Brand() {
   return (
-    <Link to="/" className="flex items-center gap-2.5 group">
-      <span className="flex size-9 sm:size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1 shadow-sm ring-1 ring-white/25 transition-transform group-hover:scale-105">
+    <Link to="/" className="flex items-center gap-3 group">
+      <span className="flex size-12 sm:size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1.5 shadow-md ring-1 ring-white/30 transition-transform duration-200 group-hover:scale-105">
         <img
           src={logoMark}
           alt="Damoder Immigration Services Logo"
           className="size-full object-contain"
         />
       </span>
-      <div className="flex flex-col justify-center">
-        <span className="font-display text-[15px] font-bold uppercase leading-none text-white transition-colors group-hover:text-ember sm:text-base">
+      <div className="flex flex-col justify-center leading-none">
+        <span className="font-display text-lg sm:text-xl font-extrabold uppercase leading-none tracking-tight text-white transition-colors duration-200 group-hover:text-ember">
           Damoder
         </span>
-        <span className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-ember sm:text-[10px]">
+        <span className="mt-1.5 h-px w-full bg-ember/40" />
+        <span className="mt-1.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] leading-none text-ember">
           Immigration Services
         </span>
       </div>
