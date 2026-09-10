@@ -49,8 +49,8 @@ export const Route = createFileRoute("/contact-us")({
           "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Damoder Immigration Services & Overseas Manpower Consultancy",
-            "telephone": "+91-94440-12345",
-            "email": "contact@damoderimmigration.com",
+            "telephone": "+91-8639516954",
+            "email": "mail2damoder@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "6F6F+74G, Tukkuguda",
@@ -93,14 +93,14 @@ const officeLocations = [
     city: "Hyderabad (Headquarters)",
     state: "Telangana, India",
     address: "Damoder Immigration Services & Overseas Manpower Consultancy, 6F6F+74G, Tukkuguda Business District, Hyderabad – 501359",
-    contact: "+91 94440 12345 / contact@damoderimmigration.com",
+    contact: "+91 8639516954 / +91 950205194 / mail2damoder@gmail.com",
     role: "Registered MEA Headquarters & Central Executive Operations",
   },
   {
     city: "Regional Mobilisation Centers",
     state: "South & North India Network",
     address: "Authorized Trade Testing & Skill Auditing Workshop Alliances in Madurai, Trichy, Kochi, Hyderabad, and New Delhi",
-    contact: "partnerships@damoderimmigration.com",
+    contact: "mail2damoder@gmail.com",
     role: "Candidate Screening, Welding Rigs, MEP Labs & Trade Testing Yards",
   },
 ];

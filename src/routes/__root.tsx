@@ -153,8 +153,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           logo: "https://damoderimmigration.com/favicon.png",
           description:
             "Premier visa and immigration consultancy based in Hyderabad, India, providing seamless solutions for PR, Study, Work, and Visitor visas across New Zealand, Germany, Canada, Australia, the UK, and Europe.",
-          telephone: "+91-98765-43210",
-          email: "info@damoderimmigration.com",
+          telephone: "+91-8639516954",
+          email: "mail2damoder@gmail.com",
           address: {
             "@type": "PostalAddress",
             streetAddress: "6F6F+74G, Tukkuguda",
