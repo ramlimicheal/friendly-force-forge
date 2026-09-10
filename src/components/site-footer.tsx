@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
 import logoMark from "@/assets/logo-mark-white.png";
 import { company } from "@/data/site";
 
@@ -142,6 +143,19 @@ export function SiteFooter() {
                   {company.email}
                 </a>
               </div>
+              <a
+                href={company.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(company.mapsUrl, "_blank", "noopener,noreferrer");
+                }}
+                className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-ember/40 bg-ember/10 px-2.5 py-1 text-[11px] font-semibold text-ember transition-colors hover:bg-ember/20 hover:border-ember"
+              >
+                <ExternalLink className="size-3" />
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </div>
