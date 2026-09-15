@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as AewvRecruitmentAgencyIndiaRouteImport } from './routes/aewv-recruitment-agency-india'
 import { Route as CandidatePortalRouteImport } from './routes/candidate-portal'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as EmployerServicesRouteImport } from './routes/employer-services'
@@ -32,6 +33,12 @@ const AboutUsRoute = AboutUsRouteImport.update({
   path: '/about-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AewvRecruitmentAgencyIndiaRoute =
+  AewvRecruitmentAgencyIndiaRouteImport.update({
+    id: '/aewv-recruitment-agency-india',
+    path: '/aewv-recruitment-agency-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CandidatePortalRoute = CandidatePortalRouteImport.update({
   id: '/candidate-portal',
   path: '/candidate-portal',
@@ -87,6 +94,7 @@ const DestinationsUsaVisaRoute = DestinationsUsaVisaRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/aewv-recruitment-agency-india': typeof AewvRecruitmentAgencyIndiaRoute
   '/candidate-portal': typeof CandidatePortalRoute
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
@@ -101,6 +109,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/aewv-recruitment-agency-india': typeof AewvRecruitmentAgencyIndiaRoute
   '/candidate-portal': typeof CandidatePortalRoute
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
@@ -116,6 +125,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/aewv-recruitment-agency-india': typeof AewvRecruitmentAgencyIndiaRoute
   '/candidate-portal': typeof CandidatePortalRoute
   '/contact-us': typeof ContactUsRoute
   '/employer-services': typeof EmployerServicesRoute
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about-us'
+    | '/aewv-recruitment-agency-india'
     | '/candidate-portal'
     | '/contact-us'
     | '/employer-services'
@@ -146,6 +157,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about-us'
+    | '/aewv-recruitment-agency-india'
     | '/candidate-portal'
     | '/contact-us'
     | '/employer-services'
@@ -160,6 +172,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about-us'
+    | '/aewv-recruitment-agency-india'
     | '/candidate-portal'
     | '/contact-us'
     | '/employer-services'
@@ -175,6 +188,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
+  AewvRecruitmentAgencyIndiaRoute: typeof AewvRecruitmentAgencyIndiaRoute
   CandidatePortalRoute: typeof CandidatePortalRoute
   ContactUsRoute: typeof ContactUsRoute
   EmployerServicesRoute: typeof EmployerServicesRoute
@@ -201,6 +215,13 @@ declare module '@tanstack/react-router' {
       path: '/about-us'
       fullPath: '/about-us'
       preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aewv-recruitment-agency-india': {
+      id: '/aewv-recruitment-agency-india'
+      path: '/aewv-recruitment-agency-india'
+      fullPath: '/aewv-recruitment-agency-india'
+      preLoaderRoute: typeof AewvRecruitmentAgencyIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/candidate-portal': {
@@ -279,6 +300,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
+  AewvRecruitmentAgencyIndiaRoute: AewvRecruitmentAgencyIndiaRoute,
   CandidatePortalRoute: CandidatePortalRoute,
   ContactUsRoute: ContactUsRoute,
   EmployerServicesRoute: EmployerServicesRoute,
