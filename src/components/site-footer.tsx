@@ -14,7 +14,7 @@ const quickLinks = [
 ];
 
 const destinationLinks = [
-  { label: "🇳🇿 New Zealand (Top Priority)", to: "/destinations/schengen-europe" },
+  { label: "🇳🇿 New Zealand (Top Priority)", to: "/destinations/new-zealand" },
   { label: "🇩🇪 Germany Chancenkarte & Blue Card", to: "/destinations/schengen-europe" },
   { label: "🇨🇦 Canada Express Entry & PNP", to: "/destinations/usa-visa" },
   { label: "🇦🇺 Australia GSM 189/190", to: "/destinations/usa-visa" },

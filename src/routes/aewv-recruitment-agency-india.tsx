@@ -28,23 +28,25 @@ import { company } from "@/data/site";
 
 const aewvPageSchema = {
   "@context": "https://schema.org",
-  "@type": "GovernmentService",
+  "@type": "Service",
   "name": "Accredited Employer Work Visa (AEWV) Recruitment Agency India",
   "serviceType": "AEWV Overseas Recruitment & Trade Deployment",
   "description":
     "MEA licensed overseas recruitment agency in India deploying skilled trades (Welders, Fitters, Electricians) to New Zealand under Immigration New Zealand (INZ) WR1 instructions and ANZSCO standards.",
   "provider": {
-    "@type": "EmploymentAgency",
+    "@type": ["EmploymentAgency", "LocalBusiness"],
     "name": "Damoder Immigration Services",
     "url": "https://dis.ind.in/",
-    "telephone": "+91-40-23456789",
+    "telephone": "+91 8639516954",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "6F6F+74G, Tukkuguda",
       "addressLocality": "Hyderabad",
       "addressRegion": "Telangana",
+      "postalCode": "501359",
       "addressCountry": "IN"
     },
-    "identifier": "MEA License B-0895/TEL/PER/1000+/5/9821/2021"
+    "identifier": "MEA Licence B-0824/TN/PER/1000+/5/9821/2021"
   },
   "areaServed": [
     { "@type": "Country", "name": "India" },

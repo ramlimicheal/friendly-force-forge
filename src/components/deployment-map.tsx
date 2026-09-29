@@ -125,7 +125,7 @@ const destinationCards: DestinationCard[] = [
     rating: "5.0",
     reviewCount: "2,400+",
     image: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=800&q=80",
-    to: "/destinations/schengen-europe",
+    to: "/destinations/new-zealand",
   },
   {
     country: "Germany",
